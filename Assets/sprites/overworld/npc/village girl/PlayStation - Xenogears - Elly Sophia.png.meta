@@ -1,0 +1,1830 @@
+fileFormatVersion: 2
+guid: c4340a3ae90f7ec48be202cb36a060f0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 573
+        width: 20
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b873007eea5e974db6de6f3e0df6ece
+      internalID: 1833978267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 576
+        width: 20
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbea2caf1b7d6a40b672905d1ca01ba
+      internalID: 1164429318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 576
+        width: 20
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e13023664378645ad5f72d99370ef6
+      internalID: 2000660812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 573
+        width: 20
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e707fb08fded244fb012078571be301
+      internalID: -1403228754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_4
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 573
+        width: 19
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f7874515782c0429ed1075949116d0
+      internalID: 1779476749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_5
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 576
+        width: 19
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e09d011ea95de44d97e27e320013ede
+      internalID: 1604763143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_6
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 576
+        width: 19
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a41cf813ad2a74b851c64267f8dca5
+      internalID: -1297821330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_7
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 574
+        width: 20
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54b33e117da31940a9abc51b348de72
+      internalID: -1926036859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_8
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 576
+        width: 18
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24b056d19d330e46a57a7d163bb5ad1
+      internalID: 536527946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_9
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 575
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83251f74016435e42bf5be7e9b97506f
+      internalID: 682865771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_10
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 496
+        width: 20
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac2d306420bfb04fb1a41b401b59bfa
+      internalID: 743107999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_11
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 496
+        width: 19
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa01c7741d4e5b74c9f1ce8ec8f9c8ac
+      internalID: -1796700349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_12
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 494
+        width: 21
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ac8ddc517963f408d90a52767aa1f8
+      internalID: 601144371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_13
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 493
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146381390df874b42a06c7b181c922e2
+      internalID: -1304526329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_14
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 495
+        width: 22
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ee6de2b66bf5e41bfa3ac38833bb79
+      internalID: 1804180247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_15
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 497
+        width: 21
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e937ec92ab21b0b42b08680a9b8fef34
+      internalID: -618934881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_16
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 495
+        width: 21
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689e9b9dcfcbf8944aa0844646e623aa
+      internalID: 295298098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_17
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 495
+        width: 21
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62aa46860ea52f43829c3c298d50349
+      internalID: -842333250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_18
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 495
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71495b881b5d5c4f822ac3142b1e357
+      internalID: 2063352685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_19
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 495
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4e1340ccc2ab8489917d4a15d1f025
+      internalID: 2129205799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_20
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 415
+        width: 22
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978f02f6bbb269542b59208fa25b5e51
+      internalID: -733531506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_21
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 415
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c0373d8588c3064e933a507915b5767
+      internalID: -1143422838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_22
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 415
+        width: 26
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3631ab512266cd4dabdfb1119b1052d
+      internalID: 1967132426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_23
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 415
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06341c717e554d94eb0393bc517a761b
+      internalID: -465433676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_24
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 417
+        width: 21
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b45d232048969944eb4134695ded1dfa
+      internalID: -1082394648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_25
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 415
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c713b8ea068d04409cec674731d2b4d
+      internalID: -2026676752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_26
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 414
+        width: 20
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48aae3d6ab118a244b044d2155e7b957
+      internalID: -988687025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_27
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 412
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25455d04b18ca9e4aa75a8ea99fe4f80
+      internalID: 58998898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_28
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 412
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a051baacf5ce8c4198f9d0f9ec957f1
+      internalID: -1978713315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_29
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 413
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786c7864e4cd3324f96d6d50c4546786
+      internalID: 614414330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_30
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 334
+        width: 21
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7ebdb81f2f2684994ffc270288fe8c
+      internalID: 834346878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_31
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 333
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb3a47c81343a4489be96c0fbb77c10
+      internalID: 318326589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_32
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 333
+        width: 19
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2803950402a561248bb12469b545e3de
+      internalID: -507997927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_33
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 334
+        width: 19
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c70ab3734223b41bef37e34c382ae2
+      internalID: -178345373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_34
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 333
+        width: 21
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ae0bc1676eb8f4b9e8b523a0c6e25a
+      internalID: -1485733678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_35
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 333
+        width: 21
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 242617de286c00247aeb39327f79dbe9
+      internalID: 1904097956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_36
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 331
+        width: 19
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f44f5b0bbb9674b8a421a6dd23188a
+      internalID: -1758314506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_37
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 331
+        width: 19
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eef2d3d2d7897e43b01ff405af3c829
+      internalID: -103985194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_38
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 332
+        width: 19
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc810b9ee7ed2ba48910868c0a90e1ba
+      internalID: -2114304969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_39
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 333
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de5ea6e7dadafa459f4fc6882a43f25
+      internalID: -113655352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_40
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 251
+        width: 19
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 093cb5656cf46074a8d9018ec366001b
+      internalID: 1322334520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_41
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 251
+        width: 19
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca89b129cdfce3c489738f16ab5fa27c
+      internalID: -586856030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_42
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 252
+        width: 19
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a87adae8155044b92b3b91bbf0c4f0
+      internalID: 1481005203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_43
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 253
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d522c3823ad7d438fd7386d32d44a6
+      internalID: -4814776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_44
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 254
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af2da1d8101d694c931fd6a6fe5b24d
+      internalID: 939737368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_45
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 248
+        width: 18
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5fbdd745b594464ea6e68f34353f2a8
+      internalID: 893914536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_46
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 248
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd06dfacff12e2f4dbd2dd672f795594
+      internalID: 682947327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_47
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 246
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6e7b814b609700458e1fa5732b9bdb5
+      internalID: 1249862035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_48
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 243
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87edb6af84eed7b48be7fc681adf86a3
+      internalID: -1827603159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_49
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 241
+        width: 18
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eaea14fe8263874ab2e0c00825237aa
+      internalID: -1685325269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_50
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 173
+        width: 21
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eae463cb04b5e24ca98db9d6cca828d
+      internalID: 839115172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_51
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 173
+        width: 21
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35ca63f1e478144e8335a52ad36dd4f
+      internalID: -1693407487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_52
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 173
+        width: 21
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843ee499d869ea84abf266f4a489c1e2
+      internalID: 1630538197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_53
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 173
+        width: 21
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ff934efcc58a2438265fd7cba4c0f7
+      internalID: -1296091645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_54
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 174
+        width: 18
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff5ae2eb859ea84faedcd4bf99c99c3
+      internalID: 2077709328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_55
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 174
+        width: 18
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb5d6e33d5c93c479ff06abe15de06a
+      internalID: 480255518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_56
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 174
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b785b7b8119914291bcd3eb90436ef
+      internalID: 1627734417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_57
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 174
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cab813d759cf3b4898b7d66bea7e11e
+      internalID: -782870895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_58
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 176
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb68800beb30bf245bbce49cc2f377cc
+      internalID: -146926528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_59
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 175
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636920a1c11846e49bfb50f5945ade97
+      internalID: -1136039314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_60
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 98
+        width: 27
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b222c9499d2bd47b8838bc8aca94e3
+      internalID: 1959038721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_61
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 96
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024588f8599f9c04c8368a657de93acc
+      internalID: 2044645582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_62
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 96
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be686f79267eaaa4cacca162130dff15
+      internalID: 1140099952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_63
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 95
+        width: 31
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb696e2264a549d4faa799e4b0749c9c
+      internalID: -1507479934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_64
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 97
+        width: 23
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d948a680024b5094c91a462db1aed153
+      internalID: -959387810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_65
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 96
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d57564dfb5b0bc4d96dff807c93a937
+      internalID: -683649445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_66
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 97
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9bc29ec2c627144b9bcc773b966e831
+      internalID: -1784168264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_67
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 97
+        width: 20
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d470cfaf58c98144a972e0b2128997ad
+      internalID: -2082469361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_68
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 97
+        width: 19
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9b62148e2cd9b4894a1da5df7862a2
+      internalID: 624321368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_69
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 95
+        width: 20
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a9bf16c60c8f4408c05c6014d166e9
+      internalID: -526772897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_70
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 16
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcad549795fb8f540847e862f8a0e636
+      internalID: 1113061129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_71
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 17
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0edced084ea06f44a336c88ddb1d48a
+      internalID: 1012768317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_72
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 21
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4618cc4c667781a47b9d1dbfb55c6137
+      internalID: -1186883966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_73
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 23
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74dd82140e96a849bc94b633636ea6b
+      internalID: -31051714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_74
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 14
+        width: 44
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98990cc7a860e58438bd540a6a8f7d15
+      internalID: 2073529750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_75
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 12
+        width: 44
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b977ad7d387fc51429a73683765851fa
+      internalID: -833244991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_76
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 7
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11dcbeb13ef93104d9333a6dee038d2a
+      internalID: 1241364625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation - Xenogears - Elly Sophia_77
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 13
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953a8844bf4720b48b5d043d62309ee9
+      internalID: -243644448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PlayStation - Xenogears - Elly Sophia_0: 1833978267
+      PlayStation - Xenogears - Elly Sophia_1: 1164429318
+      PlayStation - Xenogears - Elly Sophia_10: 743107999
+      PlayStation - Xenogears - Elly Sophia_11: -1796700349
+      PlayStation - Xenogears - Elly Sophia_12: 601144371
+      PlayStation - Xenogears - Elly Sophia_13: -1304526329
+      PlayStation - Xenogears - Elly Sophia_14: 1804180247
+      PlayStation - Xenogears - Elly Sophia_15: -618934881
+      PlayStation - Xenogears - Elly Sophia_16: 295298098
+      PlayStation - Xenogears - Elly Sophia_17: -842333250
+      PlayStation - Xenogears - Elly Sophia_18: 2063352685
+      PlayStation - Xenogears - Elly Sophia_19: 2129205799
+      PlayStation - Xenogears - Elly Sophia_2: 2000660812
+      PlayStation - Xenogears - Elly Sophia_20: -733531506
+      PlayStation - Xenogears - Elly Sophia_21: -1143422838
+      PlayStation - Xenogears - Elly Sophia_22: 1967132426
+      PlayStation - Xenogears - Elly Sophia_23: -465433676
+      PlayStation - Xenogears - Elly Sophia_24: -1082394648
+      PlayStation - Xenogears - Elly Sophia_25: -2026676752
+      PlayStation - Xenogears - Elly Sophia_26: -988687025
+      PlayStation - Xenogears - Elly Sophia_27: 58998898
+      PlayStation - Xenogears - Elly Sophia_28: -1978713315
+      PlayStation - Xenogears - Elly Sophia_29: 614414330
+      PlayStation - Xenogears - Elly Sophia_3: -1403228754
+      PlayStation - Xenogears - Elly Sophia_30: 834346878
+      PlayStation - Xenogears - Elly Sophia_31: 318326589
+      PlayStation - Xenogears - Elly Sophia_32: -507997927
+      PlayStation - Xenogears - Elly Sophia_33: -178345373
+      PlayStation - Xenogears - Elly Sophia_34: -1485733678
+      PlayStation - Xenogears - Elly Sophia_35: 1904097956
+      PlayStation - Xenogears - Elly Sophia_36: -1758314506
+      PlayStation - Xenogears - Elly Sophia_37: -103985194
+      PlayStation - Xenogears - Elly Sophia_38: -2114304969
+      PlayStation - Xenogears - Elly Sophia_39: -113655352
+      PlayStation - Xenogears - Elly Sophia_4: 1779476749
+      PlayStation - Xenogears - Elly Sophia_40: 1322334520
+      PlayStation - Xenogears - Elly Sophia_41: -586856030
+      PlayStation - Xenogears - Elly Sophia_42: 1481005203
+      PlayStation - Xenogears - Elly Sophia_43: -4814776
+      PlayStation - Xenogears - Elly Sophia_44: 939737368
+      PlayStation - Xenogears - Elly Sophia_45: 893914536
+      PlayStation - Xenogears - Elly Sophia_46: 682947327
+      PlayStation - Xenogears - Elly Sophia_47: 1249862035
+      PlayStation - Xenogears - Elly Sophia_48: -1827603159
+      PlayStation - Xenogears - Elly Sophia_49: -1685325269
+      PlayStation - Xenogears - Elly Sophia_5: 1604763143
+      PlayStation - Xenogears - Elly Sophia_50: 839115172
+      PlayStation - Xenogears - Elly Sophia_51: -1693407487
+      PlayStation - Xenogears - Elly Sophia_52: 1630538197
+      PlayStation - Xenogears - Elly Sophia_53: -1296091645
+      PlayStation - Xenogears - Elly Sophia_54: 2077709328
+      PlayStation - Xenogears - Elly Sophia_55: 480255518
+      PlayStation - Xenogears - Elly Sophia_56: 1627734417
+      PlayStation - Xenogears - Elly Sophia_57: -782870895
+      PlayStation - Xenogears - Elly Sophia_58: -146926528
+      PlayStation - Xenogears - Elly Sophia_59: -1136039314
+      PlayStation - Xenogears - Elly Sophia_6: -1297821330
+      PlayStation - Xenogears - Elly Sophia_60: 1959038721
+      PlayStation - Xenogears - Elly Sophia_61: 2044645582
+      PlayStation - Xenogears - Elly Sophia_62: 1140099952
+      PlayStation - Xenogears - Elly Sophia_63: -1507479934
+      PlayStation - Xenogears - Elly Sophia_64: -959387810
+      PlayStation - Xenogears - Elly Sophia_65: -683649445
+      PlayStation - Xenogears - Elly Sophia_66: -1784168264
+      PlayStation - Xenogears - Elly Sophia_67: -2082469361
+      PlayStation - Xenogears - Elly Sophia_68: 624321368
+      PlayStation - Xenogears - Elly Sophia_69: -526772897
+      PlayStation - Xenogears - Elly Sophia_7: -1926036859
+      PlayStation - Xenogears - Elly Sophia_70: 1113061129
+      PlayStation - Xenogears - Elly Sophia_71: 1012768317
+      PlayStation - Xenogears - Elly Sophia_72: -1186883966
+      PlayStation - Xenogears - Elly Sophia_73: -31051714
+      PlayStation - Xenogears - Elly Sophia_74: 2073529750
+      PlayStation - Xenogears - Elly Sophia_75: -833244991
+      PlayStation - Xenogears - Elly Sophia_76: 1241364625
+      PlayStation - Xenogears - Elly Sophia_77: -243644448
+      PlayStation - Xenogears - Elly Sophia_8: 536527946
+      PlayStation - Xenogears - Elly Sophia_9: 682865771
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

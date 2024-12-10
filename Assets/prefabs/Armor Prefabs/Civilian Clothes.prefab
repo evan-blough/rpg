@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7259023572631277989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6758812048357556799}
+  - component: {fileID: 1978005193644405353}
+  m_Layer: 0
+  m_Name: Civilian Clothes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6758812048357556799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7259023572631277989}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1978005193644405353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7259023572631277989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e1b347b7556b42b9293cfda6ae6ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Civilian Clothes
+  itemDescription: A set of well-worn clothes.
+  isKeyItem: 0
+  itemPrice: 35
+  characterEquippedTo: {fileID: 9201340297840824953, guid: be950a4846f89ef4bbb7a3b85afe3d20, type: 3}
+  isEquipped: 1
+  attackBuff: 0
+  defenseBuff: 3
+  magicAttackBuff: 0
+  magicDefenseBuff: 0
+  agilityBuff: 2
+  weight: 1
+  skill:
+    skillName: 
+    skillDescription: 
+    skillPointCost: 0
+    active: 0
+    levelReq: 0
+    criticalModifier: 0
+    powerModifier: 0
+    accuracyModifier: 0
+    isMagic: 0
+    type: 0
+    isRanged: 0
+    isMultiTargeted: 0
+    elemAttribute: 0
+    applySelfStatuses: []
+    applyTargetStatuses: []
+    removeSelfStatuses: []
+    removeTargetStatuses: []
+  elemResists: 
+  elemWeaknesses: 
+  elemAbsorption: 

@@ -1,0 +1,4 @@
+repository "rpg@plow_43@cloud"
+  path "/"
+    br "/main"
+    co "/main"
