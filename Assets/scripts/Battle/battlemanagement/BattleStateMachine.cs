@@ -9,7 +9,7 @@ public enum BattleStates
 }
 public class BattleStateMachine : MonoBehaviour
 {
-    GameManager gameManager;
+    SceneManager gameManager;
     BattlePartyHandler partyHandler;
     public GameObject heroPrefab;
     public GameObject ogrePrefab;
@@ -35,7 +35,7 @@ public class BattleStateMachine : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        gameManager = GameManager.instance;
+        gameManager = SceneManager.instance;
         StartCoroutine(gameManager.BattleTransitionTime("Enter_Scene"));
         partyHandler = BattlePartyHandler.instance;
         uiHandler.OnStart();

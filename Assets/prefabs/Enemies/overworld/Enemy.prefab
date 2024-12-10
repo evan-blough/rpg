@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 3781437855770296647}
   - component: {fileID: 5375338072314237370}
   - component: {fileID: -947361395450149305}
+  - component: {fileID: 7014413318932375529}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -153,10 +154,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38afe7939db9d8e4ea3220d0a9858d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 7014413318932375529}
   cam: {fileID: 0}
   sprite: {fileID: 1957669967638962850}
   animator: {fileID: 1652031604700238094}
   animDirection: 0
+  direction: {x: 0, y: 0, z: 0}
+  move: {x: 0, y: 0}
+  runDirection: 0
+  isGrounded: 0
+  groundCheck: {fileID: 6403071026584776699}
+  groundDistance: 1
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 128
+  movementRadius: 2
   encounterFormation:
   - {fileID: 2822974986440038967, guid: 399b79e63c82d074782fccd530f1c0a1, type: 3}
   - {fileID: 1213536487157950206, guid: 0083df4cb2c3e72408f4f388d95526c8, type: 3}
@@ -203,4 +215,30 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!143 &7014413318932375529
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6833651356911179426}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1
+  m_Radius: 0
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}

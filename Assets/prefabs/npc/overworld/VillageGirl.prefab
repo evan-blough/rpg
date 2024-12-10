@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8751259848194555905}
   - component: {fileID: 4217898255201576630}
   - component: {fileID: -2634391355743823584}
+  - component: {fileID: 4235409726648682077}
   m_Layer: 0
   m_Name: VillageGirl
   m_TagString: Untagged
@@ -47,10 +48,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d08a73c4625494aa1b5f1975481f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 4235409726648682077}
   cam: {fileID: 0}
   sprite: {fileID: 4104688596267737478}
   animator: {fileID: 7931201689128122291}
   animDirection: 0
+  direction: {x: 0, y: 0, z: 0}
+  move: {x: 0, y: 0}
+  runDirection: 0
+  isGrounded: 0
+  groundCheck: {fileID: 1049632522173204514}
+  groundDistance: 1
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 128
+  movementRadius: 1
 --- !u!136 &4217898255201576630
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -93,7 +105,33 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.5
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!143 &4235409726648682077
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5404843245928785422}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1
+  m_Radius: 0
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5537742822558684371
 GameObject:

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class SceneManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static SceneManager instance;
 
     public CameraHandler cam;
-    public EnemyController enemyInBattle;
+    public EnemyHandler enemyInBattle;
     public Animator animator;
     Scene overworld;
 
@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Keep the GameManager object alive across scenes
+            DontDestroyOnLoad(gameObject); // Keep the SceneManager object alive across scenes
         }
         else
         {
@@ -25,11 +25,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public IEnumerator StartBattle(EnemyController enemy)
+    public IEnumerator StartBattle(EnemyHandler enemy)
     {
         enemyInBattle = enemy;
 
-        overworld = SceneManager.GetActiveScene();
+        overworld = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
         foreach (var thing in overworld.GetRootGameObjects())
         {
             thing.SetActive(false);
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
         yield return StartCoroutine(BattleTransitionTime("Exit_Scene"));
 
-        SceneManager.LoadSceneAsync("Battle", LoadSceneMode.Additive);
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("Battle", LoadSceneMode.Additive);
     }
 
     public IEnumerator TransitionFromBattle(List<PlayerCharacter> playerCharacterList, bool battleWon)
@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
 
         yield return StartCoroutine(BattleTransitionTime("Exit_Scene"));
 
-        SceneManager.UnloadSceneAsync("Battle");
+        UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("Battle");
 
 
         foreach (var thing in overworld.GetRootGameObjects())

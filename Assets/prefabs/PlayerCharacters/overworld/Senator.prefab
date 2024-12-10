@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2441845083990291648}
   - component: {fileID: 1301956678079050258}
   - component: {fileID: 7308092045361649383}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SenatorSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 5820106945921824875}
   - component: {fileID: 6773056236942423671}
   - component: {fileID: 8257282397150323404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Senator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,20 +152,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b35ead877c16e54fb40177da6f7710c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 8257282397150323404}
   cam: {fileID: 0}
   sprite: {fileID: 1301956678079050258}
   animator: {fileID: 7308092045361649383}
   animDirection: 0
-  partyHandler: {fileID: 0}
-  controller: {fileID: 8257282397150323404}
-  state: 0
-  isGrounded: 0
+  direction: {x: 0, y: 0, z: 0}
+  move: {x: 0, y: 0}
   runDirection: 0
-  groundCheck: {fileID: 2441845083990291648}
+  isGrounded: 0
+  groundCheck: {fileID: 5820106945921824875}
   groundDistance: 1
   groundMask:
     serializedVersion: 2
     m_Bits: 128
+  partyHandler: {fileID: 0}
+  state: 0
 --- !u!143 &8257282397150323404
 CharacterController:
   m_ObjectHideFlags: 0
@@ -176,7 +178,7 @@ CharacterController:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0

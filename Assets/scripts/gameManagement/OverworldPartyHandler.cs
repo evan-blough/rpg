@@ -8,12 +8,12 @@ public class OverworldPartyHandler : MonoBehaviour
     public GameObject wizardPrefab;
     public GameObject senatorPrefab;
 
-    public List<CharacterHandler> currParty;
-    CharacterHandler heroController;
-    CharacterHandler wizardController;
-    CharacterHandler senatorController;
+    public List<PlayerCharacterHandler> currParty;
+    PlayerCharacterHandler heroController;
+    PlayerCharacterHandler wizardController;
+    PlayerCharacterHandler senatorController;
 
-    public CharacterHandler leadCharacter { get { return currParty.FirstOrDefault(); } }
+    public PlayerCharacterHandler leadCharacter { get { return currParty.FirstOrDefault(); } }
 
     void Start()
     {
@@ -26,7 +26,7 @@ public class OverworldPartyHandler : MonoBehaviour
             {
                 temp = Instantiate(heroPrefab, transform);
 
-                heroController = temp.GetComponent<CharacterHandler>();
+                heroController = temp.GetComponent<PlayerCharacterHandler>();
                 heroController.partyHandler = this;
                 if (!currParty.Any(pc => pc == heroController)) currParty.Add(heroController);
             }
@@ -34,7 +34,7 @@ public class OverworldPartyHandler : MonoBehaviour
             {
                 temp = Instantiate(wizardPrefab, transform);
 
-                wizardController = temp.GetComponent<CharacterHandler>();
+                wizardController = temp.GetComponent<PlayerCharacterHandler>();
                 wizardController.partyHandler = this;
                 if (!currParty.Any(pc => pc == wizardController)) currParty.Add(wizardController);
             }
@@ -48,7 +48,7 @@ public class OverworldPartyHandler : MonoBehaviour
                 //else
                 //    senator.DeepCopyFrom(pcd);
 
-                senatorController = temp.GetComponent<CharacterHandler>();
+                senatorController = temp.GetComponent<PlayerCharacterHandler>();
                 senatorController.partyHandler = this;
                 if (!currParty.Any(pc => pc == senatorController)) currParty.Add(senatorController);
             }
@@ -59,15 +59,15 @@ public class OverworldPartyHandler : MonoBehaviour
 
     void Update()
     {
-        if (leadCharacter != GameManager.instance.cam.cam.LookAt)
+        if (leadCharacter != SceneManager.instance.cam.cam.LookAt)
         {
             SetLeadCharacterCam();
         }
     }
     public void SetLeadCharacterCam()
     {
-        GameManager.instance.cam.cam.Follow = leadCharacter.transform;
-        GameManager.instance.cam.cam.LookAt = leadCharacter.transform;
+        SceneManager.instance.cam.cam.Follow = leadCharacter.transform;
+        SceneManager.instance.cam.cam.LookAt = leadCharacter.transform;
     }
     public void SwapLeader()
     {

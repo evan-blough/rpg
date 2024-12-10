@@ -11,7 +11,7 @@ public class CameraHandler : MonoBehaviour
     public float rotationSpeed = 5f;
     void Awake()
     {
-        GameManager.instance.cam = this;
+        SceneManager.instance.cam = this;
         controls = ControlsHandler.instance.playerControls;
 
         controls.overworld.CameraRotation.performed += ctx => RotateCamera(ctx.ReadValue<float>());
@@ -43,10 +43,24 @@ public class CameraHandler : MonoBehaviour
         }
     }
 
+    // want to make PlayerCharacterHandler also use this... logic in that gets a little funky, though. Might be a refactor day for that.
+    public static Vector2 AutoMoveRelativeToCamera(Vector3 positionToMoveTowards, Vector3 currentPosition)
+    {
+        positionToMoveTowards = Camera.main.transform.InverseTransformPoint(positionToMoveTowards);
+        currentPosition = Camera.main.transform.InverseTransformPoint(currentPosition);
+
+        Vector3 moveTowards = (positionToMoveTowards - currentPosition).normalized;
+
+        return new Vector2(moveTowards.x, moveTowards.z);
+    }
+
     // normalizes the angle to a scale of -180 => 180 degrees due to that being the range of transform.eulerAngles
     public static float AngleNormalization(float angle)
     {
         float newAngle = angle;
+
+        // fixes some angle normalization issues where values were @ or slightly below 360 degrees... keeps it in range of the 45 degrees of the animation direction function
+        if (newAngle > 350) newAngle -= 360;
 
         if (newAngle > 180) newAngle = (newAngle % 180) + (-180);
         else if (newAngle < -180) newAngle = 180 - (newAngle % 180);

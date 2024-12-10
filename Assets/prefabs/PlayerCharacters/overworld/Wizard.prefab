@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 251478925795110450}
   - component: {fileID: 4403209782889309760}
   - component: {fileID: 884710461612806910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WizardSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 531982098335607982}
   - component: {fileID: 3657223964525729659}
   - component: {fileID: 8012809271602870826}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,20 +152,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b35ead877c16e54fb40177da6f7710c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 8012809271602870826}
   cam: {fileID: 0}
   sprite: {fileID: 4403209782889309760}
   animator: {fileID: 884710461612806910}
   animDirection: 0
-  partyHandler: {fileID: 0}
-  controller: {fileID: 8012809271602870826}
-  state: 0
-  isGrounded: 0
+  direction: {x: 0, y: 0, z: 0}
+  move: {x: 0, y: 0}
   runDirection: 0
-  groundCheck: {fileID: 251478925795110450}
+  isGrounded: 0
+  groundCheck: {fileID: 531982098335607982}
   groundDistance: 1
   groundMask:
     serializedVersion: 2
     m_Bits: 128
+  partyHandler: {fileID: 0}
+  state: 0
 --- !u!143 &8012809271602870826
 CharacterController:
   m_ObjectHideFlags: 0

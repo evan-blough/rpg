@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5535800953060676847}
   - component: {fileID: 8013880923130159896}
   - component: {fileID: 6727869426798303976}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,20 +46,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b35ead877c16e54fb40177da6f7710c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 6727869426798303976}
   cam: {fileID: 0}
   sprite: {fileID: 82226780361119070}
   animator: {fileID: 3734021793272607866}
   animDirection: 0
-  partyHandler: {fileID: 0}
-  controller: {fileID: 6727869426798303976}
-  state: 0
-  isGrounded: 0
+  direction: {x: 0, y: 0, z: 0}
+  move: {x: 0, y: 0}
   runDirection: 0
-  groundCheck: {fileID: 1270595642930810431}
+  isGrounded: 0
+  groundCheck: {fileID: 5535800953060676847}
   groundDistance: 1
   groundMask:
     serializedVersion: 2
     m_Bits: 128
+  partyHandler: {fileID: 0}
+  state: 0
 --- !u!143 &6727869426798303976
 CharacterController:
   m_ObjectHideFlags: 0
@@ -70,7 +72,7 @@ CharacterController:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -97,7 +99,7 @@ GameObject:
   - component: {fileID: 1270595642930810431}
   - component: {fileID: 82226780361119070}
   - component: {fileID: 3734021793272607866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HeroSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
