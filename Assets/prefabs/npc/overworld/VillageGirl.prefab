@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1049632522173204514}
   - component: {fileID: 8751259848194555905}
+  - component: {fileID: 2262201655338121336}
   - component: {fileID: 4217898255201576630}
   - component: {fileID: -2634391355743823584}
   - component: {fileID: 4235409726648682077}
@@ -62,7 +63,24 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 128
-  movementRadius: 1
+  movement: {fileID: 2262201655338121336}
+  movementTime: 0.5
+  movementPause: 1.5
+--- !u!114 &2262201655338121336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5404843245928785422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb501eaff6241e4781e68157551d6fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPoint: {x: 0, y: 0, z: 0}
+  movementRadius: 2
+  movementFrequency: 5
 --- !u!136 &4217898255201576630
 CapsuleCollider:
   m_ObjectHideFlags: 0

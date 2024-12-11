@@ -4,13 +4,13 @@ using UnityEngine;
 public class NonPlayerCharacterHandler : CharacterHandler
 {
     private bool canMove = false;
-
-    public float movementRadius;
-    protected Vector3 originalPoint = new Vector3();
+    public NPCMovement movement;
+    public float movementTime = .5f;
+    public float movementPause = 1.5f;
 
     private void Start()
     {
-        originalPoint = transform.position;
+        movement.originalPoint = transform.position;
         cam = SceneManager.instance.cam.transform;
     }
 
@@ -26,11 +26,11 @@ public class NonPlayerCharacterHandler : CharacterHandler
 
     protected IEnumerator WaitToMove()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(movementTime);
 
         move = new Vector2(0f, 0f);
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(movementPause);
         canMove = true;
     }
 
@@ -38,26 +38,22 @@ public class NonPlayerCharacterHandler : CharacterHandler
     {
         if (canMove)
         {
-            if (Random.Range(0, 2) == 0)
-            {
-                if (Vector3.Distance(originalPoint, transform.position) > movementRadius)
-                {
-                    var moveBackToOrigin = CameraHandler.AutoMoveRelativeToCamera(originalPoint, transform.position);
-                    move = new Vector2(moveBackToOrigin.x + Random.Range(-.15f, .15f), moveBackToOrigin.y + Random.Range(-.15f, .15f));
-                }
-                else
-                    move = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-            }
-            else
-            {
-                move = Vector2.zero;
-            }
+            move = movement.GetMovementVector(transform.position);
 
             canMove = false;
             StartCoroutine(WaitToMove());
         }
 
         base.SetMovement();
+    }
+
+    public override void Move()
+    {
+        Vector3 moveDir = movement.ApplyMovementVector(direction);
+        animator.SetFloat("Speed", currentSpeed / 11);
+
+        controller.Move(moveDir.normalized * currentSpeed * Time.deltaTime);
+        runDirection = directionMultiplier * Vector3.Angle(moveDir, Camera.main.transform.forward);
     }
 
     protected virtual void OnTriggerEnter(Collider other)

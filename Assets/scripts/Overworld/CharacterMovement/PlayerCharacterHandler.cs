@@ -49,7 +49,7 @@ public class PlayerCharacterHandler : CharacterHandler
         {
             int index = partyHandler.currParty.IndexOf(this);
             PlayerCharacterHandler leader = partyHandler.currParty.ElementAt(index - 1);
-            FollowLeadCharacter(leader, index);
+            FollowLeadCharacter(leader);
         }
         VerticalMovement();
         Move();
@@ -107,7 +107,7 @@ public class PlayerCharacterHandler : CharacterHandler
         }
     }
 
-    public void FollowLeadCharacter(PlayerCharacterHandler leader, int charIndex)
+    public void FollowLeadCharacter(PlayerCharacterHandler leader)
     {
         if (leader.moveHistory.Count > 5)
         {

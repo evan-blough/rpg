@@ -62,13 +62,10 @@ public abstract class CharacterHandler : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+
     public virtual void SetMovement()
     {
         sprite.gameObject.transform.rotation = Camera.main.transform.rotation;
-
-        //walk
-        float horizontal = move.x;
-        float vertical = move.y;
 
         // make movement relative to the camera
         var forward = cam.transform.forward;
@@ -79,7 +76,7 @@ public abstract class CharacterHandler : MonoBehaviour
         right.Normalize();
 
         direction = forward * move.y + right * move.x;
-        directionMultiplier = horizontal < 0 ? -1 : horizontal == 0 ? directionMultiplier : 1;
+        directionMultiplier = move.x < 0 ? -1 : move.x == 0 ? directionMultiplier : 1;
     }
 
     public float GetDirection(float angle)

@@ -12,7 +12,7 @@ public class EnemyHandler : NonPlayerCharacterHandler
     {
         cam = SceneManager.instance.cam.transform;
         canEnterBattle = false;
-        originalPoint = transform.position;
+        movement.originalPoint = transform.position;
         StartCoroutine(WaitToMove());
     }
 
