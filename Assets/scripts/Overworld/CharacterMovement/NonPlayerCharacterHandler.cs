@@ -3,14 +3,11 @@ using UnityEngine;
 
 public class NonPlayerCharacterHandler : CharacterHandler
 {
-    private bool canMove = false;
+    private bool isActive = false;
     public NPCMovement movement;
-    public float movementTime = .5f;
-    public float movementPause = 1.5f;
 
     private void Start()
     {
-        movement.originalPoint = transform.position;
         cam = SceneManager.instance.cam.transform;
     }
 
@@ -24,25 +21,20 @@ public class NonPlayerCharacterHandler : CharacterHandler
         AnimationStateCheck();
     }
 
-    protected IEnumerator WaitToMove()
+    protected IEnumerator WaitToStart()
     {
-        yield return new WaitForSeconds(movementTime);
-
-        move = new Vector2(0f, 0f);
-
-        yield return new WaitForSeconds(movementPause);
-        canMove = true;
+        yield return new WaitForSeconds(2f);
+        isActive = true;
+        movement.canMove = true;
     }
 
     public override void SetMovement()
     {
-        if (canMove)
+        if (isActive)
         {
             move = movement.GetMovementVector(transform.position);
-
-            canMove = false;
-            StartCoroutine(WaitToMove());
         }
+        else move = new Vector2(0f, 0f);
 
         base.SetMovement();
     }
@@ -66,12 +58,12 @@ public class NonPlayerCharacterHandler : CharacterHandler
 
     protected void OnEnable()
     {
-        StartCoroutine(WaitToMove());
+        StartCoroutine(WaitToStart());
     }
 
     protected void OnDisable()
     {
-        canMove = false;
+        isActive = false;
         move = Vector2.zero;
     }
 }

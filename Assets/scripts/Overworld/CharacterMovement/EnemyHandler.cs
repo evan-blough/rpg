@@ -8,12 +8,12 @@ public class EnemyHandler : NonPlayerCharacterHandler
     bool isInBattle;
     bool isChasing;
     public List<GameObject> encounterFormation;
+    Vector3 preChasePoint;
     private void Start()
     {
         cam = SceneManager.instance.cam.transform;
         canEnterBattle = false;
-        movement.originalPoint = transform.position;
-        StartCoroutine(WaitToMove());
+        StartCoroutine(WaitToStart());
     }
 
     private void Update()

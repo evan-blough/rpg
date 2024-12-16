@@ -116,7 +116,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6403071026584776699}
   - component: {fileID: 3781437855770296647}
-  - component: {fileID: 7031060839710215629}
   - component: {fileID: 5375338072314237370}
   - component: {fileID: -947361395450149305}
   - component: {fileID: 7014413318932375529}
@@ -169,27 +168,12 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 128
-  movement: {fileID: 7031060839710215629}
+  movement: {fileID: 0}
   movementTime: 0.5
   movementPause: 1.5
   encounterFormation:
   - {fileID: 2822974986440038967, guid: 399b79e63c82d074782fccd530f1c0a1, type: 3}
   - {fileID: 1213536487157950206, guid: 0083df4cb2c3e72408f4f388d95526c8, type: 3}
---- !u!114 &7031060839710215629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6833651356911179426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb501eaff6241e4781e68157551d6fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  originalPoint: {x: 0, y: 0, z: 0}
-  movementRadius: 2
-  movementFrequency: 8
 --- !u!136 &5375338072314237370
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -200,7 +184,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
