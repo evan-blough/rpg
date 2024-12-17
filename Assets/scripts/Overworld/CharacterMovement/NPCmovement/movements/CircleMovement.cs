@@ -2,17 +2,31 @@ using UnityEngine;
 
 public class CircleMovement : NPCMovement
 {
-    float angle = 0f, angularSpeed = 2f;
+    float angle = 0f;
+    float speed { get { return movementRadius / 2f; } }
+    public Transform whatever;
 
     private void Start()
     {
-        originalPoint = transform.position - new Vector3(2, 0, 0);
+        originalPoint = new Vector3(transform.position.x - movementRadius, transform.position.y, transform.position.z);
     }
+
+    private void Update()
+    {
+        Debug.Log(Vector3.Distance(whatever.position, transform.position));
+    }
+
     public override Vector2 GetMovementVector(Vector3 currentPos)
     {
         var xVal = originalPoint.x + Mathf.Cos(angle) * movementRadius;
         var zVal = originalPoint.z + Mathf.Sin(angle) * movementRadius;
-        angle = angle + Time.deltaTime * angularSpeed;
+
+        // never manually code a circular path again... hacky solution to maintain a distance equal to the 
+        // radius from the fixed point
+
+        //Debug.Log($"gay: {(speed * (speed / ((speed + movementRadius) / 2f)) / movementRadius)}, straight: {(speed * (speed / 3f)) / movementRadius}");
+        angle = angle + Time.deltaTime * ((speed * (speed / ((speed + movementRadius) / 2f))) / movementRadius);
+
         Vector3 target = new Vector3(xVal, 0f, zVal);
         Vector3 toMove = (target - currentPos).normalized;
         if (angle >= 360f)
