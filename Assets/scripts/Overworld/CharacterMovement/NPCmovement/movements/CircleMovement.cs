@@ -11,11 +11,6 @@ public class CircleMovement : NPCMovement
         originalPoint = new Vector3(transform.position.x - movementRadius, transform.position.y, transform.position.z);
     }
 
-    private void Update()
-    {
-        Debug.Log(Vector3.Distance(whatever.position, transform.position));
-    }
-
     public override Vector2 GetMovementVector(Vector3 currentPos)
     {
         var xVal = originalPoint.x + Mathf.Cos(angle) * movementRadius;
@@ -24,7 +19,6 @@ public class CircleMovement : NPCMovement
         // never manually code a circular path again... hacky solution to maintain a distance equal to the 
         // radius from the fixed point
 
-        //Debug.Log($"gay: {(speed * (speed / ((speed + movementRadius) / 2f)) / movementRadius)}, straight: {(speed * (speed / 3f)) / movementRadius}");
         angle = angle + Time.deltaTime * ((speed * (speed / ((speed + movementRadius) / 2f))) / movementRadius);
 
         Vector3 target = new Vector3(xVal, 0f, zVal);

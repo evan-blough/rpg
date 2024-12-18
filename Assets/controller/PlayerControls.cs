@@ -71,6 +71,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""ManualCamera"",
+                    ""type"": ""Value"",
+                    ""id"": ""ef63f4c1-fc97-4a70-85c6-df750fdc6106"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -229,39 +238,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""Stick"",
-                    ""id"": ""e776c4c8-e7fe-4008-81a9-e51163963952"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""CameraRotation"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""e819dd70-3a17-40bb-a452-ba88ad0b9928"",
-                    ""path"": ""<Gamepad>/rightStick/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Controller"",
-                    ""action"": ""CameraRotation"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""53fb2285-05c2-4717-8bad-4412a2e05d0b"",
-                    ""path"": ""<Gamepad>/rightStick/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Controller"",
-                    ""action"": ""CameraRotation"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": """",
                     ""id"": ""9db9bbdb-cfd7-4265-aca9-f1a8701739b6"",
                     ""path"": ""<Gamepad>/buttonEast"",
@@ -403,6 +379,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Walk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3643c1a7-a22f-4ce9-8604-fdab0b01954e"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""ManualCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -427,6 +414,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_overworld_CameraRotation = m_overworld.FindAction("CameraRotation", throwIfNotFound: true);
         m_overworld_Interact = m_overworld.FindAction("Interact", throwIfNotFound: true);
         m_overworld_Walk = m_overworld.FindAction("Walk", throwIfNotFound: true);
+        m_overworld_ManualCamera = m_overworld.FindAction("ManualCamera", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -493,6 +481,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_overworld_CameraRotation;
     private readonly InputAction m_overworld_Interact;
     private readonly InputAction m_overworld_Walk;
+    private readonly InputAction m_overworld_ManualCamera;
     public struct OverworldActions
     {
         private @PlayerControls m_Wrapper;
@@ -502,6 +491,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @CameraRotation => m_Wrapper.m_overworld_CameraRotation;
         public InputAction @Interact => m_Wrapper.m_overworld_Interact;
         public InputAction @Walk => m_Wrapper.m_overworld_Walk;
+        public InputAction @ManualCamera => m_Wrapper.m_overworld_ManualCamera;
         public InputActionMap Get() { return m_Wrapper.m_overworld; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -526,6 +516,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Walk.started += instance.OnWalk;
             @Walk.performed += instance.OnWalk;
             @Walk.canceled += instance.OnWalk;
+            @ManualCamera.started += instance.OnManualCamera;
+            @ManualCamera.performed += instance.OnManualCamera;
+            @ManualCamera.canceled += instance.OnManualCamera;
         }
 
         private void UnregisterCallbacks(IOverworldActions instance)
@@ -545,6 +538,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Walk.started -= instance.OnWalk;
             @Walk.performed -= instance.OnWalk;
             @Walk.canceled -= instance.OnWalk;
+            @ManualCamera.started -= instance.OnManualCamera;
+            @ManualCamera.performed -= instance.OnManualCamera;
+            @ManualCamera.canceled -= instance.OnManualCamera;
         }
 
         public void RemoveCallbacks(IOverworldActions instance)
@@ -587,5 +583,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnCameraRotation(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnWalk(InputAction.CallbackContext context);
+        void OnManualCamera(InputAction.CallbackContext context);
     }
 }

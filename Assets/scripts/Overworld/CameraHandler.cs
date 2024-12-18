@@ -9,16 +9,24 @@ public class CameraHandler : MonoBehaviour
     public float targetRotation;
     public float currentRotation;
     public float rotationSpeed = 5f;
+    public Vector2 stickRotation;
+    public bool isKeyboard = false;
     void Awake()
     {
         SceneManager.instance.cam = this;
         controls = ControlsHandler.instance.playerControls;
+        cam.m_XAxis.Value = 0f;
+        cam.m_YAxis.Value = .5f;
 
         controls.overworld.CameraRotation.performed += ctx => RotateCamera(ctx.ReadValue<float>());
+
+        controls.overworld.ManualCamera.performed += ctx => stickRotation = ctx.ReadValue<Vector2>();
+        controls.overworld.ManualCamera.canceled += ctx => stickRotation = Vector2.zero;
     }
 
     public void RotateCamera(float rotateDirection)
     {
+        isKeyboard = true;
         targetRotation += 45 * (rotateDirection == 0 ? 0 : (rotateDirection < 0 ? -1 : 1));
         if (targetRotation > 180)
         {
@@ -33,7 +41,14 @@ public class CameraHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Mathf.Abs(currentRotation - targetRotation) > 0.1f)
+        if (stickRotation.magnitude >= .1f)
+        {
+            isKeyboard = false;
+            cam.m_XAxis.Value += stickRotation.x * Time.deltaTime * 90;
+            cam.m_YAxis.Value += stickRotation.y * Time.deltaTime;
+        }
+
+        if (Mathf.Abs(currentRotation - targetRotation) > 0.1f && isKeyboard)
         {
             currentRotation = Mathf.LerpAngle(currentRotation, targetRotation, rotationSpeed * Time.deltaTime);
 
@@ -41,6 +56,7 @@ public class CameraHandler : MonoBehaviour
 
             cam.m_XAxis.Value = currentRotation;
         }
+
     }
 
     // want to make PlayerCharacterHandler also use this... logic in that gets a little funky, though. Might be a refactor day for that.

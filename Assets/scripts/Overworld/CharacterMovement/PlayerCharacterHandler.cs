@@ -11,6 +11,7 @@ public class PlayerCharacterHandler : CharacterHandler
     Vector3 leaderPosition;
     Vector2 runMove;
     Vector2 walkMove;
+    bool jumped;
 
     float speedMultiplier = 1f;
     float followDistance = 1.5f;
@@ -27,7 +28,7 @@ public class PlayerCharacterHandler : CharacterHandler
         controls.overworld.Walk.performed += ctx => walkMove = ctx.ReadValue<Vector2>();
         controls.overworld.Walk.canceled += ctx => walkMove = Vector2.zero;
 
-        controls.overworld.Jump.performed += ctx => OnJump();
+        controls.overworld.Jump.performed += ctx => OnJump(partyHandler.leadCharacter == this);
     }
 
     private void Start()
@@ -39,7 +40,6 @@ public class PlayerCharacterHandler : CharacterHandler
     void Update()
     {
         moveHistory.Enqueue(transform.position);
-        if (moveHistory.Count > 15) moveHistory.Dequeue();
 
         if (partyHandler.leadCharacter == this)
         {
@@ -55,9 +55,9 @@ public class PlayerCharacterHandler : CharacterHandler
         Move();
         AnimationStateCheck();
     }
-    public void OnJump()
+    public void OnJump(bool isLeader = false)
     {
-        if (isGrounded)
+        if (isGrounded && isLeader)
         {
             state = CharacterState.JUMPING;
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
@@ -113,6 +113,11 @@ public class PlayerCharacterHandler : CharacterHandler
         {
             leaderPosition = leader.moveHistory.Dequeue();
 
+            if (leaderPosition.y > transform.position.y + 1.5f)
+            {
+                OnJump(true);
+            }
+
             // need position relative to main camera in world space to adjust for rotation
             leaderPosition = Camera.main.transform.InverseTransformPoint(leaderPosition);
             Vector3 posRelToCam = Camera.main.transform.InverseTransformPoint(transform.position);
@@ -134,6 +139,7 @@ public class PlayerCharacterHandler : CharacterHandler
         }
         else
             move = new Vector2(0f, 0f);
+
 
         if (state != CharacterState.JUMPING && state != CharacterState.FALLING)
         {

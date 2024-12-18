@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "ManualCamera",
+                    "type": "Value",
+                    "id": "ef63f4c1-fc97-4a70-85c6-df750fdc6106",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -207,39 +216,6 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Stick",
-                    "id": "e776c4c8-e7fe-4008-81a9-e51163963952",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "CameraRotation",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "e819dd70-3a17-40bb-a452-ba88ad0b9928",
-                    "path": "<Gamepad>/rightStick/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Controller",
-                    "action": "CameraRotation",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "53fb2285-05c2-4717-8bad-4412a2e05d0b",
-                    "path": "<Gamepad>/rightStick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Controller",
-                    "action": "CameraRotation",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "",
                     "id": "9db9bbdb-cfd7-4265-aca9-f1a8701739b6",
                     "path": "<Gamepad>/buttonEast",
@@ -381,6 +357,17 @@
                     "action": "Walk",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "3643c1a7-a22f-4ce9-8604-fdab0b01954e",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "ManualCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
