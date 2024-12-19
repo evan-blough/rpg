@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class NonPlayerCharacterHandler : CharacterHandler
 {
-    private bool isActive = false;
+    protected bool isActive = false;
     public NPCMovement movement;
 
     private void Start()
@@ -21,14 +21,14 @@ public class NonPlayerCharacterHandler : CharacterHandler
         AnimationStateCheck();
     }
 
-    protected IEnumerator WaitToStart()
+    protected virtual IEnumerator WaitToStart()
     {
         yield return new WaitForSeconds(2f);
         isActive = true;
         movement.canMove = true;
     }
 
-    public override void SetMovement()
+    public virtual void SetMovement()
     {
         if (isActive)
         {
@@ -36,7 +36,7 @@ public class NonPlayerCharacterHandler : CharacterHandler
         }
         else move = new Vector2(0f, 0f);
 
-        base.SetMovement();
+        ApplyMoveVector();
     }
 
     public override void Move()

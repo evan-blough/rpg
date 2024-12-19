@@ -63,7 +63,7 @@ public abstract class CharacterHandler : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    public virtual void SetMovement()
+    public void ApplyMoveVector()
     {
         sprite.gameObject.transform.rotation = Camera.main.transform.rotation;
 

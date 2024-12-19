@@ -159,7 +159,7 @@ public class PlayerCharacterHandler : CharacterHandler
 
     public override void Move()
     {
-        SetMovement();
+        ApplyMoveVector();
         currentSpeed = runMove != Vector2.zero ? speed * speedMultiplier : speed * speedMultiplier / 2.0f;
 
         base.Move();
