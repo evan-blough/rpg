@@ -4,6 +4,7 @@ public abstract class CharacterHandler : MonoBehaviour
 {
     public CharacterController controller;
     public Transform cam;
+    protected Camera mainCamera;
     public SpriteRenderer sprite;
     public Animator animator;
     protected float speed = 10f;
@@ -13,18 +14,21 @@ public abstract class CharacterHandler : MonoBehaviour
     public Vector3 direction;
     public Vector2 move;
     protected int directionMultiplier = 1;
-    public float runDirection = 0f;
     protected Vector3 velocity;
     public bool isGrounded;
     public Transform groundCheck;
     public float groundDistance = 1f;
     public LayerMask groundMask;
 
+    private void Start()
+    {
+        mainCamera = Camera.main;
+    }
     public virtual void Move()
     {
         if (direction.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + Camera.main.transform.eulerAngles.y;
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + mainCamera.transform.eulerAngles.y;
 
             transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
@@ -32,7 +36,6 @@ public abstract class CharacterHandler : MonoBehaviour
             animator.SetFloat("Speed", currentSpeed / 11);
 
             controller.Move(moveDir.normalized * currentSpeed * Time.deltaTime);
-            runDirection = directionMultiplier * Vector3.Angle(moveDir, Camera.main.transform.forward);
         }
     }
 
@@ -65,7 +68,7 @@ public abstract class CharacterHandler : MonoBehaviour
 
     public void ApplyMoveVector()
     {
-        sprite.gameObject.transform.rotation = Camera.main.transform.rotation;
+        sprite.gameObject.transform.rotation = mainCamera.transform.rotation;
 
         // make movement relative to the camera
         var forward = cam.transform.forward;

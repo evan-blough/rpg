@@ -34,6 +34,7 @@ public class PlayerCharacterHandler : CharacterHandler
     private void Start()
     {
         cam = SceneManager.instance.cam.transform;
+        mainCamera = Camera.main;
     }
 
     // Update is called once per frame
@@ -119,8 +120,8 @@ public class PlayerCharacterHandler : CharacterHandler
             }
 
             // need position relative to main camera in world space to adjust for rotation
-            leaderPosition = Camera.main.transform.InverseTransformPoint(leaderPosition);
-            Vector3 posRelToCam = Camera.main.transform.InverseTransformPoint(transform.position);
+            leaderPosition = mainCamera.transform.InverseTransformPoint(leaderPosition);
+            Vector3 posRelToCam = mainCamera.transform.InverseTransformPoint(transform.position);
 
 
             if (Vector3.Distance(leaderPosition, posRelToCam) < followDistance)
@@ -194,21 +195,8 @@ public class PlayerCharacterHandler : CharacterHandler
                 animator.SetBool("Jumping", true);
             else if (state == CharacterState.FALLING)
                 animator.SetBool("Falling", true);
-
-            animDirection = GetDirection(runDirection);
-            animator.SetFloat("Direction", animDirection);
         }
-        else
-        {
-            var angleDif = CameraHandler.AngleNormalization(sprite.transform.eulerAngles.y);
-
-            animDirection = GetDirection(transform.eulerAngles.y - angleDif);
-            animator.SetFloat("Direction", animDirection);
-        }
-        if (animDirection <= 7 && animDirection >= 5)
-            sprite.flipX = true;
-        else
-            sprite.flipX = false;
+        base.AnimationStateCheck();
     }
 
     public void OnEnable()
