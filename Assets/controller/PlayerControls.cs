@@ -80,6 +80,24 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""QuickMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""ba0f33a7-5191-4835-83e8-1ea14b942db2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""3647a105-415e-4e78-953e-b2de759913ea"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -152,7 +170,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7ac6a464-a09e-4741-8e87-44c0436ade7c"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
@@ -390,6 +408,50 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""ManualCamera"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""93cefeae-4158-4231-b5e6-cbb2115bf231"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""566dad75-4e68-4493-b0de-14c56477ba65"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keyboard"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9d70d58f-ed2f-45d2-96e5-2531662af351"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keyboard"",
+                    ""action"": ""QuickMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d5a44411-a0ed-4e2c-9941-e0ae56c044a3"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""QuickMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -415,6 +477,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_overworld_Interact = m_overworld.FindAction("Interact", throwIfNotFound: true);
         m_overworld_Walk = m_overworld.FindAction("Walk", throwIfNotFound: true);
         m_overworld_ManualCamera = m_overworld.FindAction("ManualCamera", throwIfNotFound: true);
+        m_overworld_QuickMenu = m_overworld.FindAction("QuickMenu", throwIfNotFound: true);
+        m_overworld_Cancel = m_overworld.FindAction("Cancel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -482,6 +546,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_overworld_Interact;
     private readonly InputAction m_overworld_Walk;
     private readonly InputAction m_overworld_ManualCamera;
+    private readonly InputAction m_overworld_QuickMenu;
+    private readonly InputAction m_overworld_Cancel;
     public struct OverworldActions
     {
         private @PlayerControls m_Wrapper;
@@ -492,6 +558,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_overworld_Interact;
         public InputAction @Walk => m_Wrapper.m_overworld_Walk;
         public InputAction @ManualCamera => m_Wrapper.m_overworld_ManualCamera;
+        public InputAction @QuickMenu => m_Wrapper.m_overworld_QuickMenu;
+        public InputAction @Cancel => m_Wrapper.m_overworld_Cancel;
         public InputActionMap Get() { return m_Wrapper.m_overworld; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -519,6 +587,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @ManualCamera.started += instance.OnManualCamera;
             @ManualCamera.performed += instance.OnManualCamera;
             @ManualCamera.canceled += instance.OnManualCamera;
+            @QuickMenu.started += instance.OnQuickMenu;
+            @QuickMenu.performed += instance.OnQuickMenu;
+            @QuickMenu.canceled += instance.OnQuickMenu;
+            @Cancel.started += instance.OnCancel;
+            @Cancel.performed += instance.OnCancel;
+            @Cancel.canceled += instance.OnCancel;
         }
 
         private void UnregisterCallbacks(IOverworldActions instance)
@@ -541,6 +615,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @ManualCamera.started -= instance.OnManualCamera;
             @ManualCamera.performed -= instance.OnManualCamera;
             @ManualCamera.canceled -= instance.OnManualCamera;
+            @QuickMenu.started -= instance.OnQuickMenu;
+            @QuickMenu.performed -= instance.OnQuickMenu;
+            @QuickMenu.canceled -= instance.OnQuickMenu;
+            @Cancel.started -= instance.OnCancel;
+            @Cancel.performed -= instance.OnCancel;
+            @Cancel.canceled -= instance.OnCancel;
         }
 
         public void RemoveCallbacks(IOverworldActions instance)
@@ -584,5 +664,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnWalk(InputAction.CallbackContext context);
         void OnManualCamera(InputAction.CallbackContext context);
+        void OnQuickMenu(InputAction.CallbackContext context);
+        void OnCancel(InputAction.CallbackContext context);
     }
 }

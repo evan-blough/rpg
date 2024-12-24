@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 29916633}
   - component: {fileID: 29916635}
   - component: {fileID: 29916634}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ Transform:
   m_GameObject: {fileID: 35360053}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: -1.4, z: 85.990906}
+  m_LocalPosition: {x: 4, y: -2.41, z: 5.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 133740349}
   - component: {fileID: 133740351}
   - component: {fileID: 133740350}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 156179010}
   - component: {fileID: 156179009}
   - component: {fileID: 156179008}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Defend
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 180499513}
   - component: {fileID: 180499515}
   - component: {fileID: 180499514}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Loss box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,7 +532,7 @@ GameObject:
   - component: {fileID: 189710961}
   - component: {fileID: 189710963}
   - component: {fileID: 189710962}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: WinBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 257787216}
   - component: {fileID: 257787218}
   - component: {fileID: 257787217}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: GameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,7 +765,7 @@ AudioSource:
   m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -857,7 +857,7 @@ GameObject:
   - component: {fileID: 300300791}
   - component: {fileID: 300300793}
   - component: {fileID: 300300792}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: EXPText (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -936,7 +936,7 @@ GameObject:
   - component: {fileID: 329499083}
   - component: {fileID: 329499085}
   - component: {fileID: 329499084}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: LossBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1026,7 +1026,7 @@ Transform:
   m_GameObject: {fileID: 331999504}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 1, z: 85.990906}
+  m_LocalPosition: {x: 1.5, y: -2.41, z: 8.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1057,7 +1057,7 @@ Transform:
   m_GameObject: {fileID: 388255439}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: -1.25, z: 0.27808008}
+  m_LocalPosition: {x: -2.5, y: -2.41, z: 5.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1074,7 +1074,7 @@ GameObject:
   - component: {fileID: 409046762}
   - component: {fileID: 409046764}
   - component: {fileID: 409046763}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: EnemyTopLeftDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1167,7 +1167,7 @@ Transform:
   m_GameObject: {fileID: 417806089}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 1.25, z: 250.23}
+  m_LocalPosition: {x: -2.5, y: -2.41, z: 8.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1184,7 +1184,7 @@ GameObject:
   - component: {fileID: 418803283}
   - component: {fileID: 418803285}
   - component: {fileID: 418803284}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: SkillDescription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1263,7 +1263,7 @@ GameObject:
   - component: {fileID: 462832073}
   - component: {fileID: 462832075}
   - component: {fileID: 462832074}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1345,7 +1345,7 @@ GameObject:
   - component: {fileID: 487546774}
   - component: {fileID: 487546773}
   - component: {fileID: 487546772}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: EnemyList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1366,9 +1366,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1439259822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.78266674, y: 0.8704445}
-  m_AnchorMax: {x: 0.78266674, y: 0.8834075}
-  m_AnchoredPosition: {x: 0, y: 2.9620056}
+  m_AnchorMin: {x: 0.79552084, y: 0.87600005}
+  m_AnchorMax: {x: 0.80020833, y: 0.8834075}
+  m_AnchoredPosition: {x: -1, y: 0.5}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &487546772
@@ -1505,7 +1505,7 @@ GameObject:
   - component: {fileID: 490005499}
   - component: {fileID: 490005498}
   - component: {fileID: 490005497}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: ItemDescriptionBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1639,6 +1639,98 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &492132597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 492132598}
+  - component: {fileID: 492132600}
+  - component: {fileID: 492132599}
+  m_Layer: 7
+  m_Name: Terrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &492132598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492132597}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -50, y: -5.17, z: 3.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1215258744}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!154 &492132599
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492132597}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_TerrainData: {fileID: 15600000, guid: 72030ef67abb3b04ca75a80623148189, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &492132600
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492132597}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: 72030ef67abb3b04ca75a80623148189, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
+  m_IgnoreQualitySettings: 0
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ReceiveGI: 1
+  m_ScaleInLightmap: 0.0256
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+  m_EnableHeightmapRayTracing: 1
+  m_EnableTreesAndDetailsRayTracing: 0
+  m_TreeMotionVectorModeOverride: 3
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,7 +1766,7 @@ Camera:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1698,19 +1790,19 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 148.5
-  orthographic: 1
+  field of view: 60
+  orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 0
+  m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 0
+  m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 0
@@ -1724,13 +1816,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.54}
+  m_LocalRotation: {x: 0.15431033, y: -0, z: -0, w: 0.9880225}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 17.754, y: 0, z: 0}
 --- !u!1 &638567308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,7 +1835,7 @@ GameObject:
   - component: {fileID: 638567312}
   - component: {fileID: 638567311}
   - component: {fileID: 638567310}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Flee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1875,7 +1967,7 @@ GameObject:
   - component: {fileID: 651386066}
   - component: {fileID: 651386068}
   - component: {fileID: 651386067}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: UpperStationDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1954,7 +2046,7 @@ GameObject:
   - component: {fileID: 687114324}
   - component: {fileID: 687114326}
   - component: {fileID: 687114325}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: GoldText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2033,7 +2125,7 @@ GameObject:
   - component: {fileID: 711341389}
   - component: {fileID: 711341391}
   - component: {fileID: 711341390}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2126,7 +2218,7 @@ Transform:
   m_GameObject: {fileID: 711391065}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.5, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: -2.41, z: 6.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2143,7 +2235,7 @@ GameObject:
   - component: {fileID: 767724428}
   - component: {fileID: 767724430}
   - component: {fileID: 767724429}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: EXPText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2222,7 +2314,7 @@ GameObject:
   - component: {fileID: 780319071}
   - component: {fileID: 780319073}
   - component: {fileID: 780319072}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2301,7 +2393,7 @@ GameObject:
   - component: {fileID: 788492564}
   - component: {fileID: 788492566}
   - component: {fileID: 788492565}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Flee box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2378,7 +2470,7 @@ GameObject:
   - component: {fileID: 796842050}
   - component: {fileID: 796842049}
   - component: {fileID: 796842051}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: WinBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2476,7 +2568,7 @@ GameObject:
   - component: {fileID: 817446377}
   - component: {fileID: 817446376}
   - component: {fileID: 817446378}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: CostBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2580,7 +2672,7 @@ Transform:
   m_GameObject: {fileID: 832782473}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5, y: 1, z: 85.990906}
+  m_LocalPosition: {x: 4, y: -2.41, z: 8.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2597,7 +2689,7 @@ GameObject:
   - component: {fileID: 850240381}
   - component: {fileID: 850240383}
   - component: {fileID: 850240382}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2678,7 +2770,7 @@ GameObject:
   - component: {fileID: 854165878}
   - component: {fileID: 854165880}
   - component: {fileID: 854165879}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Status text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2757,7 +2849,7 @@ GameObject:
   - component: {fileID: 894669946}
   - component: {fileID: 894669948}
   - component: {fileID: 894669947}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: CostVariableText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2837,7 +2929,7 @@ GameObject:
   - component: {fileID: 907272892}
   - component: {fileID: 907272891}
   - component: {fileID: 907272893}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Flee Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2926,7 +3018,7 @@ GameObject:
   - component: {fileID: 975949728}
   - component: {fileID: 975949730}
   - component: {fileID: 975949729}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: EXPText (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3005,7 +3097,7 @@ GameObject:
   - component: {fileID: 980145190}
   - component: {fileID: 980145192}
   - component: {fileID: 980145191}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: CharacterName(2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3084,7 +3176,7 @@ GameObject:
   - component: {fileID: 1019954637}
   - component: {fileID: 1019954638}
   - component: {fileID: 1019954639}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: EnemyBottomBackDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3164,7 +3256,7 @@ GameObject:
   - component: {fileID: 1051633573}
   - component: {fileID: 1051633572}
   - component: {fileID: 1051633574}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: MainUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3270,7 +3362,7 @@ GameObject:
   - component: {fileID: 1056412051}
   - component: {fileID: 1056412050}
   - component: {fileID: 1056412049}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Commands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3403,7 +3495,7 @@ GameObject:
   - component: {fileID: 1058684173}
   - component: {fileID: 1058684172}
   - component: {fileID: 1058684171}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Swap Row
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3535,7 +3627,7 @@ GameObject:
   - component: {fileID: 1060816735}
   - component: {fileID: 1060816734}
   - component: {fileID: 1060816733}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: EnemyTopBackDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3663,7 +3755,7 @@ GameObject:
   - component: {fileID: 1090240640}
   - component: {fileID: 1090240639}
   - component: {fileID: 1090240638}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: ItemList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3763,7 +3855,7 @@ GameObject:
   - component: {fileID: 1091977928}
   - component: {fileID: 1091977927}
   - component: {fileID: 1091977926}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Recover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3898,7 +3990,7 @@ GameObject:
   - component: {fileID: 1126763619}
   - component: {fileID: 1126763618}
   - component: {fileID: 1126763622}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: HeroList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4115,7 +4207,7 @@ GameObject:
   - component: {fileID: 1136135236}
   - component: {fileID: 1136135238}
   - component: {fileID: 1136135237}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: RigidGOLD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4244,7 +4336,7 @@ GameObject:
   - component: {fileID: 1207855823}
   - component: {fileID: 1207855822}
   - component: {fileID: 1207855821}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: CommandList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4349,7 +4441,7 @@ GameObject:
   - component: {fileID: 1210415268}
   - component: {fileID: 1210415270}
   - component: {fileID: 1210415269}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: EnemySkillText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4428,7 +4520,7 @@ GameObject:
   - component: {fileID: 1212715983}
   - component: {fileID: 1212715985}
   - component: {fileID: 1212715984}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4496,6 +4588,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212715982}
   m_CullTransparentMesh: 1
+--- !u!1 &1215258743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1215258744}
+  m_Layer: 4
+  m_Name: CurrentArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1215258744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215258743}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 492132598}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1216081510
 GameObject:
   m_ObjectHideFlags: 0
@@ -4507,7 +4631,7 @@ GameObject:
   - component: {fileID: 1216081511}
   - component: {fileID: 1216081513}
   - component: {fileID: 1216081512}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Fled
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4586,7 +4710,7 @@ GameObject:
   - component: {fileID: 1299480764}
   - component: {fileID: 1299480766}
   - component: {fileID: 1299480765}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: CharacterName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4665,7 +4789,7 @@ GameObject:
   - component: {fileID: 1339731080}
   - component: {fileID: 1339731082}
   - component: {fileID: 1339731081}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: SP COST
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4745,7 +4869,7 @@ GameObject:
   - component: {fileID: 1432093355}
   - component: {fileID: 1432093354}
   - component: {fileID: 1432093356}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: SkillDescriptionBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4835,7 +4959,7 @@ GameObject:
   - component: {fileID: 1439259821}
   - component: {fileID: 1439259820}
   - component: {fileID: 1439259819}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4891,7 +5015,7 @@ Canvas:
   m_GameObject: {fileID: 1439259818}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -4903,7 +5027,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 1488012547
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1439259822
 RectTransform:
@@ -4955,7 +5079,7 @@ GameObject:
   - component: {fileID: 1481337971}
   - component: {fileID: 1481337973}
   - component: {fileID: 1481337972}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: ItemDescription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5035,7 +5159,7 @@ GameObject:
   - component: {fileID: 1496987127}
   - component: {fileID: 1496987126}
   - component: {fileID: 1496987125}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5168,7 +5292,7 @@ GameObject:
   - component: {fileID: 1502954709}
   - component: {fileID: 1502954708}
   - component: {fileID: 1502954707}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Items
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5300,7 +5424,7 @@ GameObject:
   - component: {fileID: 1505020951}
   - component: {fileID: 1505020953}
   - component: {fileID: 1505020952}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: EnemyBottomLeftDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5379,7 +5503,7 @@ GameObject:
   - component: {fileID: 1515267415}
   - component: {fileID: 1515267417}
   - component: {fileID: 1515267416}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: BackRowDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5458,7 +5582,7 @@ GameObject:
   - component: {fileID: 1582867393}
   - component: {fileID: 1582867395}
   - component: {fileID: 1582867394}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: CharacterName (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5605,7 +5729,7 @@ GameObject:
   - component: {fileID: 1752359443}
   - component: {fileID: 1752359445}
   - component: {fileID: 1752359444}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: RigidEXP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5685,7 +5809,7 @@ GameObject:
   - component: {fileID: 1785070858}
   - component: {fileID: 1785070857}
   - component: {fileID: 1785070856}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Skills
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5806,90 +5930,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785070854}
   m_CullTransparentMesh: 1
---- !u!1 &1829834720
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1829834721}
-  - component: {fileID: 1829834722}
-  m_Layer: 6
-  m_Name: Background 7 (Bonus)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1829834721
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829834720}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.44846, y: 0.44846, z: 0.44846}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1829834722
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829834720}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 540271965
-  m_SortingLayer: -2
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 65cd764d3e245dd439eb0df9e92550fa, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 50, y: 25}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1848522160
 GameObject:
   m_ObjectHideFlags: 0
@@ -5901,7 +5941,7 @@ GameObject:
   - component: {fileID: 1848522161}
   - component: {fileID: 1848522163}
   - component: {fileID: 1848522162}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: LowerStationDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5981,7 +6021,7 @@ GameObject:
   - component: {fileID: 1913652319}
   - component: {fileID: 1913652318}
   - component: {fileID: 1913652317}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: EnemySkillBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6071,7 +6111,7 @@ GameObject:
   - component: {fileID: 1939600019}
   - component: {fileID: 1939600018}
   - component: {fileID: 1939600020}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: SkillList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6170,7 +6210,7 @@ GameObject:
   - component: {fileID: 1972031519}
   - component: {fileID: 1972031521}
   - component: {fileID: 1972031520}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6310,7 +6350,7 @@ Transform:
   m_GameObject: {fileID: 2009594320}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: -1.4, z: 85.990906}
+  m_LocalPosition: {x: 2, y: -2.41, z: 5.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6352,6 +6392,7 @@ MonoBehaviour:
     skillDescription: 
     skillPointCost: 0
     active: 0
+    isEquipped: 0
     levelReq: 0
     criticalModifier: 0
     powerModifier: 0
@@ -6436,6 +6477,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 1215258744}
   - {fileID: 283585011}
   - {fileID: 1439259822}
   - {fileID: 331999505}
@@ -6445,7 +6487,6 @@ SceneRoots:
   - {fileID: 417806090}
   - {fileID: 388255440}
   - {fileID: 711391066}
-  - {fileID: 1829834721}
   - {fileID: 1712897803}
   - {fileID: 2005655175}
   - {fileID: 2117507430}

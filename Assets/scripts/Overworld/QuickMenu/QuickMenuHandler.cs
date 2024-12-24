@@ -1,0 +1,37 @@
+using UnityEngine;
+
+public class QuickMenuHandler : MonoBehaviour
+{
+    PlayerControls controls;
+    public QuickMenu menu;
+
+    private void Start()
+    {
+        controls = ControlsHandler.instance.playerControls;
+
+        controls.overworld.QuickMenu.performed += ctx => ActivateQuickMenu();
+
+        controls.overworld.Cancel.performed += ctx => DeactivateQuickMenu();
+    }
+
+    public void ActivateQuickMenu()
+    {
+        if (menu.gameObject.activeInHierarchy)
+        {
+            DeactivateQuickMenu();
+            return;
+        }
+
+        menu.SetMenu();
+
+        menu.gameObject.SetActive(true);
+    }
+
+    public void DeactivateQuickMenu()
+    {
+        if (menu.gameObject.activeInHierarchy)
+        {
+            menu.gameObject.SetActive(false);
+        }
+    }
+}
