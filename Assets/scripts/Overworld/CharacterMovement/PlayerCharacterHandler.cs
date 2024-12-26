@@ -67,7 +67,7 @@ public class PlayerCharacterHandler : CharacterHandler
     public override void VerticalMovement()
     {
         //jump
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, controller.height, groundMask);
 
         if (isGrounded && velocity.y < 0)
         {

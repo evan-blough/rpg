@@ -35,6 +35,13 @@ public abstract class CharacterHandler : MonoBehaviour
 
             animator.SetFloat("Speed", currentSpeed / 11);
 
+            var futurePosition = transform.position + (moveDir.normalized * currentSpeed * Time.deltaTime);
+
+            if (!Physics.Raycast(futurePosition, Vector3.down, groundDistance, groundMask) && velocity.y < .1f && isGrounded)
+            {
+                moveDir = moveDir + Vector3.down;
+            }
+
             controller.Move(moveDir.normalized * currentSpeed * Time.deltaTime);
         }
     }

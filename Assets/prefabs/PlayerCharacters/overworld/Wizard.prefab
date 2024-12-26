@@ -159,7 +159,6 @@ MonoBehaviour:
   animDirection: 0
   direction: {x: 0, y: 0, z: 0}
   move: {x: 0, y: 0}
-  runDirection: 0
   isGrounded: 0
   groundCheck: {fileID: 531982098335607982}
   groundDistance: 1
@@ -188,7 +187,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 1
-  m_Radius: 0.5
+  m_Radius: 0.1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
