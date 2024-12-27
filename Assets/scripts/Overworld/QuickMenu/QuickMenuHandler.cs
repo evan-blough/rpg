@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class QuickMenuHandler : MonoBehaviour
+public class MenuHandler : MonoBehaviour
 {
     PlayerControls controls;
     public QuickMenu menu;
@@ -12,6 +12,8 @@ public class QuickMenuHandler : MonoBehaviour
         controls.overworld.QuickMenu.performed += ctx => ActivateQuickMenu();
 
         controls.overworld.Cancel.performed += ctx => DeactivateQuickMenu();
+
+        controls.overworld.Menu.performed += ctx => OpenMenu();
     }
 
     public void ActivateQuickMenu()
@@ -33,5 +35,10 @@ public class QuickMenuHandler : MonoBehaviour
         {
             menu.gameObject.SetActive(false);
         }
+    }
+
+    public void OpenMenu()
+    {
+        SceneManager.instance.StartCoroutine(SceneManager.instance.OpenMenu());
     }
 }

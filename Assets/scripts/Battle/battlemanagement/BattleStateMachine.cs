@@ -36,7 +36,7 @@ public class BattleStateMachine : MonoBehaviour
     public void Start()
     {
         gameManager = SceneManager.instance;
-        StartCoroutine(gameManager.BattleTransitionTime("Enter_Scene"));
+        StartCoroutine(gameManager.TransitionTime("Enter_Scene", .5f));
         partyHandler = BattlePartyHandler.instance;
         uiHandler.OnStart();
         state = BattleStates.START;
