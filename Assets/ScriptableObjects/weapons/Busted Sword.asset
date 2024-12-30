@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad432990600af61429f59a56b9d9086c, type: 3}
+  m_Name: Busted Sword
+  m_EditorClassIdentifier: 
+  itemName: Busted Sword
+  itemDescription: 'A sword that''s seen more than its fair share of battles. '
+  itemPrice: 100
+  itemEffect:
+    effectValue: 0
+    isMultiTargeted: 0
+    itemType: 0
+    statuses: []
+    element: 0
+  attackBuff: 20
+  defenseBuff: 5
+  magicAttackBuff: 0
+  magicDefenseBuff: 5
+  agilityBuff: 0
+  weight: 2
+  element: 0
+  statuses: []

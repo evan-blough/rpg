@@ -500,94 +500,6 @@ Transform:
   - {fileID: 1746119510}
   m_Father: {fileID: 2056121246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &204529223
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 204529224}
-  - component: {fileID: 204529227}
-  - component: {fileID: 204529226}
-  - component: {fileID: 204529225}
-  m_Layer: 0
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &204529224
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204529223}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.441877, y: 4.843589, z: 0.81100994}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1533934836}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -700, y: -350}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!225 &204529225
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204529223}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
---- !u!114 &204529226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204529223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &204529227
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204529223}
-  m_CullTransparentMesh: 1
 --- !u!1001 &216932725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -653,6 +565,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 628a62bb84f141b4aa0fa30af055a7ef, type: 3}
+--- !u!1 &394513087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 394513089}
+  - component: {fileID: 394513088}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &394513088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394513087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8f90f32b661254e98f67387ca54123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  enemyInBattle: {fileID: 0}
+  animator: {fileID: 1147446287}
+--- !u!4 &394513089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394513087}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.43576, y: 1.620879, z: -47.90675}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1147446291}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &430111606 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1652031604700238094, guid: 80dfb76abf03a9943bb5c110291fee93, type: 3}
@@ -763,6 +723,163 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &636204834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 636204837}
+  - component: {fileID: 636204836}
+  - component: {fileID: 636204835}
+  - component: {fileID: 636204838}
+  - component: {fileID: 636204839}
+  - component: {fileID: 636204840}
+  m_Layer: 0
+  m_Name: TreasureBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &636204835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636204834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119699c97b6cf9543b57266d416f8da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!212 &636204836
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636204834}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -1551524844, guid: 873d821c71021ca4a92d61fbaba4e614, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &636204837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636204834}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.22, y: 0.58, z: -3.52}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &636204838
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636204834}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &636204839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636204834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff0ddc1ac9745a4bbac497ac146d4bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 652a926482a042445816d55325173317, type: 2}
+  itemNum: 1
+  isCollected: 0
+--- !u!135 &636204840
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636204834}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &663269401
 GameObject:
   m_ObjectHideFlags: 3
@@ -875,6 +992,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8b78ac948f05a46a6d8339a503172b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &683718917
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 125852, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: m_Name
+      value: Dialogue Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
 --- !u!1 &713236125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,54 +1219,6 @@ Transform:
   m_Children:
   - {fileID: 663269402}
   m_Father: {fileID: 2056121246}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &870025169
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 870025171}
-  - component: {fileID: 870025170}
-  m_Layer: 0
-  m_Name: SceneManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &870025170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870025169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d8f90f32b661254e98f67387ca54123, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  enemyInBattle: {fileID: 0}
-  animator: {fileID: 1533934837}
---- !u!4 &870025171
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870025169}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.43576, y: 1.620879, z: -47.90675}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1533934836}
-  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1004354058 stripped
 Transform:
@@ -1351,6 +1477,130 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!1 &1147446286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1147446291}
+  - component: {fileID: 1147446290}
+  - component: {fileID: 1147446289}
+  - component: {fileID: 1147446288}
+  - component: {fileID: 1147446287}
+  m_Layer: 0
+  m_Name: Transition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1147446287
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147446286}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 34c503287993e5c4ab6ce622dd40ba44, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1147446288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147446286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1147446289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147446286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1147446290
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147446286}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 1739515326}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1147446291
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147446286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1437247895}
+  m_Father: {fileID: 394513089}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1001 &1244284226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1579,6 +1829,94 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 1652031604700238094, guid: 80dfb76abf03a9943bb5c110291fee93, type: 3}
   m_PrefabInstance: {fileID: 1244284226}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1437247894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1437247895}
+  - component: {fileID: 1437247898}
+  - component: {fileID: 1437247897}
+  - component: {fileID: 1437247896}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1437247895
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437247894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 8.441877, y: 4.843589, z: 0.81100994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1147446291}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -700, y: -350}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1437247896
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437247894}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1437247897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437247894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1437247898
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437247894}
+  m_CullTransparentMesh: 1
 --- !u!1 &1476581605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,130 +2011,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1533934835
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1533934836}
-  - component: {fileID: 1533934840}
-  - component: {fileID: 1533934839}
-  - component: {fileID: 1533934838}
-  - component: {fileID: 1533934837}
-  m_Layer: 0
-  m_Name: Transition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1533934836
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1533934835}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 204529224}
-  m_Father: {fileID: 870025171}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!95 &1533934837
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1533934835}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 34c503287993e5c4ab6ce622dd40ba44, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1533934838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1533934835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1533934839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1533934835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &1533934840
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1533934835}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 1739515326}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!1 &1739515324
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,7 +2362,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1747148165
+--- !u!1 &1873256339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6833651356911179426, guid: 80dfb76abf03a9943bb5c110291fee93, type: 3}
+  m_PrefabInstance: {fileID: 12997267}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1873256343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873256339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b49bff210cc1bf49910c77c4f3678e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPoint: {x: 0, y: 0, z: 0}
+  movementRadius: 5
+  movementFrequency: 0
+  movementPause: 1.5
+  movementTime: 0.5
+  canMove: 0
+  isMoving: 0
+  whatever: {fileID: 0}
+--- !u!4 &1873256345 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6403071026584776699, guid: 80dfb76abf03a9943bb5c110291fee93, type: 3}
+  m_PrefabInstance: {fileID: 12997267}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1909506363
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2156,9 +2400,416 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1747148168}
-  - component: {fileID: 1747148167}
-  - component: {fileID: 1747148166}
+  - component: {fileID: 1909506365}
+  - component: {fileID: 1909506364}
+  m_Layer: 0
+  m_Name: PartyHandlerSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1909506364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909506363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0864ce6af2061fb47b2825f0a9a5df31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partyData: []
+  heroData:
+    unitName: Hero
+    level: 1
+    maxHP: 200
+    maxSP: 20
+    currSP: 20
+    currHP: 200
+    strength: 30
+    constitution: 20
+    intelligence: 10
+    spirit: 15
+    speed: 10
+    luck: 10
+    currStatuses: []
+    isActive: 1
+    isBackRow: 0
+    portrait: {fileID: -608852291, guid: fae09291a07f8ec4cae064be59d978c3, type: 3}
+    expHandler:
+      experienceCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 99
+          value: 200000
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    weightClass: 3
+    skills:
+    - skillName: Skull Crusher
+      skillDescription: Delivers a high-powered axe kick to the skull. Increased
+        critical chance.
+      skillPointCost: 5
+      active: 1
+      isEquipped: 1
+      levelReq: 1
+      criticalModifier: 5
+      powerModifier: 1.5
+      accuracyModifier: 1
+      isMagic: 0
+      type: 0
+      isRanged: 0
+      isMultiTargeted: 0
+      elemAttribute: 0
+      applySelfStatuses: []
+      applyTargetStatuses: []
+      removeSelfStatuses: []
+      removeTargetStatuses: []
+    - skillName: Rebel Yell
+      skillDescription: Sounds a primal battle cry, causing fear in enemies while
+        entering a Berserk state.
+      skillPointCost: 5
+      active: 1
+      isEquipped: 1
+      levelReq: 1
+      criticalModifier: 1
+      powerModifier: 1
+      accuracyModifier: 0.8
+      isMagic: 1
+      type: 2
+      isRanged: 0
+      isMultiTargeted: 0
+      elemAttribute: 0
+      applySelfStatuses:
+      - status: 4
+        expirationTurn: 3
+        canBeCured: 0
+        accuracy: 1
+      - status: 6
+        expirationTurn: 2
+        canBeCured: 0
+        accuracy: 1
+      applyTargetStatuses:
+      - status: 5
+        expirationTurn: 3
+        canBeCured: 1
+        accuracy: 1
+      removeSelfStatuses: []
+      removeTargetStatuses: []
+    charInventory:
+      items:
+      - {fileID: 11400000, guid: 5b0d6e1408024224a9848f871f6f5955, type: 2}
+      - {fileID: 11400000, guid: 652a926482a042445816d55325173317, type: 2}
+      maxItems: 0
+    weapon: {fileID: 11400000, guid: 071ed8db7b43dd749bbeb3e88a0650c5, type: 2}
+    armor: {fileID: 11400000, guid: 37a7d84b7754e2c4ab4a0f903e466b6c, type: 2}
+    accessory1: {fileID: 11400000, guid: c08de3fc026cb4d41a70932790981e20, type: 2}
+    accessory2: {fileID: 0}
+    isInParty: 1
+    exp: 0
+  wizardData:
+    unitName: Wizard
+    level: 1
+    maxHP: 150
+    maxSP: 30
+    currSP: 30
+    currHP: 150
+    strength: 20
+    constitution: 15
+    intelligence: 20
+    spirit: 15
+    speed: 15
+    luck: 5
+    currStatuses: []
+    isActive: 1
+    isBackRow: 0
+    portrait: {fileID: 728856764, guid: fae09291a07f8ec4cae064be59d978c3, type: 3}
+    expHandler:
+      experienceCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 99
+          value: 200000
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    weightClass: 1
+    skills:
+    - skillName: Cure
+      skillDescription: Heals one ally a moderate amount.
+      skillPointCost: 5
+      active: 1
+      isEquipped: 1
+      levelReq: 1
+      criticalModifier: 1
+      powerModifier: 1
+      accuracyModifier: 1
+      isMagic: 1
+      type: 1
+      isRanged: 1
+      isMultiTargeted: 0
+      elemAttribute: 0
+      applySelfStatuses: []
+      applyTargetStatuses: []
+      removeSelfStatuses: []
+      removeTargetStatuses: []
+    - skillName: Heal
+      skillDescription: Heals all allies a small amount.
+      skillPointCost: 7
+      active: 1
+      isEquipped: 1
+      levelReq: 1
+      criticalModifier: 1
+      powerModifier: 1
+      accuracyModifier: 1
+      isMagic: 1
+      type: 1
+      isRanged: 1
+      isMultiTargeted: 1
+      elemAttribute: 0
+      applySelfStatuses: []
+      applyTargetStatuses: []
+      removeSelfStatuses: []
+      removeTargetStatuses: []
+    - skillName: Backstab
+      skillDescription: Slips around and impales the target. Deals critical damage
+        and has a chance to inflict Bleed.
+      skillPointCost: 4
+      active: 1
+      isEquipped: 1
+      levelReq: 1
+      criticalModifier: 2.5
+      powerModifier: 1.5
+      accuracyModifier: 1.5
+      isMagic: 0
+      type: 0
+      isRanged: 0
+      isMultiTargeted: 0
+      elemAttribute: 0
+      applySelfStatuses: []
+      applyTargetStatuses:
+      - status: 2
+        expirationTurn: 2
+        canBeCured: 1
+        accuracy: 0.5
+      removeSelfStatuses: []
+      removeTargetStatuses: []
+    - skillName: Raise
+      skillDescription: Utter a short prayer to revive a fallen party member with
+        a little HP.
+      skillPointCost: 15
+      active: 1
+      isEquipped: 1
+      levelReq: 1
+      criticalModifier: 1
+      powerModifier: 1
+      accuracyModifier: 1
+      isMagic: 1
+      type: 3
+      isRanged: 0
+      isMultiTargeted: 0
+      elemAttribute: 0
+      applySelfStatuses: []
+      applyTargetStatuses:
+      - status: 2
+        expirationTurn: 2
+        canBeCured: 1
+        accuracy: 0.5
+      removeSelfStatuses: []
+      removeTargetStatuses: []
+    - skillName: Arise-All
+      skillDescription: Revives all fallen party members with maximum HP.
+      skillPointCost: 30
+      active: 1
+      isEquipped: 1
+      levelReq: 1
+      criticalModifier: 5
+      powerModifier: 999
+      accuracyModifier: 1
+      isMagic: 1
+      type: 3
+      isRanged: 0
+      isMultiTargeted: 1
+      elemAttribute: 0
+      applySelfStatuses: []
+      applyTargetStatuses: []
+      removeSelfStatuses: []
+      removeTargetStatuses: []
+    charInventory:
+      items:
+      - {fileID: 11400000, guid: 090af2dc9acebe74f8347f86cc68974b, type: 2}
+      - {fileID: 11400000, guid: 090af2dc9acebe74f8347f86cc68974b, type: 2}
+      - {fileID: 11400000, guid: 652a926482a042445816d55325173317, type: 2}
+      - {fileID: 11400000, guid: b7fbfe1500396c14aa92a2e8faa0a391, type: 2}
+      maxItems: 0
+    weapon: {fileID: 11400000, guid: a0aed8a0f9790f443a7fbcf2f5daead2, type: 2}
+    armor: {fileID: 11400000, guid: a76dd72ed74770e47b3a52e31df98724, type: 2}
+    accessory1: {fileID: 11400000, guid: 7a8e64f91ff3d8e41896ddda304e18e3, type: 2}
+    accessory2: {fileID: 0}
+    isInParty: 1
+    exp: 0
+  senatorData:
+    unitName: Senator
+    level: 1
+    maxHP: 100
+    maxSP: 35
+    currSP: 35
+    currHP: 100
+    strength: 10
+    constitution: 10
+    intelligence: 25
+    spirit: 20
+    speed: 25
+    luck: 15
+    currStatuses: []
+    isActive: 1
+    isBackRow: 1
+    portrait: {fileID: 1009789545, guid: fae09291a07f8ec4cae064be59d978c3, type: 3}
+    expHandler:
+      experienceCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 99
+          value: 200000
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    weightClass: 2
+    skills:
+    - skillName: Death
+      skillDescription: Instantly kills an enemy... if it hits.
+      skillPointCost: 20
+      active: 1
+      isEquipped: 1
+      levelReq: 1
+      criticalModifier: 1
+      powerModifier: 1
+      accuracyModifier: 1
+      isMagic: 1
+      type: 2
+      isRanged: 0
+      isMultiTargeted: 0
+      elemAttribute: 0
+      applySelfStatuses: []
+      applyTargetStatuses:
+      - status: 7
+        expirationTurn: -1
+        canBeCured: 1
+        accuracy: 0.05
+      removeSelfStatuses: []
+      removeTargetStatuses: []
+    - skillName: Bolt
+      skillDescription: Fires a beam of lightning from afar. Can be used from the
+        back row.
+      skillPointCost: 5
+      active: 1
+      isEquipped: 1
+      levelReq: 1
+      criticalModifier: 1
+      powerModifier: 1.25
+      accuracyModifier: 1
+      isMagic: 1
+      type: 0
+      isRanged: 1
+      isMultiTargeted: 0
+      elemAttribute: 4
+      applySelfStatuses: []
+      applyTargetStatuses: []
+      removeSelfStatuses: []
+      removeTargetStatuses: []
+    charInventory:
+      items:
+      - {fileID: 11400000, guid: 4a085fcd2db670f419ea8347e8beb641, type: 2}
+      - {fileID: 11400000, guid: 652a926482a042445816d55325173317, type: 2}
+      maxItems: 0
+    weapon: {fileID: 11400000, guid: 5893a22409031d6479390574907630a5, type: 2}
+    armor: {fileID: 11400000, guid: 5581629ab299a1a42857d3c641c90722, type: 2}
+    accessory1: {fileID: 11400000, guid: c72475d64bc331a4585346fe56caf3d3, type: 2}
+    accessory2: {fileID: 0}
+    isInParty: 1
+    exp: 0
+  inventory:
+    items: []
+    keyItems: []
+  gold: 0
+--- !u!4 &1909506365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909506363}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2014259895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2014259898}
+  - component: {fileID: 2014259897}
+  - component: {fileID: 2014259896}
   m_Layer: 0
   m_Name: ControlsHandler
   m_TagString: Untagged
@@ -2166,13 +2817,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1747148166
+--- !u!114 &2014259896
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747148165}
+  m_GameObject: {fileID: 2014259895}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
@@ -2216,25 +2867,25 @@ MonoBehaviour:
   m_DefaultActionMap: overworld
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1747148167
+--- !u!114 &2014259897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747148165}
+  m_GameObject: {fileID: 2014259895}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ee11aab9c3cca14b915e33fc63d2290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1747148168
+--- !u!4 &2014259898
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747148165}
+  m_GameObject: {fileID: 2014259895}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.43576, y: 1.620879, z: -47.90675}
@@ -2243,36 +2894,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1873256339 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6833651356911179426, guid: 80dfb76abf03a9943bb5c110291fee93, type: 3}
-  m_PrefabInstance: {fileID: 12997267}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1873256343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1873256339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b49bff210cc1bf49910c77c4f3678e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  originalPoint: {x: 0, y: 0, z: 0}
-  movementRadius: 5
-  movementFrequency: 0
-  movementPause: 1.5
-  movementTime: 0.5
-  canMove: 0
-  isMoving: 0
-  whatever: {fileID: 0}
---- !u!4 &1873256345 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6403071026584776699, guid: 80dfb76abf03a9943bb5c110291fee93, type: 3}
-  m_PrefabInstance: {fileID: 12997267}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2037677605
 GameObject:
   m_ObjectHideFlags: 3
@@ -2689,414 +3310,6 @@ MonoBehaviour:
   - {x: 4.439, y: 1.26, z: 20}
   targetPoint: {x: 0, y: 0, z: 0}
   hasDelay: 1
---- !u!1 &2126671197
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2126671198}
-  - component: {fileID: 2126671199}
-  m_Layer: 0
-  m_Name: PartyHandlerSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2126671198
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126671197}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2126671199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126671197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0864ce6af2061fb47b2825f0a9a5df31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  partyData: []
-  heroData:
-    unitName: Hero
-    level: 1
-    maxHP: 200
-    maxSP: 20
-    currSP: 20
-    currHP: 200
-    strength: 30
-    constitution: 20
-    intelligence: 10
-    spirit: 15
-    speed: 10
-    luck: 10
-    currStatuses: []
-    isActive: 1
-    isBackRow: 0
-    portrait: {fileID: -608852291, guid: fae09291a07f8ec4cae064be59d978c3, type: 3}
-    expHandler:
-      experienceCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 99
-          value: 200000
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    weightClass: 3
-    skills:
-    - skillName: Skull Crusher
-      skillDescription: Delivers a high-powered axe kick to the skull. Increased
-        critical chance.
-      skillPointCost: 5
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 5
-      powerModifier: 1.5
-      accuracyModifier: 1
-      isMagic: 0
-      type: 0
-      isRanged: 0
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses: []
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Rebel Yell
-      skillDescription: Sounds a primal battle cry, causing fear in enemies while
-        entering a Berserk state.
-      skillPointCost: 5
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1
-      accuracyModifier: 0.8
-      isMagic: 1
-      type: 2
-      isRanged: 0
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses:
-      - status: 4
-        expirationTurn: 3
-        canBeCured: 0
-        accuracy: 1
-      - status: 6
-        expirationTurn: 2
-        canBeCured: 0
-        accuracy: 1
-      applyTargetStatuses:
-      - status: 5
-        expirationTurn: 3
-        canBeCured: 1
-        accuracy: 1
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    charInventory:
-      items:
-      - {fileID: 3271123177584135514, guid: ae63dc4f11d5d95439662e6a647b4861, type: 3}
-      - {fileID: -8188676650458331907, guid: 14f10625ce138934bb2258982bc8f5ce, type: 3}
-      - {fileID: 1423346543988370821, guid: 9a43f4d0a851a994082560863ce9dbc8, type: 3}
-      maxItems: 0
-    weapon: {fileID: 7450168070135004269, guid: 46003da1cbed6b649a2828dfc955c429, type: 3}
-    armor: {fileID: 6222597448484757221, guid: 7a77483ebeead354a872104ff8a16b31, type: 3}
-    accessory1: {fileID: 10736376745185, guid: 7838a7c859a387c4ca67e2a0a70a10f9, type: 3}
-    accessory2: {fileID: 0}
-    isInParty: 1
-    exp: 0
-  wizardData:
-    unitName: Wizard
-    level: 1
-    maxHP: 150
-    maxSP: 30
-    currSP: 30
-    currHP: 150
-    strength: 20
-    constitution: 15
-    intelligence: 20
-    spirit: 15
-    speed: 15
-    luck: 5
-    currStatuses: []
-    isActive: 1
-    isBackRow: 0
-    portrait: {fileID: 728856764, guid: fae09291a07f8ec4cae064be59d978c3, type: 3}
-    expHandler:
-      experienceCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 99
-          value: 200000
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    weightClass: 1
-    skills:
-    - skillName: Cure
-      skillDescription: Heals one ally a moderate amount.
-      skillPointCost: 5
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1
-      accuracyModifier: 1
-      isMagic: 1
-      type: 1
-      isRanged: 1
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses: []
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Heal
-      skillDescription: Heals all allies a small amount.
-      skillPointCost: 7
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1
-      accuracyModifier: 1
-      isMagic: 1
-      type: 1
-      isRanged: 1
-      isMultiTargeted: 1
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses: []
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Backstab
-      skillDescription: Slips around and impales the target. Deals critical damage
-        and has a chance to inflict Bleed.
-      skillPointCost: 4
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 2.5
-      powerModifier: 1.5
-      accuracyModifier: 1.5
-      isMagic: 0
-      type: 0
-      isRanged: 0
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses:
-      - status: 2
-        expirationTurn: 2
-        canBeCured: 1
-        accuracy: 0.5
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Raise
-      skillDescription: Utter a short prayer to revive a fallen party member with
-        a little HP.
-      skillPointCost: 15
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1
-      accuracyModifier: 1
-      isMagic: 1
-      type: 3
-      isRanged: 0
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses:
-      - status: 2
-        expirationTurn: 2
-        canBeCured: 1
-        accuracy: 0.5
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Arise-All
-      skillDescription: Revives all fallen party members with maximum HP.
-      skillPointCost: 30
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 5
-      powerModifier: 999
-      accuracyModifier: 1
-      isMagic: 1
-      type: 3
-      isRanged: 0
-      isMultiTargeted: 1
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses: []
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    charInventory:
-      items:
-      - {fileID: -1426282936647135499, guid: 329f4e2dead4fb3409b7f3de4f5103a5, type: 3}
-      - {fileID: -8162923582710611980, guid: 886b86f4aca85e2448e1d12df8904490, type: 3}
-      - {fileID: -6518628258153509171, guid: ee15b631ee0c1be4a8a1e01e5b5c1e2f, type: 3}
-      - {fileID: -4263733865363180137, guid: a0208734a5c4c7d41b14d7d14a9e0a6e, type: 3}
-      maxItems: 0
-    weapon: {fileID: 4569600273080726547, guid: 73d918d04ac8faa44b296c50ccf4fec2, type: 3}
-    armor: {fileID: 1978005193644405353, guid: 706f28450b0e4a7458201a8690aca74e, type: 3}
-    accessory1: {fileID: -1656304782301335978, guid: d42754150133ee342b07fe7e8e839e37, type: 3}
-    accessory2: {fileID: 0}
-    isInParty: 1
-    exp: 0
-  senatorData:
-    unitName: Senator
-    level: 1
-    maxHP: 100
-    maxSP: 35
-    currSP: 35
-    currHP: 100
-    strength: 10
-    constitution: 10
-    intelligence: 25
-    spirit: 20
-    speed: 25
-    luck: 15
-    currStatuses: []
-    isActive: 1
-    isBackRow: 1
-    portrait: {fileID: 1009789545, guid: fae09291a07f8ec4cae064be59d978c3, type: 3}
-    expHandler:
-      experienceCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 99
-          value: 200000
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    weightClass: 2
-    skills:
-    - skillName: Death
-      skillDescription: Instantly kills an enemy... if it hits.
-      skillPointCost: 20
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1
-      accuracyModifier: 1
-      isMagic: 1
-      type: 2
-      isRanged: 0
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses:
-      - status: 7
-        expirationTurn: -1
-        canBeCured: 1
-        accuracy: 0.05
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Bolt
-      skillDescription: Fires a beam of lightning from afar. Can be used from the
-        back row.
-      skillPointCost: 5
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1.25
-      accuracyModifier: 1
-      isMagic: 1
-      type: 0
-      isRanged: 1
-      isMultiTargeted: 0
-      elemAttribute: 4
-      applySelfStatuses: []
-      applyTargetStatuses: []
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    charInventory:
-      items:
-      - {fileID: -8188676650458331907, guid: 14f10625ce138934bb2258982bc8f5ce, type: 3}
-      - {fileID: -1426282936647135499, guid: 329f4e2dead4fb3409b7f3de4f5103a5, type: 3}
-      maxItems: 0
-    weapon: {fileID: -5567508497310547029, guid: 712a4e1d290130943860b0c44bbd41b7, type: 3}
-    armor: {fileID: -4006867976105413393, guid: f2ac0da73cbe24d4c8387acdce6c3523, type: 3}
-    accessory1: {fileID: 7260057777859599565, guid: 4a34398c20831724d8717817681a9017, type: 3}
-    accessory2: {fileID: 0}
-    isInParty: 1
-    exp: 0
-  inventory:
-    items: []
-    keyItems: []
-  gold: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3104,11 +3317,8 @@ SceneRoots:
   - {fileID: 1739515327}
   - {fileID: 1035690948}
   - {fileID: 1476581607}
-  - {fileID: 2126671198}
   - {fileID: 1344321835}
   - {fileID: 713236128}
-  - {fileID: 870025171}
-  - {fileID: 1747148168}
   - {fileID: 2056121246}
   - {fileID: 1244284226}
   - {fileID: 12997267}
@@ -3117,3 +3327,8 @@ SceneRoots:
   - {fileID: 69383691}
   - {fileID: 81637008}
   - {fileID: 2087471329}
+  - {fileID: 636204837}
+  - {fileID: 1909506365}
+  - {fileID: 2014259898}
+  - {fileID: 394513089}
+  - {fileID: 683718917}

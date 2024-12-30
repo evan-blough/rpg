@@ -67,7 +67,7 @@ public class PlayerCharacterHandler : CharacterHandler
     public override void VerticalMovement()
     {
         //jump
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, controller.height, groundMask);
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
         {
@@ -77,8 +77,10 @@ public class PlayerCharacterHandler : CharacterHandler
         {
             velocity.y += Physics2D.gravity.y * (fallMultiplier - 1.5f) * Time.deltaTime;
         }
+
         //gravity
         velocity.y += gravity * Time.deltaTime;
+
         controller.Move(velocity * Time.deltaTime);
     }
 

@@ -161,7 +161,7 @@ MonoBehaviour:
   constitution: 25
   intelligence: 9
   spirit: 15
-  speed: 15
+  speed: 25
   luck: 6
   currStatuses: []
   isActive: 1
@@ -245,13 +245,12 @@ MonoBehaviour:
     removeTargetStatuses: []
   charInventory:
     items:
-    - {fileID: 3271123177584135514, guid: ae63dc4f11d5d95439662e6a647b4861, type: 3}
-    - {fileID: -8188676650458331907, guid: 14f10625ce138934bb2258982bc8f5ce, type: 3}
-    - {fileID: 1423346543988370821, guid: 9a43f4d0a851a994082560863ce9dbc8, type: 3}
+    - {fileID: 11400000, guid: 5b0d6e1408024224a9848f871f6f5955, type: 2}
+    - {fileID: 11400000, guid: 652a926482a042445816d55325173317, type: 2}
     maxItems: 0
-  weapon: {fileID: 7450168070135004269, guid: 46003da1cbed6b649a2828dfc955c429, type: 3}
-  armor: {fileID: 6222597448484757221, guid: 7a77483ebeead354a872104ff8a16b31, type: 3}
-  accessory1: {fileID: 10736376745185, guid: 7838a7c859a387c4ca67e2a0a70a10f9, type: 3}
+  weapon: {fileID: 11400000, guid: 071ed8db7b43dd749bbeb3e88a0650c5, type: 2}
+  armor: {fileID: 11400000, guid: 37a7d84b7754e2c4ab4a0f903e466b6c, type: 2}
+  accessory1: {fileID: 11400000, guid: c08de3fc026cb4d41a70932790981e20, type: 2}
   accessory2: {fileID: 0}
   isInParty: 1
   exp: 0

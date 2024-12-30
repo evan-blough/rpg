@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d41969b3477160c4c85e11877be8fb64, type: 3}
+  m_Name: Wedding Ring
+  m_EditorClassIdentifier: 
+  itemName: Wedding Ring
+  itemDescription: A reminder of the ties that bind.
+  itemPrice: 1
+  itemEffect:
+    effectValue: 0
+    isMultiTargeted: 0
+    itemType: 0
+    statuses: []
+    element: 0
+  attackBuff: 20
+  defenseBuff: 20
+  magicAttackBuff: 20
+  magicDefenseBuff: 20
+  agilityBuff: 20
+  weight: 1
+  statusResistances: 00000000010000000200000004000000
+  statusImmunities: 070000000500000003000000

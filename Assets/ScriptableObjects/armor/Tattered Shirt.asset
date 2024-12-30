@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e1b347b7556b42b9293cfda6ae6ac, type: 3}
+  m_Name: Tattered Shirt
+  m_EditorClassIdentifier: 
+  itemName: Tattered Shirt
+  itemDescription: A shirt that really needs to be mended.
+  itemPrice: 25
+  itemEffect:
+    effectValue: 0
+    isMultiTargeted: 0
+    itemType: 0
+    statuses: []
+    element: 0
+  attackBuff: 0
+  defenseBuff: 5
+  magicAttackBuff: 0
+  magicDefenseBuff: 5
+  agilityBuff: 2
+  weight: 1
+  elemResists: 
+  elemWeaknesses: 
+  elemAbsorption: 
