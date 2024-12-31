@@ -12,6 +12,7 @@ public class PlayerCharacterHandler : CharacterHandler
     Vector2 runMove;
     Vector2 walkMove;
     bool jumped;
+    Ray ray;
 
     float speedMultiplier = 1f;
     float followDistance = 1.5f;
@@ -66,8 +67,9 @@ public class PlayerCharacterHandler : CharacterHandler
     }
     public override void VerticalMovement()
     {
+        var point = new Vector3(controller.transform.position.x, controller.transform.position.y - (controller.height / 3) + .1f, controller.transform.position.z);
         //jump
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask);
+        isGrounded = Physics.OverlapSphere(point, controller.radius, groundMask).Any() && Physics.Raycast(transform.position, Vector3.down, groundDistance * 2, groundMask);
 
         if (isGrounded && velocity.y < 0)
         {
@@ -79,7 +81,8 @@ public class PlayerCharacterHandler : CharacterHandler
         }
 
         //gravity
-        velocity.y += gravity * Time.deltaTime;
+        if (!isGrounded)
+            velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
     }
