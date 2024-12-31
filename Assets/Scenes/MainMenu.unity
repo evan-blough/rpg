@@ -502,6 +502,231 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+--- !u!1 &1447335538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1447335540}
+  - component: {fileID: 1447335539}
+  m_Layer: 0
+  m_Name: PartyHandlerSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1447335539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447335538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0864ce6af2061fb47b2825f0a9a5df31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partyData: []
+  heroData:
+    unitName: Hero
+    level: 1
+    maxHP: 200
+    maxSP: 20
+    currSP: 20
+    currHP: 200
+    strength: 30
+    constitution: 20
+    intelligence: 10
+    spirit: 15
+    speed: 10
+    luck: 10
+    currStatuses: []
+    isActive: 1
+    isBackRow: 0
+    portrait: {fileID: -608852291, guid: fae09291a07f8ec4cae064be59d978c3, type: 3}
+    expHandler:
+      experienceCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 99
+          value: 200000
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    weightClass: 3
+    skills:
+    - {fileID: 11400000, guid: 9d699328ff7ce3f47890398f4cad3784, type: 2}
+    - {fileID: 11400000, guid: 3cd65ccdc37e52146bf68b592bd7afd4, type: 2}
+    charInventory:
+      items:
+      - {fileID: 11400000, guid: 5b0d6e1408024224a9848f871f6f5955, type: 2}
+      - {fileID: 11400000, guid: 652a926482a042445816d55325173317, type: 2}
+      maxItems: 0
+    weapon: {fileID: 11400000, guid: 071ed8db7b43dd749bbeb3e88a0650c5, type: 2}
+    armor: {fileID: 11400000, guid: 37a7d84b7754e2c4ab4a0f903e466b6c, type: 2}
+    accessory1: {fileID: 11400000, guid: c08de3fc026cb4d41a70932790981e20, type: 2}
+    accessory2: {fileID: 0}
+    isInParty: 1
+    exp: 0
+  wizardData:
+    unitName: Wizard
+    level: 1
+    maxHP: 150
+    maxSP: 30
+    currSP: 30
+    currHP: 150
+    strength: 20
+    constitution: 15
+    intelligence: 20
+    spirit: 15
+    speed: 15
+    luck: 5
+    currStatuses: []
+    isActive: 1
+    isBackRow: 0
+    portrait: {fileID: 728856764, guid: fae09291a07f8ec4cae064be59d978c3, type: 3}
+    expHandler:
+      experienceCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 99
+          value: 200000
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    weightClass: 1
+    skills:
+    - {fileID: 11400000, guid: 7df9437d966edf740b2c4500287d95e7, type: 2}
+    - {fileID: 11400000, guid: 3eadb9cbb8fac314fa3639d4935f12b0, type: 2}
+    - {fileID: 11400000, guid: 3615a18a16dc63941926b46bfb386b66, type: 2}
+    - {fileID: 11400000, guid: ce4e4ae3a0fbc3a49b3cd17be07cb4e9, type: 2}
+    - {fileID: 11400000, guid: 99197cccc3bf9bc44add1599faa6e5aa, type: 2}
+    charInventory:
+      items:
+      - {fileID: 11400000, guid: 090af2dc9acebe74f8347f86cc68974b, type: 2}
+      - {fileID: 11400000, guid: 090af2dc9acebe74f8347f86cc68974b, type: 2}
+      - {fileID: 11400000, guid: 652a926482a042445816d55325173317, type: 2}
+      - {fileID: 11400000, guid: b7fbfe1500396c14aa92a2e8faa0a391, type: 2}
+      maxItems: 0
+    weapon: {fileID: 11400000, guid: a0aed8a0f9790f443a7fbcf2f5daead2, type: 2}
+    armor: {fileID: 11400000, guid: a76dd72ed74770e47b3a52e31df98724, type: 2}
+    accessory1: {fileID: 11400000, guid: 7a8e64f91ff3d8e41896ddda304e18e3, type: 2}
+    accessory2: {fileID: 0}
+    isInParty: 1
+    exp: 0
+  senatorData:
+    unitName: Senator
+    level: 1
+    maxHP: 100
+    maxSP: 35
+    currSP: 35
+    currHP: 100
+    strength: 10
+    constitution: 10
+    intelligence: 25
+    spirit: 20
+    speed: 25
+    luck: 15
+    currStatuses: []
+    isActive: 1
+    isBackRow: 1
+    portrait: {fileID: 1009789545, guid: fae09291a07f8ec4cae064be59d978c3, type: 3}
+    expHandler:
+      experienceCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 99
+          value: 200000
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    weightClass: 2
+    skills:
+    - {fileID: 11400000, guid: c65e5f15092b5ea4cbdecdcdaaba0a57, type: 2}
+    - {fileID: 11400000, guid: 5b068e4274a72f34fbc4e3f25a2056cf, type: 2}
+    charInventory:
+      items:
+      - {fileID: 11400000, guid: 4a085fcd2db670f419ea8347e8beb641, type: 2}
+      - {fileID: 11400000, guid: 652a926482a042445816d55325173317, type: 2}
+      maxItems: 0
+    weapon: {fileID: 11400000, guid: 5893a22409031d6479390574907630a5, type: 2}
+    armor: {fileID: 11400000, guid: 5581629ab299a1a42857d3c641c90722, type: 2}
+    accessory1: {fileID: 11400000, guid: c72475d64bc331a4585346fe56caf3d3, type: 2}
+    accessory2: {fileID: 0}
+    isInParty: 1
+    exp: 0
+  inventory:
+    items: []
+    keyItems: []
+  gold: 0
+--- !u!4 &1447335540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447335538}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1533934835
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,413 +946,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2126671197
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2126671198}
-  - component: {fileID: 2126671199}
-  m_Layer: 0
-  m_Name: PartyHandlerSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2126671198
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126671197}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2126671199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126671197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0864ce6af2061fb47b2825f0a9a5df31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  partyData: []
-  heroData:
-    unitName: Hero
-    level: 1
-    maxHP: 200
-    maxSP: 20
-    currSP: 20
-    currHP: 200
-    strength: 30
-    constitution: 20
-    intelligence: 10
-    spirit: 15
-    speed: 10
-    luck: 10
-    currStatuses: []
-    isActive: 1
-    isBackRow: 0
-    portrait: {fileID: -608852291, guid: fae09291a07f8ec4cae064be59d978c3, type: 3}
-    expHandler:
-      experienceCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 99
-          value: 200000
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    weightClass: 3
-    skills:
-    - skillName: Skull Crusher
-      skillDescription: Delivers a high-powered axe kick to the skull. Increased
-        critical chance.
-      skillPointCost: 5
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 5
-      powerModifier: 1.5
-      accuracyModifier: 1
-      isMagic: 0
-      type: 0
-      isRanged: 0
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses: []
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Rebel Yell
-      skillDescription: Sounds a primal battle cry, causing fear in enemies while
-        entering a Berserk state.
-      skillPointCost: 5
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1
-      accuracyModifier: 0.8
-      isMagic: 1
-      type: 2
-      isRanged: 0
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses:
-      - status: 4
-        expirationTurn: 3
-        canBeCured: 0
-        accuracy: 1
-      - status: 6
-        expirationTurn: 2
-        canBeCured: 0
-        accuracy: 1
-      applyTargetStatuses:
-      - status: 5
-        expirationTurn: 3
-        canBeCured: 1
-        accuracy: 1
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    charInventory:
-      items:
-      - {fileID: 11400000, guid: 5b0d6e1408024224a9848f871f6f5955, type: 2}
-      - {fileID: 11400000, guid: 652a926482a042445816d55325173317, type: 2}
-      maxItems: 0
-    weapon: {fileID: 11400000, guid: 071ed8db7b43dd749bbeb3e88a0650c5, type: 2}
-    armor: {fileID: 11400000, guid: 37a7d84b7754e2c4ab4a0f903e466b6c, type: 2}
-    accessory1: {fileID: 11400000, guid: c08de3fc026cb4d41a70932790981e20, type: 2}
-    accessory2: {fileID: 0}
-    isInParty: 1
-    exp: 0
-  wizardData:
-    unitName: Wizard
-    level: 1
-    maxHP: 150
-    maxSP: 30
-    currSP: 30
-    currHP: 150
-    strength: 20
-    constitution: 15
-    intelligence: 20
-    spirit: 15
-    speed: 15
-    luck: 5
-    currStatuses: []
-    isActive: 1
-    isBackRow: 0
-    portrait: {fileID: 728856764, guid: fae09291a07f8ec4cae064be59d978c3, type: 3}
-    expHandler:
-      experienceCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 99
-          value: 200000
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    weightClass: 1
-    skills:
-    - skillName: Cure
-      skillDescription: Heals one ally a moderate amount.
-      skillPointCost: 5
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1
-      accuracyModifier: 1
-      isMagic: 1
-      type: 1
-      isRanged: 1
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses: []
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Heal
-      skillDescription: Heals all allies a small amount.
-      skillPointCost: 7
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1
-      accuracyModifier: 1
-      isMagic: 1
-      type: 1
-      isRanged: 1
-      isMultiTargeted: 1
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses: []
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Backstab
-      skillDescription: Slips around and impales the target. Deals critical damage
-        and has a chance to inflict Bleed.
-      skillPointCost: 4
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 2.5
-      powerModifier: 1.5
-      accuracyModifier: 1.5
-      isMagic: 0
-      type: 0
-      isRanged: 0
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses:
-      - status: 2
-        expirationTurn: 2
-        canBeCured: 1
-        accuracy: 0.5
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Raise
-      skillDescription: Utter a short prayer to revive a fallen party member with
-        a little HP.
-      skillPointCost: 15
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1
-      accuracyModifier: 1
-      isMagic: 1
-      type: 3
-      isRanged: 0
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses:
-      - status: 2
-        expirationTurn: 2
-        canBeCured: 1
-        accuracy: 0.5
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Arise-All
-      skillDescription: Revives all fallen party members with maximum HP.
-      skillPointCost: 30
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 5
-      powerModifier: 999
-      accuracyModifier: 1
-      isMagic: 1
-      type: 3
-      isRanged: 0
-      isMultiTargeted: 1
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses: []
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    charInventory:
-      items:
-      - {fileID: 11400000, guid: 090af2dc9acebe74f8347f86cc68974b, type: 2}
-      - {fileID: 11400000, guid: 090af2dc9acebe74f8347f86cc68974b, type: 2}
-      - {fileID: 11400000, guid: 652a926482a042445816d55325173317, type: 2}
-      - {fileID: 11400000, guid: b7fbfe1500396c14aa92a2e8faa0a391, type: 2}
-      maxItems: 0
-    weapon: {fileID: 11400000, guid: a0aed8a0f9790f443a7fbcf2f5daead2, type: 2}
-    armor: {fileID: 11400000, guid: a76dd72ed74770e47b3a52e31df98724, type: 2}
-    accessory1: {fileID: 11400000, guid: 7a8e64f91ff3d8e41896ddda304e18e3, type: 2}
-    accessory2: {fileID: 0}
-    isInParty: 1
-    exp: 0
-  senatorData:
-    unitName: Senator
-    level: 1
-    maxHP: 100
-    maxSP: 35
-    currSP: 35
-    currHP: 100
-    strength: 10
-    constitution: 10
-    intelligence: 25
-    spirit: 20
-    speed: 25
-    luck: 15
-    currStatuses: []
-    isActive: 1
-    isBackRow: 1
-    portrait: {fileID: 1009789545, guid: fae09291a07f8ec4cae064be59d978c3, type: 3}
-    expHandler:
-      experienceCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 99
-          value: 200000
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    weightClass: 2
-    skills:
-    - skillName: Death
-      skillDescription: Instantly kills an enemy... if it hits.
-      skillPointCost: 20
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1
-      accuracyModifier: 1
-      isMagic: 1
-      type: 2
-      isRanged: 0
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses:
-      - status: 7
-        expirationTurn: -1
-        canBeCured: 1
-        accuracy: 0.05
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Bolt
-      skillDescription: Fires a beam of lightning from afar. Can be used from the
-        back row.
-      skillPointCost: 5
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1.25
-      accuracyModifier: 1
-      isMagic: 1
-      type: 0
-      isRanged: 1
-      isMultiTargeted: 0
-      elemAttribute: 4
-      applySelfStatuses: []
-      applyTargetStatuses: []
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    charInventory:
-      items:
-      - {fileID: 11400000, guid: 4a085fcd2db670f419ea8347e8beb641, type: 2}
-      - {fileID: 11400000, guid: 652a926482a042445816d55325173317, type: 2}
-      maxItems: 0
-    weapon: {fileID: 11400000, guid: 5893a22409031d6479390574907630a5, type: 2}
-    armor: {fileID: 11400000, guid: 5581629ab299a1a42857d3c641c90722, type: 2}
-    accessory1: {fileID: 11400000, guid: c72475d64bc331a4585346fe56caf3d3, type: 2}
-    accessory2: {fileID: 0}
-    isInParty: 1
-    exp: 0
-  inventory:
-    items: []
-    keyItems: []
-  gold: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1135,6 +953,6 @@ SceneRoots:
   - {fileID: 376079301}
   - {fileID: 805438249}
   - {fileID: 1276831076}
-  - {fileID: 2126671198}
   - {fileID: 870025171}
   - {fileID: 1747148168}
+  - {fileID: 1447335540}

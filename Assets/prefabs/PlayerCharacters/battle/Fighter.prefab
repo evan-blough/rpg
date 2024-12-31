@@ -193,56 +193,11 @@ MonoBehaviour:
       m_RotationOrder: 4
   weightClass: 3
   skills:
-  - skillName: Skull Crusher
-    skillDescription: Delivers a high-powered axe kick to the skull. Increased critical
-      chance.
-    skillPointCost: 5
-    active: 1
-    isEquipped: 0
-    levelReq: 1
-    criticalModifier: 5
-    powerModifier: 1.5
-    accuracyModifier: 1
-    isMagic: 0
-    type: 0
-    isRanged: 0
-    isMultiTargeted: 0
-    elemAttribute: 0
-    applySelfStatuses: []
-    applyTargetStatuses: []
-    removeSelfStatuses: []
-    removeTargetStatuses: []
-  - skillName: Rebel Yell
-    skillDescription: Sounds a primal battle cry, causing fear in enemies while entering
-      a Berserk state.
-    skillPointCost: 5
-    active: 1
-    isEquipped: 0
-    levelReq: 1
-    criticalModifier: 1
-    powerModifier: 1
-    accuracyModifier: 0.8
-    isMagic: 1
-    type: 2
-    isRanged: 0
-    isMultiTargeted: 0
-    elemAttribute: 0
-    applySelfStatuses:
-    - status: 4
-      expirationTurn: 3
-      canBeCured: 0
-      accuracy: 1
-    - status: 6
-      expirationTurn: 2
-      canBeCured: 0
-      accuracy: 1
-    applyTargetStatuses:
-    - status: 5
-      expirationTurn: 3
-      canBeCured: 1
-      accuracy: 1
-    removeSelfStatuses: []
-    removeTargetStatuses: []
+  - {fileID: 11400000, guid: 9d699328ff7ce3f47890398f4cad3784, type: 2}
+  - {fileID: 11400000, guid: 3cd65ccdc37e52146bf68b592bd7afd4, type: 2}
+  equippedSkills:
+  - {fileID: 11400000, guid: 9d699328ff7ce3f47890398f4cad3784, type: 2}
+  - {fileID: 11400000, guid: 3cd65ccdc37e52146bf68b592bd7afd4, type: 2}
   charInventory:
     items:
     - {fileID: 11400000, guid: 5b0d6e1408024224a9848f871f6f5955, type: 2}

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f47e9d06383fd48ba345eaf42521d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Traitor
+  unitName: Senator
   level: 1
   maxHP: 250
   maxSP: 50
@@ -87,47 +87,11 @@ MonoBehaviour:
       m_RotationOrder: 4
   weightClass: 2
   skills:
-  - skillName: Death
-    skillDescription: Instantly kills an enemy... if it hits.
-    skillPointCost: 20
-    active: 1
-    isEquipped: 0
-    levelReq: 1
-    criticalModifier: 1
-    powerModifier: 1
-    accuracyModifier: 1
-    isMagic: 1
-    type: 2
-    isRanged: 0
-    isMultiTargeted: 0
-    elemAttribute: 0
-    applySelfStatuses: []
-    applyTargetStatuses:
-    - status: 7
-      expirationTurn: -1
-      canBeCured: 1
-      accuracy: 0.05
-    removeSelfStatuses: []
-    removeTargetStatuses: []
-  - skillName: Bolt
-    skillDescription: Fires a beam of lightning from afar. Can be used from the back
-      row.
-    skillPointCost: 5
-    active: 1
-    isEquipped: 0
-    levelReq: 1
-    criticalModifier: 1
-    powerModifier: 1.25
-    accuracyModifier: 1
-    isMagic: 1
-    type: 0
-    isRanged: 1
-    isMultiTargeted: 0
-    elemAttribute: 4
-    applySelfStatuses: []
-    applyTargetStatuses: []
-    removeSelfStatuses: []
-    removeTargetStatuses: []
+  - {fileID: 11400000, guid: c65e5f15092b5ea4cbdecdcdaaba0a57, type: 2}
+  - {fileID: 11400000, guid: 5b068e4274a72f34fbc4e3f25a2056cf, type: 2}
+  equippedSkills:
+  - {fileID: 11400000, guid: c65e5f15092b5ea4cbdecdcdaaba0a57, type: 2}
+  - {fileID: 11400000, guid: 5b068e4274a72f34fbc4e3f25a2056cf, type: 2}
   charInventory:
     items:
     - {fileID: 11400000, guid: 4a085fcd2db670f419ea8347e8beb641, type: 2}

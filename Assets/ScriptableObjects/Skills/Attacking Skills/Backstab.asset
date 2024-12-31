@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835f6ecd3b3280f4caff404ed7ba24dc, type: 3}
+  m_Name: Backstab
+  m_EditorClassIdentifier: 
+  skillName: Backstab
+  skillDescription: Slip around the target and impale them on your knife. May inflict
+    Bleed.
+  skillPointCost: 7
+  active: 0
+  isEquipped: 0
+  levelReq: 0
+  criticalModifier: 1.5
+  powerModifier: 2
+  accuracyModifier: 9
+  isMagic: 0
+  isRanged: 1
+  isMultiTargeted: 0
+  elemAttribute: 0
+  applySelfStatuses: []
+  applyTargetStatuses:
+  - status: 2
+    expirationTurn: 3
+    canBeCured: 1
+    accuracy: 0.5
+  removeSelfStatuses: []
+  removeTargetStatuses: []

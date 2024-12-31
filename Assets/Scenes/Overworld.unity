@@ -2466,56 +2466,11 @@ MonoBehaviour:
         m_RotationOrder: 4
     weightClass: 3
     skills:
-    - skillName: Skull Crusher
-      skillDescription: Delivers a high-powered axe kick to the skull. Increased
-        critical chance.
-      skillPointCost: 5
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 5
-      powerModifier: 1.5
-      accuracyModifier: 1
-      isMagic: 0
-      type: 0
-      isRanged: 0
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses: []
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Rebel Yell
-      skillDescription: Sounds a primal battle cry, causing fear in enemies while
-        entering a Berserk state.
-      skillPointCost: 5
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1
-      accuracyModifier: 0.8
-      isMagic: 1
-      type: 2
-      isRanged: 0
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses:
-      - status: 4
-        expirationTurn: 3
-        canBeCured: 0
-        accuracy: 1
-      - status: 6
-        expirationTurn: 2
-        canBeCured: 0
-        accuracy: 1
-      applyTargetStatuses:
-      - status: 5
-        expirationTurn: 3
-        canBeCured: 1
-        accuracy: 1
-      removeSelfStatuses: []
-      removeTargetStatuses: []
+    - {fileID: 11400000, guid: 9d699328ff7ce3f47890398f4cad3784, type: 2}
+    - {fileID: 11400000, guid: 3cd65ccdc37e52146bf68b592bd7afd4, type: 2}
+    equippedSkills:
+    - {fileID: 11400000, guid: 9d699328ff7ce3f47890398f4cad3784, type: 2}
+    - {fileID: 11400000, guid: 3cd65ccdc37e52146bf68b592bd7afd4, type: 2}
     charInventory:
       items:
       - {fileID: 11400000, guid: 5b0d6e1408024224a9848f871f6f5955, type: 2}
@@ -2571,106 +2526,17 @@ MonoBehaviour:
         m_RotationOrder: 4
     weightClass: 1
     skills:
-    - skillName: Cure
-      skillDescription: Heals one ally a moderate amount.
-      skillPointCost: 5
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1
-      accuracyModifier: 1
-      isMagic: 1
-      type: 1
-      isRanged: 1
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses: []
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Heal
-      skillDescription: Heals all allies a small amount.
-      skillPointCost: 7
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1
-      accuracyModifier: 1
-      isMagic: 1
-      type: 1
-      isRanged: 1
-      isMultiTargeted: 1
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses: []
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Backstab
-      skillDescription: Slips around and impales the target. Deals critical damage
-        and has a chance to inflict Bleed.
-      skillPointCost: 4
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 2.5
-      powerModifier: 1.5
-      accuracyModifier: 1.5
-      isMagic: 0
-      type: 0
-      isRanged: 0
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses:
-      - status: 2
-        expirationTurn: 2
-        canBeCured: 1
-        accuracy: 0.5
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Raise
-      skillDescription: Utter a short prayer to revive a fallen party member with
-        a little HP.
-      skillPointCost: 15
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1
-      accuracyModifier: 1
-      isMagic: 1
-      type: 3
-      isRanged: 0
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses:
-      - status: 2
-        expirationTurn: 2
-        canBeCured: 1
-        accuracy: 0.5
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Arise-All
-      skillDescription: Revives all fallen party members with maximum HP.
-      skillPointCost: 30
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 5
-      powerModifier: 999
-      accuracyModifier: 1
-      isMagic: 1
-      type: 3
-      isRanged: 0
-      isMultiTargeted: 1
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses: []
-      removeSelfStatuses: []
-      removeTargetStatuses: []
+    - {fileID: 11400000, guid: 7df9437d966edf740b2c4500287d95e7, type: 2}
+    - {fileID: 11400000, guid: 3eadb9cbb8fac314fa3639d4935f12b0, type: 2}
+    - {fileID: 11400000, guid: 3615a18a16dc63941926b46bfb386b66, type: 2}
+    - {fileID: 11400000, guid: ce4e4ae3a0fbc3a49b3cd17be07cb4e9, type: 2}
+    - {fileID: 11400000, guid: 99197cccc3bf9bc44add1599faa6e5aa, type: 2}
+    equippedSkills:
+    - {fileID: 11400000, guid: 7df9437d966edf740b2c4500287d95e7, type: 2}
+    - {fileID: 11400000, guid: 3eadb9cbb8fac314fa3639d4935f12b0, type: 2}
+    - {fileID: 11400000, guid: 3615a18a16dc63941926b46bfb386b66, type: 2}
+    - {fileID: 11400000, guid: ce4e4ae3a0fbc3a49b3cd17be07cb4e9, type: 2}
+    - {fileID: 11400000, guid: 99197cccc3bf9bc44add1599faa6e5aa, type: 2}
     charInventory:
       items:
       - {fileID: 11400000, guid: 090af2dc9acebe74f8347f86cc68974b, type: 2}
@@ -2728,47 +2594,11 @@ MonoBehaviour:
         m_RotationOrder: 4
     weightClass: 2
     skills:
-    - skillName: Death
-      skillDescription: Instantly kills an enemy... if it hits.
-      skillPointCost: 20
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1
-      accuracyModifier: 1
-      isMagic: 1
-      type: 2
-      isRanged: 0
-      isMultiTargeted: 0
-      elemAttribute: 0
-      applySelfStatuses: []
-      applyTargetStatuses:
-      - status: 7
-        expirationTurn: -1
-        canBeCured: 1
-        accuracy: 0.05
-      removeSelfStatuses: []
-      removeTargetStatuses: []
-    - skillName: Bolt
-      skillDescription: Fires a beam of lightning from afar. Can be used from the
-        back row.
-      skillPointCost: 5
-      active: 1
-      isEquipped: 1
-      levelReq: 1
-      criticalModifier: 1
-      powerModifier: 1.25
-      accuracyModifier: 1
-      isMagic: 1
-      type: 0
-      isRanged: 1
-      isMultiTargeted: 0
-      elemAttribute: 4
-      applySelfStatuses: []
-      applyTargetStatuses: []
-      removeSelfStatuses: []
-      removeTargetStatuses: []
+    - {fileID: 11400000, guid: c65e5f15092b5ea4cbdecdcdaaba0a57, type: 2}
+    - {fileID: 11400000, guid: 5b068e4274a72f34fbc4e3f25a2056cf, type: 2}
+    equippedSkills:
+    - {fileID: 11400000, guid: c65e5f15092b5ea4cbdecdcdaaba0a57, type: 2}
+    - {fileID: 11400000, guid: 5b068e4274a72f34fbc4e3f25a2056cf, type: 2}
     charInventory:
       items:
       - {fileID: 11400000, guid: 4a085fcd2db670f419ea8347e8beb641, type: 2}

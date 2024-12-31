@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
@@ -8,7 +7,8 @@ public class PlayerCharacterData : CharacterData
     public Sprite portrait;
     public ExperienceHandler expHandler;
     public EquipmentWeight weightClass;
-    public List<Skills> skills;
+    public List<Skill> skills;
+    public List<Skill> equippedSkills;
     public BattleInventory charInventory;
     public Weapon weapon;
     public Armor armor;
@@ -26,7 +26,8 @@ public class PlayerCharacterData : CharacterData
         base.DeepDataCopy(c);
         expHandler = pc.expHandler;
         weightClass = pc.weightClass;
-        skills = pc.skills.ConvertAll(cs => new Skills(cs)).ToList();
+        skills = pc.skills;
+        equippedSkills = pc.equippedSkills;
         charInventory = pc.charInventory;
         weapon = pc.weapon;
         armor = pc.armor;

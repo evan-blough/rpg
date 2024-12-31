@@ -193,106 +193,17 @@ MonoBehaviour:
       m_RotationOrder: 4
   weightClass: 1
   skills:
-  - skillName: Cure
-    skillDescription: Heals one ally a moderate amount.
-    skillPointCost: 5
-    active: 1
-    isEquipped: 0
-    levelReq: 1
-    criticalModifier: 1
-    powerModifier: 1
-    accuracyModifier: 1
-    isMagic: 1
-    type: 1
-    isRanged: 1
-    isMultiTargeted: 0
-    elemAttribute: 0
-    applySelfStatuses: []
-    applyTargetStatuses: []
-    removeSelfStatuses: []
-    removeTargetStatuses: []
-  - skillName: Heal
-    skillDescription: Heals all allies a small amount.
-    skillPointCost: 7
-    active: 1
-    isEquipped: 0
-    levelReq: 1
-    criticalModifier: 1
-    powerModifier: 1
-    accuracyModifier: 1
-    isMagic: 1
-    type: 1
-    isRanged: 1
-    isMultiTargeted: 1
-    elemAttribute: 0
-    applySelfStatuses: []
-    applyTargetStatuses: []
-    removeSelfStatuses: []
-    removeTargetStatuses: []
-  - skillName: Backstab
-    skillDescription: Slips around and impales the target. Deals critical damage
-      and has a chance to inflict Bleed.
-    skillPointCost: 4
-    active: 1
-    isEquipped: 0
-    levelReq: 1
-    criticalModifier: 2.5
-    powerModifier: 1.5
-    accuracyModifier: 1.5
-    isMagic: 0
-    type: 0
-    isRanged: 0
-    isMultiTargeted: 0
-    elemAttribute: 0
-    applySelfStatuses: []
-    applyTargetStatuses:
-    - status: 2
-      expirationTurn: 2
-      canBeCured: 1
-      accuracy: 0.5
-    removeSelfStatuses: []
-    removeTargetStatuses: []
-  - skillName: Raise
-    skillDescription: Utter a short prayer to revive a fallen party member with a
-      little HP.
-    skillPointCost: 15
-    active: 1
-    isEquipped: 0
-    levelReq: 1
-    criticalModifier: 1
-    powerModifier: 1
-    accuracyModifier: 1
-    isMagic: 1
-    type: 3
-    isRanged: 0
-    isMultiTargeted: 0
-    elemAttribute: 0
-    applySelfStatuses: []
-    applyTargetStatuses:
-    - status: 2
-      expirationTurn: 2
-      canBeCured: 1
-      accuracy: 0.5
-    removeSelfStatuses: []
-    removeTargetStatuses: []
-  - skillName: Arise-All
-    skillDescription: Revives all fallen party members with maximum HP.
-    skillPointCost: 30
-    active: 1
-    isEquipped: 0
-    levelReq: 1
-    criticalModifier: 5
-    powerModifier: 999
-    accuracyModifier: 1
-    isMagic: 1
-    type: 3
-    isRanged: 0
-    isMultiTargeted: 1
-    elemAttribute: 0
-    applySelfStatuses: []
-    applyTargetStatuses: []
-    removeSelfStatuses: []
-    removeTargetStatuses: []
+  - {fileID: 11400000, guid: 7df9437d966edf740b2c4500287d95e7, type: 2}
+  - {fileID: 11400000, guid: 3eadb9cbb8fac314fa3639d4935f12b0, type: 2}
+  - {fileID: 11400000, guid: 3615a18a16dc63941926b46bfb386b66, type: 2}
+  - {fileID: 11400000, guid: ce4e4ae3a0fbc3a49b3cd17be07cb4e9, type: 2}
+  - {fileID: 11400000, guid: 99197cccc3bf9bc44add1599faa6e5aa, type: 2}
+  equippedSkills:
+  - {fileID: 11400000, guid: 7df9437d966edf740b2c4500287d95e7, type: 2}
+  - {fileID: 11400000, guid: 3eadb9cbb8fac314fa3639d4935f12b0, type: 2}
+  - {fileID: 11400000, guid: 3615a18a16dc63941926b46bfb386b66, type: 2}
+  - {fileID: 11400000, guid: ce4e4ae3a0fbc3a49b3cd17be07cb4e9, type: 2}
+  - {fileID: 11400000, guid: 99197cccc3bf9bc44add1599faa6e5aa, type: 2}
   charInventory:
     items:
     - {fileID: 11400000, guid: 090af2dc9acebe74f8347f86cc68974b, type: 2}
