@@ -68,8 +68,9 @@ public class PlayerCharacterHandler : CharacterHandler
     public override void VerticalMovement()
     {
         var point = new Vector3(controller.transform.position.x, controller.transform.position.y - (controller.height / 3) + .1f, controller.transform.position.z);
-        //jump
-        isGrounded = Physics.OverlapSphere(point, controller.radius, groundMask).Any() && Physics.Raycast(transform.position, Vector3.down, groundDistance * 2, groundMask);
+        //jump... added raycast check prevents hanging on to edge of ground when on cliff
+        isGrounded = Physics.OverlapSphere(point, controller.radius, groundMask).Any()
+            && Physics.Raycast(transform.position, Vector3.down, groundDistance * 2, groundMask);
 
         if (isGrounded && velocity.y < 0)
         {

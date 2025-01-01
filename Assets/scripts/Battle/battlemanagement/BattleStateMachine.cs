@@ -11,6 +11,7 @@ public class BattleStateMachine : MonoBehaviour
 {
     SceneManager gameManager;
     BattlePartyHandler partyHandler;
+    public AudioClip victory;
     public GameObject heroPrefab;
     public GameObject ogrePrefab;
     public GameObject wizardPrefab;
@@ -204,6 +205,7 @@ public class BattleStateMachine : MonoBehaviour
         else if (state == BattleStates.WIN)
         {
             uiHandler.OnWin(enemies, playerCharacterList);
+            AudioManager.instance.ChangeAudio(victory);
             StartCoroutine(gameManager.TransitionFromBattle(playerCharacterList, true));
         }
         else if (state == BattleStates.FLEE)
