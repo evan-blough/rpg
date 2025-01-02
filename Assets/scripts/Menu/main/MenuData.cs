@@ -10,14 +10,13 @@ public class MenuData : MonoBehaviour
     }
     public void FillSlotData(List<PlayerCharacterData> dataList)
     {
-        CharacterDisplay newSlot;
+        GameObject temp;
         foreach (PlayerCharacterData data in dataList)
         {
             if (!data.isInParty) continue;
 
-            GameObject temp = Instantiate(menuSlotPrefab, transform);
-            newSlot = temp.GetComponent<CharacterDisplay>();
-            newSlot.SetDisplayData(data);
+            temp = Instantiate(menuSlotPrefab, transform);
+            temp.GetComponent<CharacterDisplay>().SetDisplayData(data);
         }
     }
 }
