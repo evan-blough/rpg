@@ -60,7 +60,7 @@ public class Skill : ScriptableObject
 
                 status.expirationTurn += turnCounter;
                 target.currStatuses.Add(status);
-                if (status.status == Status.DEATH)
+                if (status.status == Status.Death)
                 {
                     target.currHP = 0;
                     target.isActive = false;

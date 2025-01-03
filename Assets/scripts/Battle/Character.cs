@@ -40,11 +40,11 @@ public abstract class Character : MonoBehaviour
     {
         float modifier = 1;
 
-        if (currStatuses.Where(s => s.status == Status.VULNERABLE).FirstOrDefault() != null) { modifier *= 2; }
+        if (currStatuses.Where(s => s.status == Status.Vulnerable).FirstOrDefault() != null) { modifier *= 2; }
 
-        if (currStatuses.Where(s => s.status == Status.AFRAID).FirstOrDefault() != null) { modifier *= 1.5f; }
+        if (currStatuses.Where(s => s.status == Status.Afraid).FirstOrDefault() != null) { modifier *= 1.5f; }
 
-        if (currStatuses.Where(s => s.status == Status.DEFENDING).FirstOrDefault() != null) { modifier /= 2; }
+        if (currStatuses.Where(s => s.status == Status.Defending).FirstOrDefault() != null) { modifier /= 2; }
 
         return modifier;
     }
@@ -53,11 +53,11 @@ public abstract class Character : MonoBehaviour
     {
         float modifier = 1;
 
-        if (currStatuses.Where(s => s.status == Status.VULNERABLE).FirstOrDefault() != null) { modifier /= 2; }
+        if (currStatuses.Where(s => s.status == Status.Vulnerable).FirstOrDefault() != null) { modifier /= 2; }
 
-        if (currStatuses.Where(s => s.status == Status.AFRAID).FirstOrDefault() != null) { modifier /= 1.5f; }
+        if (currStatuses.Where(s => s.status == Status.Afraid).FirstOrDefault() != null) { modifier /= 1.5f; }
 
-        if (currStatuses.Where(s => s.status == Status.BERSERK).FirstOrDefault() != null) { modifier *= 1.5f; }
+        if (currStatuses.Where(s => s.status == Status.Berserk).FirstOrDefault() != null) { modifier *= 1.5f; }
 
         return modifier;
     }

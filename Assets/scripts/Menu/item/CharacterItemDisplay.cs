@@ -3,7 +3,6 @@ using UnityEngine;
 public class CharacterItemDisplay : MonoBehaviour
 {
     public GameObject characterDisplayPrefab;
-
     private void Start()
     {
         SetupMenu();
@@ -23,6 +22,22 @@ public class CharacterItemDisplay : MonoBehaviour
 
             temp = Instantiate(characterDisplayPrefab, transform);
             temp.GetComponentInChildren<BattleInventoryDisplay>().CreateCharacterDisplay(pcd);
+        }
+    }
+
+    public void ChangeToBattleInventoryView()
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.GetComponent<BattleInventoryDisplay>().PopulateBattleInventoryDisplay();
+        }
+    }
+
+    public void ChangeToCharDataView()
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.GetComponent<BattleInventoryDisplay>().PopulateCharacterDisplay();
         }
     }
 }

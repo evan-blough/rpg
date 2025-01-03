@@ -28,7 +28,7 @@ public class Weapon : Equipment
                     newStatus.expirationTurn += turnCounter;
                     enemy.currStatuses.Add(newStatus);
 
-                    if (newStatus.status == Status.DEATH)
+                    if (newStatus.status == Status.Death)
                     {
                         enemy.currHP = 0;
                         enemy.isActive = false;
