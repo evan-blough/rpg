@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
-[CreateAssetMenu(fileName = "New Attacking Skill")]
+[CreateAssetMenu(fileName = "New Attacking Skill", menuName = "Skills/Attack Skill")]
 public class AttackSkill : Skill
 {
     public override List<string> UseSkill(Character character, List<Character> targets, int turnCounter)

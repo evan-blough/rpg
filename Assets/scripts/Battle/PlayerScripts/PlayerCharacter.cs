@@ -5,9 +5,12 @@ using UnityEngine;
 public class PlayerCharacter : Character
 {
     public ExperienceHandler expHandler;
+    public ClassExpHandler classExpHandler;
     public EquipmentWeight weightClass;
     public List<Skill> skills;
     public List<Skill> equippedSkills;
+    public List<Class> classes;
+    public Class currClass;
     public BattleInventory charInventory;
     public Weapon weapon;
     public Armor armor;
@@ -26,7 +29,8 @@ public class PlayerCharacter : Character
         get
         {
             return strength + (weapon is null ? 0 : weapon.attackBuff) + (armor is null ? 0 : armor.attackBuff)
-                + (accessory1 is null ? 0 : accessory1.attackBuff) + (accessory2 is null ? 0 : accessory2.attackBuff);
+                + (accessory1 is null ? 0 : accessory1.attackBuff) + (accessory2 is null ? 0 : accessory2.attackBuff)
+                + (currClass is null ? 0 : currClass.classAtkMod);
         }
     }
 
@@ -35,7 +39,8 @@ public class PlayerCharacter : Character
         get
         {
             return constitution + (weapon is null ? 0 : weapon.defenseBuff) + (armor is null ? 0 : armor.defenseBuff)
-                + (accessory1 is null ? 0 : accessory1.defenseBuff) + (accessory2 is null ? 0 : accessory2.defenseBuff);
+                + (accessory1 is null ? 0 : accessory1.defenseBuff) + (accessory2 is null ? 0 : accessory2.defenseBuff)
+                + (currClass is null ? 0 : currClass.classDefMod);
         }
     }
 
@@ -44,7 +49,8 @@ public class PlayerCharacter : Character
         get
         {
             return intelligence + (weapon is null ? 0 : weapon.magicAttackBuff) + (armor is null ? 0 : armor.magicAttackBuff)
-                + (accessory1 is null ? 0 : accessory1.magicAttackBuff) + (accessory2 is null ? 0 : accessory2.magicAttackBuff);
+                + (accessory1 is null ? 0 : accessory1.magicAttackBuff) + (accessory2 is null ? 0 : accessory2.magicAttackBuff)
+                + (currClass is null ? 0 : currClass.classMgAtkMod);
         }
     }
 
@@ -53,7 +59,8 @@ public class PlayerCharacter : Character
         get
         {
             return spirit + (weapon is null ? 0 : weapon.magicDefenseBuff) + (armor is null ? 0 : armor.magicDefenseBuff)
-                + (accessory1 is null ? 0 : accessory1.magicDefenseBuff) + (accessory2 is null ? 0 : accessory2.magicDefenseBuff);
+                + (accessory1 is null ? 0 : accessory1.magicDefenseBuff) + (accessory2 is null ? 0 : accessory2.magicDefenseBuff)
+                + (currClass is null ? 0 : currClass.classMgDefMod);
         }
     }
     public override int agility
@@ -61,7 +68,8 @@ public class PlayerCharacter : Character
         get
         {
             return speed + (weapon is null ? 0 : weapon.agilityBuff) + (armor is null ? 0 : armor.agilityBuff)
-                + (accessory1 is null ? 0 : accessory1.agilityBuff) + (accessory2 is null ? 0 : accessory2.agilityBuff);
+                + (accessory1 is null ? 0 : accessory1.agilityBuff) + (accessory2 is null ? 0 : accessory2.agilityBuff)
+                + (currClass is null ? 0 : currClass.classAgilityMod);
         }
     }
     public override List<Status> resistances
@@ -207,5 +215,18 @@ public class PlayerCharacter : Character
     {
         equippedSkills.Remove(skill);
         return $"Unequipped {skill.skillName}";
+    }
+
+    public void AutoUpdateCurrentClass()
+    {
+        // pick the first class that hasn't been maxed. If all classes have been maxed, do nothing as there is nothing to do.
+        for (int i = 0; i < classes.Count; i++)
+        {
+            if (!classes[i].isMaxed)
+            {
+                currClass = classes[i];
+                break;
+            }
+        }
     }
 }

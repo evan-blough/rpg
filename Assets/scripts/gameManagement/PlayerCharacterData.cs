@@ -9,6 +9,8 @@ public class PlayerCharacterData : CharacterData
     public EquipmentWeight weightClass;
     public List<Skill> skills;
     public List<Skill> equippedSkills;
+    public List<Class> classes;
+    public Class equippedClass;
     public BattleInventory charInventory;
     public Weapon weapon;
     public Armor armor;

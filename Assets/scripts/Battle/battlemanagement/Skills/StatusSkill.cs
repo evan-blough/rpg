@@ -3,7 +3,7 @@ using UnityEngine;
 
 
 [System.Serializable]
-[CreateAssetMenu(fileName = "New Status Skill")]
+[CreateAssetMenu(fileName = "New Status Skill", menuName = "Skills/Status Skill")]
 public class StatusSkill : Skill
 {
     public override List<string> UseSkill(Character character, List<Character> targets, int turnCounter)

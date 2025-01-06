@@ -3,7 +3,7 @@ using UnityEngine;
 
 public enum ItemEffectType { NONE, ATTACK, HEAL, RECOVER_SP, APPLY_STATUS, REMOVE_STATUS, REVIVE, GAG }
 
-[CreateAssetMenu(fileName = "New Item")]
+[CreateAssetMenu(fileName = "New Item", menuName = "Items/Item")]
 public class Items : ScriptableObject
 {
     public string itemName;

@@ -68,6 +68,7 @@ MonoBehaviour:
   enemyElemWeakness: 
   expValue: 300
   goldValue: 200
+  classXpValue: 3
   rarity: 0
 --- !u!1 &1422019712647510088
 GameObject:
