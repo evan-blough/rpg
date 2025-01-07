@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e695307be65f63c49a33afb2422ece7c, type: 3}
   m_Name: Medic
   m_EditorClassIdentifier: 
-  className: 
-  classAtkBuff: 0
-  classDefBuff: 0
-  classMgAtkBuff: 0
-  classMgDefBuff: 0
-  classAgilityBuff: 0
-  levels: []
+  className: Medic
+  classAtkBuff: -5
+  classDefBuff: -3
+  classMgAtkBuff: 10
+  classMgDefBuff: -3
+  classAgilityBuff: 10
+  levels:
+  - {fileID: 11400000, guid: b4aab458823bd0f4fb8ab9cfddf0fb9f, type: 2}
+  - {fileID: 11400000, guid: d90208a818103484bb4e5dc17bee5618, type: 2}
+  - {fileID: 11400000, guid: ca721251aa65d85468de67397aab2ba2, type: 2}

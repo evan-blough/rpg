@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e695307be65f63c49a33afb2422ece7c, type: 3}
   m_Name: Monk
   m_EditorClassIdentifier: 
-  className: 
-  classAtkBuff: 0
-  classDefBuff: 0
-  classMgAtkBuff: 0
+  className: Monk
+  classAtkBuff: 15
+  classDefBuff: -5
+  classMgAtkBuff: -5
   classMgDefBuff: 0
-  classAgilityBuff: 0
+  classAgilityBuff: 10
   levels: []

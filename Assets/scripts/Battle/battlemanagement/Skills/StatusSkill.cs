@@ -32,7 +32,7 @@ public class StatusSkill : Skill
             }
             if (removeTargetStatuses.Count > 0)
             {
-                foreach (var status in applyTargetStatuses)
+                foreach (var status in removeTargetStatuses)
                     TargetStatusRemoval(character, status, target, turnCounter);
             }
         }

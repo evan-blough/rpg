@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Class Level", menuName = "Classes/Class Level")]
 public class ClassLevel : ScriptableObject
 {
+    public string levelName;
     public int expNeeded;
     public int attackBuff;
     public int defenseBuff;

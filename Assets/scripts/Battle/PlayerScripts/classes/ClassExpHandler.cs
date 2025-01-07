@@ -3,21 +3,27 @@ using System;
 [Serializable]
 public class ClassExpHandler
 {
-    int nextLevelExp;
+    public int nextLevelExp;
     public void AddClassExperience(PlayerCharacter character, int amount)
     {
         character.currClass.classXp += amount;
+        UnityEngine.Debug.Log($"{character}, {amount}");
         CheckForClassLevelUp(character);
     }
 
     public void CheckForClassLevelUp(PlayerCharacter character)
     {
-        while (character.currClass.classXp >= nextLevelExp)
+
+        while (character.currClass.classXp >= nextLevelExp && !character.currClass.isMaxed)
         {
+            character.currClass.classXp -= nextLevelExp;
             character.currClass.classLevel++;
             character.currClass.OnClassLevelUp(character);
-            character.currClass.classXp -= nextLevelExp;
-            UpdateClassLevel(character);
+
+            if (!character.currClass.isMaxed)
+            {
+                UpdateClassLevel(character);
+            }
         }
     }
     public void UpdateClassLevel(PlayerCharacter character)

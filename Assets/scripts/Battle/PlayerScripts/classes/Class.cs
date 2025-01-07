@@ -7,7 +7,7 @@ public class Class
     public ClassLevel currLevel;
     public int classXp = 0;
     public int classLevel = 1;
-    public bool isMaxed = false;
+    public bool isMaxed;
 
     public int classAtkMod
     {
@@ -84,9 +84,26 @@ public class Class
 
     public void OnClassLevelUp(PlayerCharacter character)
     {
-        if (classSlot.levels[classLevel - 1] is null)
+        if (!character.skills.Contains(currLevel.acquiredSkill))
+        {
+            character.skills.Add(currLevel.acquiredSkill);
+
+            if (character.equippedSkills.Count < character.skillCount)
+            {
+                character.equippedSkills.Add(currLevel.acquiredSkill);
+            }
+        }
+
+        if (classSlot.levels.Count <= classLevel - 1)
         {
             isMaxed = true;
+
+            if (character.currClass.classXp > 0)
+            {
+                character.excessClassPoints += character.currClass.classXp;
+                character.currClass.classXp = 0;
+            }
+
             character.AutoUpdateCurrentClass();
         }
         else

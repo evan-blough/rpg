@@ -10,32 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65b78a7377dec3049af9ad47e3564b9c, type: 3}
-  m_Name: Battle Cry
+  m_Name: Clear Status
   m_EditorClassIdentifier: 
-  skillName: Battle Cry
-  skillDescription: Lets loose a loud scream that causes Fear in enemies. Inflicts
-    Berserk on user.
-  skillPointCost: 5
+  skillName: Clear Status
+  skillDescription: Clears all negative statuses from all party members
+  skillPointCost: 40
   criticalModifier: 0
   powerModifier: 0
-  accuracyModifier: 0
+  accuracyModifier: 1
   isMagic: 1
   isRanged: 1
   isMultiTargeted: 1
   elemAttribute: 0
-  applySelfStatuses:
-  - status: 4
-    expirationTurn: 3
-    canBeCured: 1
-    accuracy: 1
-  - status: 6
-    expirationTurn: 1
-    canBeCured: 0
-    accuracy: 1
-  applyTargetStatuses:
-  - status: 5
-    expirationTurn: 3
-    canBeCured: 1
-    accuracy: 1
-  removeSelfStatuses: 05000000
+  applySelfStatuses: []
+  applyTargetStatuses: []
+  removeSelfStatuses: 000000000100000002000000030000000400000005000000
   removeTargetStatuses: 

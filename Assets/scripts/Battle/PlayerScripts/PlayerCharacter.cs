@@ -10,7 +10,9 @@ public class PlayerCharacter : Character
     public List<Skill> skills;
     public List<Skill> equippedSkills;
     public List<Class> classes;
+    [SerializeReference]
     public Class currClass;
+    public int excessClassPoints = 0;
     public BattleInventory charInventory;
     public Weapon weapon;
     public Armor armor;
@@ -18,10 +20,15 @@ public class PlayerCharacter : Character
     public Accessory accessory2;
     public bool isInParty;
     public int exp;
+    public int skillCount = 12;
 
     private void Start()
     {
         expHandler.UpdateLevel(this);
+        if (!classes.Contains(currClass))
+        {
+            currClass = classes.Any() ? classes.First() : null;
+        }
     }
 
     public override int attack
@@ -191,21 +198,26 @@ public class PlayerCharacter : Character
 
         base.DeepCopyFrom(c);
         expHandler = pc.expHandler;
+        classExpHandler = pc.classExpHandler;
         weightClass = pc.weightClass;
         charInventory = pc.charInventory;
         skills = pc.skills;
         equippedSkills = pc.equippedSkills;
+        classes = pc.classes;
+        currClass = pc.equippedClass;
         weapon = pc.weapon;
         armor = pc.armor;
         accessory1 = pc.accessory1;
         accessory2 = pc.accessory2;
         isInParty = pc.isInParty;
         exp = pc.exp;
+        skillCount = pc.skillCount;
+        excessClassPoints = pc.excessClassPoints;
     }
 
     public string EquipSkill(Skill skill)
     {
-        if (equippedSkills.Count == 12) return "You've equipped the max amount of skills: remove a skill first!";
+        if (equippedSkills.Count == skillCount) return "You've equipped the max amount of skills: remove a skill first!";
 
         equippedSkills.Add(skill);
         return $"Equipped {skill.skillName}";
@@ -225,8 +237,11 @@ public class PlayerCharacter : Character
             if (!classes[i].isMaxed)
             {
                 currClass = classes[i];
+                classExpHandler.nextLevelExp = currClass.classSlot.levels[currClass.classLevel - 1].expNeeded;
                 break;
             }
         }
+
+
     }
 }

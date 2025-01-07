@@ -18,8 +18,8 @@ public class Skill : ScriptableObject
     public Elements elemAttribute;
     public List<Statuses> applySelfStatuses;
     public List<Statuses> applyTargetStatuses;
-    public List<Statuses> removeSelfStatuses;
-    public List<Statuses> removeTargetStatuses;
+    public List<Status> removeSelfStatuses;
+    public List<Status> removeTargetStatuses;
 
     public void SelfStatusApplication(Character character, Statuses oldStatus, int turnCounter)
     {
@@ -33,13 +33,12 @@ public class Skill : ScriptableObject
         }
     }
 
-    public void SelfStatusCure(Character character, Statuses oldStatus, int turnCounter)
+    public void SelfStatusCure(Character character, Status oldStatus, int turnCounter)
     {
-        Statuses status = new Statuses(oldStatus);
-        var curingStatus = character.currStatuses.FirstOrDefault(s => s.status == status.status);
+        var curingStatus = character.currStatuses.FirstOrDefault(s => s.status == oldStatus);
         if (curingStatus != null && curingStatus.canBeCured)
         {
-            character.currStatuses.RemoveAll(s => s.status == status.status);
+            character.currStatuses.RemoveAll(s => s.status == oldStatus);
 
         }
     }
@@ -72,13 +71,12 @@ public class Skill : ScriptableObject
         return "Miss";
     }
 
-    public void TargetStatusRemoval(Character character, Statuses statusToRemove, Character target, int turnCounter)
+    public void TargetStatusRemoval(Character character, Status statusToRemove, Character target, int turnCounter)
     {
-        Statuses status = new Statuses(statusToRemove);
-        var curingStatus = target.currStatuses.FirstOrDefault(s => s.status == status.status);
+        var curingStatus = target.currStatuses.FirstOrDefault(s => s.status == statusToRemove);
         if (curingStatus != null && curingStatus.canBeCured)
         {
-            target.currStatuses.RemoveAll(s => s.status == status.status);
+            target.currStatuses.RemoveAll(s => s.status == statusToRemove);
         }
     }
 
