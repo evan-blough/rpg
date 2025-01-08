@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,7 +11,12 @@ public class CommandUI : MonoBehaviour
     public void CommandButtonClick()
     {
         bsm.uiHandler.UIOnCommand();
-        swapPositionsButton.gameObject.SetActive(!bsm.currentCharacter.isBackRow);
+
+        if (bsm.playerCharacterList.Any(pc => !pc.isActive))
+            swapPositionsButton.gameObject.SetActive(false);
+        else
+            swapPositionsButton.gameObject.SetActive(!bsm.currentCharacter.isBackRow);
+
         recoverButton.gameObject.SetActive(bsm.currentCharacter.isBackRow);
     }
 

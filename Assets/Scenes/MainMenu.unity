@@ -731,22 +731,36 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+    classExpHandler:
+      nextLevelExp: 1000
     weightClass: 3
     skills:
     - {fileID: 11400000, guid: 9d699328ff7ce3f47890398f4cad3784, type: 2}
     - {fileID: 11400000, guid: 3cd65ccdc37e52146bf68b592bd7afd4, type: 2}
-    equippedSkills: []
+    equippedSkills:
+    - {fileID: 11400000, guid: 9d699328ff7ce3f47890398f4cad3784, type: 2}
+    - {fileID: 11400000, guid: 3cd65ccdc37e52146bf68b592bd7afd4, type: 2}
+    classes:
+    - classSlot: {fileID: 11400000, guid: 042e38109c5cb474e862e5a4f0e5a53e, type: 2}
+      currLevel: {fileID: 11400000, guid: d90208a818103484bb4e5dc17bee5618, type: 2}
+      classXp: 0
+      classLevel: 1
+      isMaxed: 0
+    equippedClass:
+      rid: -2
+    excessClassPoints: 0
     charInventory:
       items:
-      - {fileID: 11400000, guid: 5b0d6e1408024224a9848f871f6f5955, type: 2}
-      - {fileID: 11400000, guid: 652a926482a042445816d55325173317, type: 2}
-      maxItems: 0
+      - {fileID: 11400000, guid: 076d308d5d93f9542af5d682a4d09c84, type: 2}
+      - {fileID: 11400000, guid: 42191bd68af39fc4c9c9d45821f1a638, type: 2}
+      maxItems: 6
     weapon: {fileID: 11400000, guid: 071ed8db7b43dd749bbeb3e88a0650c5, type: 2}
     armor: {fileID: 11400000, guid: 37a7d84b7754e2c4ab4a0f903e466b6c, type: 2}
     accessory1: {fileID: 11400000, guid: c08de3fc026cb4d41a70932790981e20, type: 2}
     accessory2: {fileID: 0}
     isInParty: 1
     exp: 0
+    skillCount: 12
   wizardData:
     unitName: Wizard
     level: 1
@@ -789,27 +803,45 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+    classExpHandler:
+      nextLevelExp: 200
     weightClass: 1
     skills:
     - {fileID: 11400000, guid: 7df9437d966edf740b2c4500287d95e7, type: 2}
     - {fileID: 11400000, guid: 3eadb9cbb8fac314fa3639d4935f12b0, type: 2}
-    - {fileID: 11400000, guid: 3615a18a16dc63941926b46bfb386b66, type: 2}
     - {fileID: 11400000, guid: ce4e4ae3a0fbc3a49b3cd17be07cb4e9, type: 2}
-    - {fileID: 11400000, guid: 99197cccc3bf9bc44add1599faa6e5aa, type: 2}
-    equippedSkills: []
+    equippedSkills:
+    - {fileID: 11400000, guid: 7df9437d966edf740b2c4500287d95e7, type: 2}
+    - {fileID: 11400000, guid: 3eadb9cbb8fac314fa3639d4935f12b0, type: 2}
+    - {fileID: 11400000, guid: ce4e4ae3a0fbc3a49b3cd17be07cb4e9, type: 2}
+    classes:
+    - classSlot: {fileID: 11400000, guid: ad79faaa36609e647b672e2bd52681d7, type: 2}
+      currLevel: {fileID: 11400000, guid: b4aab458823bd0f4fb8ab9cfddf0fb9f, type: 2}
+      classXp: 0
+      classLevel: 1
+      isMaxed: 0
+    - classSlot: {fileID: 11400000, guid: 042e38109c5cb474e862e5a4f0e5a53e, type: 2}
+      currLevel: {fileID: 11400000, guid: d90208a818103484bb4e5dc17bee5618, type: 2}
+      classXp: 0
+      classLevel: 1
+      isMaxed: 0
+    equippedClass:
+      rid: -2
+    excessClassPoints: 0
     charInventory:
       items:
-      - {fileID: 11400000, guid: 090af2dc9acebe74f8347f86cc68974b, type: 2}
-      - {fileID: 11400000, guid: 090af2dc9acebe74f8347f86cc68974b, type: 2}
-      - {fileID: 11400000, guid: 652a926482a042445816d55325173317, type: 2}
-      - {fileID: 11400000, guid: b7fbfe1500396c14aa92a2e8faa0a391, type: 2}
-      maxItems: 0
+      - {fileID: 11400000, guid: efc85a8dd491bf34b8cb1cdb8f54cfe2, type: 2}
+      - {fileID: 11400000, guid: 076d308d5d93f9542af5d682a4d09c84, type: 2}
+      - {fileID: 11400000, guid: 95a2b4243aba90f419d42cc4fcf41c21, type: 2}
+      - {fileID: 11400000, guid: 98a0c88301fb42e47bf47dd60534e6cf, type: 2}
+      maxItems: 6
     weapon: {fileID: 11400000, guid: a0aed8a0f9790f443a7fbcf2f5daead2, type: 2}
     armor: {fileID: 11400000, guid: a76dd72ed74770e47b3a52e31df98724, type: 2}
     accessory1: {fileID: 11400000, guid: 7a8e64f91ff3d8e41896ddda304e18e3, type: 2}
     accessory2: {fileID: 0}
     isInParty: 1
     exp: 0
+    skillCount: 12
   senatorData:
     unitName: Senator
     level: 1
@@ -852,26 +884,45 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+    classExpHandler:
+      nextLevelExp: 500
     weightClass: 2
     skills:
     - {fileID: 11400000, guid: c65e5f15092b5ea4cbdecdcdaaba0a57, type: 2}
     - {fileID: 11400000, guid: 5b068e4274a72f34fbc4e3f25a2056cf, type: 2}
-    equippedSkills: []
+    equippedSkills:
+    - {fileID: 11400000, guid: c65e5f15092b5ea4cbdecdcdaaba0a57, type: 2}
+    - {fileID: 11400000, guid: 5b068e4274a72f34fbc4e3f25a2056cf, type: 2}
+    classes:
+    - classSlot: {fileID: 11400000, guid: d81032e881be0244592b98b609dadcc7, type: 2}
+      currLevel: {fileID: 11400000, guid: 82cb1741af8c1bf4d8bde15cd8aa2993, type: 2}
+      classXp: 0
+      classLevel: 1
+      isMaxed: 0
+    equippedClass:
+      rid: -2
+    excessClassPoints: 0
     charInventory:
       items:
-      - {fileID: 11400000, guid: 4a085fcd2db670f419ea8347e8beb641, type: 2}
-      - {fileID: 11400000, guid: 652a926482a042445816d55325173317, type: 2}
-      maxItems: 0
+      - {fileID: 11400000, guid: 42191bd68af39fc4c9c9d45821f1a638, type: 2}
+      - {fileID: 11400000, guid: 95a2b4243aba90f419d42cc4fcf41c21, type: 2}
+      maxItems: 6
     weapon: {fileID: 11400000, guid: 5893a22409031d6479390574907630a5, type: 2}
     armor: {fileID: 11400000, guid: 5581629ab299a1a42857d3c641c90722, type: 2}
     accessory1: {fileID: 11400000, guid: c72475d64bc331a4585346fe56caf3d3, type: 2}
     accessory2: {fileID: 0}
     isInParty: 1
     exp: 0
+    skillCount: 12
   inventory:
     items: []
     keyItems: []
   gold: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!4 &1447335540
 Transform:
   m_ObjectHideFlags: 0

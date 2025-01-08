@@ -1,10 +1,6 @@
-using JetBrains.Annotations;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
 public enum Elements { NONE, FIRE, WATER, EARTH, ELECTRIC, WIND, LIGHT, DARK, }
 public abstract class Character : MonoBehaviour
@@ -30,11 +26,13 @@ public abstract class Character : MonoBehaviour
     public bool isActive;
     public bool isBackRow;
 
-    public virtual int attack { get { return strength; } }
-    public virtual int defense { get { return constitution; } }
-    public virtual int magAtk {  get { return intelligence; } }
-    public virtual int magDef {  get { return spirit; } }
-    public virtual int agility { get { return speed; } }
+    public virtual int attack => strength;
+    public virtual int defense => constitution;
+    public virtual int magAtk => intelligence;
+    public virtual int magDef => spirit;
+    public virtual int agility => speed;
+    public virtual int hitPercent => 100;
+    public virtual int dodgePercent => 0;
 
     public virtual float FindPhysicalDamageStatusModifier()
     {
@@ -81,8 +79,7 @@ public abstract class Character : MonoBehaviour
 
     public virtual int Attack(Character enemy, int turnCounter)
     {
-        double charAgility = agility, enemyAgility = enemy.agility;
-        double hitChance = ((charAgility * 2 / enemyAgility) + .01) * 100;
+        double hitChance = hitPercent - enemy.dodgePercent;
 
         if (hitChance >= UnityEngine.Random.Range(0, 100))
         {

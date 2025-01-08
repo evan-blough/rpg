@@ -9,15 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20379fbea368b3249b2d69bfd1f965f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 668721ff330c83142a9c544d65a80594, type: 3}
   m_Name: Potion
   m_EditorClassIdentifier: 
   itemName: Potion
   itemDescription: A small potion that heals 30 HP.
   itemPrice: 50
-  itemEffect:
-    effectValue: 30
-    isMultiTargeted: 0
-    itemType: 2
-    statuses: []
-    element: 0
+  effectValue: 30
+  isMultiTargeted: 0
+  statuses: []
+  element: 0

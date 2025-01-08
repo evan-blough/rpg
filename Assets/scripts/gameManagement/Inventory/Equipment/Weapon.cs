@@ -7,6 +7,7 @@ public class Weapon : Equipment
 {
     public Elements element;
     public List<Statuses> statuses;
+
     public void ApplyWeaponStatuses(Character enemy, int turnCounter)
     {
         foreach (var status in statuses)

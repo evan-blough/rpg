@@ -164,7 +164,16 @@ public class BattleStateMachine : MonoBehaviour
         if (currentCharacter.currStatuses.Any(s => s.status == Status.Berserk))
         {
             if (enemies.Count > 1)
-                StartCoroutine(PlayerAttack(enemies.Where(t => !t.isBackRow && t.isActive).ToList()[Random.Range(0, enemies.Count - 1)]));
+            {
+                List<Enemy> targets = enemies.Where(e => e.isActive).ToList()
+                    ;
+                if (targets.Where(e => !e.isBackRow).Any())
+                {
+                    targets = targets.Where(e => !e.isBackRow).ToList();
+                }
+
+                StartCoroutine(PlayerAttack(targets[Random.Range(0, targets.Count - 1)]));
+            }
             else
                 StartCoroutine(PlayerAttack(enemies.First()));
             return;

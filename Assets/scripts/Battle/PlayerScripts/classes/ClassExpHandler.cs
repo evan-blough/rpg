@@ -7,7 +7,6 @@ public class ClassExpHandler
     public void AddClassExperience(PlayerCharacter character, int amount)
     {
         character.currClass.classXp += amount;
-        UnityEngine.Debug.Log($"{character}, {amount}");
         CheckForClassLevelUp(character);
     }
 

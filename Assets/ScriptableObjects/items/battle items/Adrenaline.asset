@@ -9,19 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20379fbea368b3249b2d69bfd1f965f0, type: 3}
-  m_Name: Adrenaline Shot
+  m_Script: {fileID: 11500000, guid: ae9820a10e5126e408898a0462936338, type: 3}
+  m_Name: Adrenaline
   m_EditorClassIdentifier: 
-  itemName: Adrenaline Shot
+  itemName: Adrenaline
   itemDescription: A military-grade adrenaline shot. Activates Fury
   itemPrice: 100
-  itemEffect:
-    effectValue: 10
-    isMultiTargeted: 0
-    itemType: 4
-    statuses:
-    - status: 4
-      expirationTurn: 3
-      canBeCured: 1
-      accuracy: 100
-    element: 0
+  effectValue: 0
+  isMultiTargeted: 0
+  statuses:
+  - status: 4
+    expirationTurn: 3
+    canBeCured: 1
+    accuracy: 1
+  element: 0

@@ -12,6 +12,12 @@ public class HealingSkill : Skill
 
         foreach (var target in targets)
         {
+            if (!target.isActive)
+            {
+                returnHeals.Add("");
+                continue;
+            }
+
             int heals = (int)((character.magAtk * powerModifier * Random.Range(.85f, 1.25f)) / targets.Count);
 
             if (heals > 9999) heals = 9999;

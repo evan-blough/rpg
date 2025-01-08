@@ -10,7 +10,6 @@ public class Skill : ScriptableObject
     public int skillPointCost;
     public float criticalModifier;
     public float powerModifier;
-    public float accuracyModifier;
     public bool isMagic;
     public bool isRanged;
     public bool isMultiTargeted;

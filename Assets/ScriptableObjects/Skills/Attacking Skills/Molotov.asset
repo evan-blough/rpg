@@ -16,8 +16,7 @@ MonoBehaviour:
   skillDescription: Construct and throw a makeshift explosive. Deals Fire damage.
   skillPointCost: 15
   criticalModifier: 1
-  powerModifier: 6
-  accuracyModifier: 1
+  powerModifier: 3
   isMagic: 1
   isRanged: 1
   isMultiTargeted: 1

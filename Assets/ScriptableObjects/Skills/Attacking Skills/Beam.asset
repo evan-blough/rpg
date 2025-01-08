@@ -15,17 +15,13 @@ MonoBehaviour:
   skillName: Beam
   skillDescription: Fires a magic beam at the target from afar.
   skillPointCost: 8
-  active: 0
-  isEquipped: 0
-  levelReq: 0
   criticalModifier: 2
-  powerModifier: 3
-  accuracyModifier: 2
+  powerModifier: 2
   isMagic: 1
   isRanged: 1
   isMultiTargeted: 0
   elemAttribute: 6
   applySelfStatuses: []
   applyTargetStatuses: []
-  removeSelfStatuses: []
-  removeTargetStatuses: []
+  removeSelfStatuses: 
+  removeTargetStatuses: 

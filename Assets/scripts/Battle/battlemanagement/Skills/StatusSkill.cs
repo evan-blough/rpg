@@ -23,6 +23,12 @@ public class StatusSkill : Skill
 
         foreach (var target in targets)
         {
+            if (!target.isActive)
+            {
+                results.Add("");
+                continue;
+            }
+
             if (applyTargetStatuses.Count > 0)
             {
                 foreach (var status in applyTargetStatuses)

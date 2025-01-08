@@ -31,54 +31,29 @@ public class PlayerCharacter : Character
         }
     }
 
-    public override int attack
-    {
-        get
-        {
-            return strength + (weapon is null ? 0 : weapon.attackBuff) + (armor is null ? 0 : armor.attackBuff)
+    public override int attack => strength + (weapon is null ? 0 : weapon.attackBuff) + (armor is null ? 0 : armor.attackBuff)
                 + (accessory1 is null ? 0 : accessory1.attackBuff) + (accessory2 is null ? 0 : accessory2.attackBuff)
                 + (currClass is null ? 0 : currClass.classAtkMod);
-        }
-    }
 
-    public override int defense
-    {
-        get
-        {
-            return constitution + (weapon is null ? 0 : weapon.defenseBuff) + (armor is null ? 0 : armor.defenseBuff)
+    public override int defense => constitution + (weapon is null ? 0 : weapon.defenseBuff) + (armor is null ? 0 : armor.defenseBuff)
                 + (accessory1 is null ? 0 : accessory1.defenseBuff) + (accessory2 is null ? 0 : accessory2.defenseBuff)
                 + (currClass is null ? 0 : currClass.classDefMod);
-        }
-    }
 
-    public override int magAtk
-    {
-        get
-        {
-            return intelligence + (weapon is null ? 0 : weapon.magicAttackBuff) + (armor is null ? 0 : armor.magicAttackBuff)
+    public override int magAtk => intelligence + (weapon is null ? 0 : weapon.magicAttackBuff) + (armor is null ? 0 : armor.magicAttackBuff)
                 + (accessory1 is null ? 0 : accessory1.magicAttackBuff) + (accessory2 is null ? 0 : accessory2.magicAttackBuff)
                 + (currClass is null ? 0 : currClass.classMgAtkMod);
-        }
-    }
 
-    public override int magDef
-    {
-        get
-        {
-            return spirit + (weapon is null ? 0 : weapon.magicDefenseBuff) + (armor is null ? 0 : armor.magicDefenseBuff)
+    public override int magDef => spirit + (weapon is null ? 0 : weapon.magicDefenseBuff) + (armor is null ? 0 : armor.magicDefenseBuff)
                 + (accessory1 is null ? 0 : accessory1.magicDefenseBuff) + (accessory2 is null ? 0 : accessory2.magicDefenseBuff)
                 + (currClass is null ? 0 : currClass.classMgDefMod);
-        }
-    }
-    public override int agility
-    {
-        get
-        {
-            return speed + (weapon is null ? 0 : weapon.agilityBuff) + (armor is null ? 0 : armor.agilityBuff)
+    public override int agility => speed + (weapon is null ? 0 : weapon.agilityBuff) + (armor is null ? 0 : armor.agilityBuff)
                 + (accessory1 is null ? 0 : accessory1.agilityBuff) + (accessory2 is null ? 0 : accessory2.agilityBuff)
                 + (currClass is null ? 0 : currClass.classAgilityMod);
-        }
-    }
+
+    public override int hitPercent => 100 + (weapon is null ? 0 : weapon.accuracyMod);
+    public override int dodgePercent => 0 + (armor is null ? 0 : armor.accuracyMod) + (accessory1 is null ? 0 : accessory1.accuracyMod)
+        + (accessory2 is null ? 0 : accessory2.accuracyMod);
+
     public override List<Status> resistances
     {
         get
@@ -128,8 +103,7 @@ public class PlayerCharacter : Character
     }
     public override int Attack(Character enemy, int turnCounter)
     {
-        double enemyAgility = enemy.agility;
-        double hitChance = ((agility / enemyAgility) + .01) * 100;
+        double hitChance = hitPercent - enemy.dodgePercent;
 
         if (weapon is not null && weapon.element != Elements.NONE && enemy.elemAbsorptions.Where(e => e == weapon.element).Any()) { return -1; }
 
