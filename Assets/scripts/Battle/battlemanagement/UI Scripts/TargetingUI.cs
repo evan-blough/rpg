@@ -49,7 +49,7 @@ public class TargetingUI : MonoBehaviour
     }
 
     // normal target activation
-    public void ActivateTargets(Character character)
+    public void ActivateTargets()
     {
         allHeroes.interactable = false;
         allEnemies.interactable = false;
@@ -75,7 +75,7 @@ public class TargetingUI : MonoBehaviour
     }
 
     // activating targets for a skill
-    public void ActivateTargets(Skill skill, Character character)
+    public void ActivateTargets(Skill skill)
     {
         var buttons = allHeroes.GetComponentsInChildren<Button>().Where(b => b != allHeroes).ToArray();
         var characters = allHeroes.GetComponentsInChildren<CharacterHUD>();
@@ -157,7 +157,7 @@ public class TargetingUI : MonoBehaviour
     }
 
     // activating targets for an item
-    public void ActivateTargets(BattleItem item, Character character)
+    public void ActivateTargets(BattleItem item)
     {
         var buttons = allHeroes.GetComponentsInChildren<Button>().Where(b => b != allHeroes).ToArray();
         var characters = allHeroes.GetComponentsInChildren<CharacterHUD>();

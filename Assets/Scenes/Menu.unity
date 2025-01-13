@@ -1925,7 +1925,7 @@ MonoBehaviour:
     maxHP: 200
     maxSP: 20
     currSP: 20
-    currHP: 200
+    currHP: 150
     strength: 30
     constitution: 20
     intelligence: 10
@@ -1997,7 +1997,7 @@ MonoBehaviour:
     maxHP: 150
     maxSP: 30
     currSP: 30
-    currHP: 150
+    currHP: 75
     strength: 20
     constitution: 15
     intelligence: 20
@@ -2078,7 +2078,7 @@ MonoBehaviour:
     maxHP: 100
     maxSP: 35
     currSP: 35
-    currHP: 100
+    currHP: 1
     strength: 10
     constitution: 10
     intelligence: 25
@@ -2145,8 +2145,21 @@ MonoBehaviour:
     exp: 0
     skillCount: 12
   inventory:
-    items: []
-    keyItems: []
+    items:
+    - item: {fileID: 11400000, guid: 076d308d5d93f9542af5d682a4d09c84, type: 2}
+      itemCount: 10
+    - item: {fileID: 11400000, guid: 98a0c88301fb42e47bf47dd60534e6cf, type: 2}
+      itemCount: 45
+    - item: {fileID: 11400000, guid: 5581629ab299a1a42857d3c641c90722, type: 2}
+      itemCount: 1
+    - item: {fileID: 11400000, guid: a76dd72ed74770e47b3a52e31df98724, type: 2}
+      itemCount: 1
+    - item: {fileID: 11400000, guid: efc85a8dd491bf34b8cb1cdb8f54cfe2, type: 2}
+      itemCount: 5
+    keyItems:
+    - {fileID: 11400000, guid: ac9fec5050e416d43af74167639ada7e, type: 2}
+    - {fileID: 11400000, guid: 257ec598dd266e34da5a1bf9e8f103b7, type: 2}
+    - {fileID: 11400000, guid: eb65d62bbb18103438171166a99ae485, type: 2}
   gold: 0
   references:
     version: 2
@@ -2336,6 +2349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 856bb7351e38fa94aa34985d1b6c7a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characters: {fileID: 1302673780}
   slotPrefab: {fileID: 1255397836772344292, guid: 14e7ae6301c40c845b87df7a0dfaa3e4, type: 3}
   inventoryType: {fileID: 248183043}
 --- !u!114 &607976704
@@ -2508,6 +2522,7 @@ GameObject:
   - component: {fileID: 667762260}
   - component: {fileID: 667762262}
   - component: {fileID: 667762261}
+  - component: {fileID: 667762263}
   m_Layer: 5
   m_Name: ItemsMenu
   m_TagString: Untagged
@@ -2577,6 +2592,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667762259}
   m_CullTransparentMesh: 1
+--- !u!114 &667762263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667762259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 667762261}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1302673777}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &678549397
 GameObject:
   m_ObjectHideFlags: 0
@@ -3911,6 +3982,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterDisplayPrefab: {fileID: 5085933641051196482, guid: 92c0636420f25ee438a2ee2dcde8c2ec, type: 3}
+  allHeroesButton: {fileID: 667762263}
+  inventoryDisplayHandler: {fileID: 607976703}
 --- !u!1 &1314137588
 GameObject:
   m_ObjectHideFlags: 0
@@ -3997,6 +4070,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1302673780}
         m_TargetAssemblyTypeName: CharacterItemDisplay, Assembly-CSharp
         m_MethodName: ChangeToBattleInventoryView
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 607976703}
+        m_TargetAssemblyTypeName: InventoryDisplayHandler, Assembly-CSharp
+        m_MethodName: PopulateBattleItems
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5461,7 +5546,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 607976703}
         m_TargetAssemblyTypeName: InventoryDisplayHandler, Assembly-CSharp
-        m_MethodName: PopulateMenu
+        m_MethodName: PopulateFieldMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -5,13 +5,15 @@ public class MenuItemButton : MonoBehaviour
 {
     public Text quantity;
     public Text itemName;
+    public InventorySlots currSlot;
     public Items item;
 
     public void CreateButton(InventorySlots slot)
     {
-        quantity.text = slot.itemCount.ToString();
-        itemName.text = slot.item.itemName;
+        currSlot = slot;
         item = slot.item;
+        quantity.text = currSlot.itemCount.ToString();
+        itemName.text = item.itemName;
     }
 
     public void CreateButton(KeyItems keyItem)
@@ -20,4 +22,14 @@ public class MenuItemButton : MonoBehaviour
         itemName.text = keyItem.itemName;
         item = keyItem;
     }
+
+    public void UpdateButtonData()
+    {
+        quantity.text = currSlot.itemCount.ToString();
+        if (currSlot.itemCount == 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
+

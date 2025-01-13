@@ -43,7 +43,7 @@ public class ItemsUI : MonoBehaviour
     public void OnItemButton(BattleItem item)
     {
         currentItem = item;
-        bsm.uiHandler.targetingUI.ActivateTargets(item, bsm.currentCharacter);
+        bsm.uiHandler.targetingUI.ActivateTargets(item);
     }
 
     public IEnumerator OnTargetSelected(List<Character> targets)

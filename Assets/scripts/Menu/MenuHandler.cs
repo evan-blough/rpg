@@ -13,7 +13,7 @@ public class MenuHandler : MonoBehaviour
 
     public void OpenItemMenu()
     {
-        itemDisplay.GetComponentInChildren<InventoryDisplayHandler>().PopulateMenu();
+        itemDisplay.GetComponentInChildren<InventoryDisplayHandler>().PopulateFieldMenu();
         itemDisplay.SetActive(true);
         mainDisplay.SetActive(false);
     }

@@ -35,6 +35,11 @@ public class BattleInventoryDisplay : MonoBehaviour
         {
             temp = Instantiate(battleInventoryButtonPrefab, battleInventory.transform);
             temp.GetComponentInChildren<BattleItemButton>().PopulateButton(item);
+            temp.GetComponentInChildren<BattleItemButton>()
+                .GetComponent<Button>()
+                .onClick.AddListener(
+                () => temp.GetComponentInParent<CharacterItemDisplay>()
+                .inventoryDisplayHandler.RemoveItemFromChar(pcd, item));
         }
 
         battleInventory.SetActive(true);

@@ -247,7 +247,7 @@ public class BattleStateMachine : MonoBehaviour
     }
     public void OnAttackButton()
     {
-        uiHandler.UIOnAttack(currentCharacter);
+        uiHandler.UIOnAttack();
     }
 
     public void OnFleeButton()

@@ -6,10 +6,12 @@ public class BattleInventory
     public List<BattleItem> items;
     public int maxItems;
 
-    public void AddItem(BattleItem item)
+    public bool AddItem(BattleItem item)
     {
-        if (items.Count == maxItems) return;
+        if (items.Count == maxItems) return false;
 
         items.Add(item);
+
+        return true;
     }
 }

@@ -104,9 +104,9 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0, g: 0.050980397, b: 0.5686275, a: 1}
     m_PressedColor: {r: 0, g: 0.050980397, b: 0.5686275, a: 1}
     m_SelectedColor: {r: 0, g: 0.050980397, b: 0.5686275, a: 1}
-    m_DisabledColor: {r: 0.5018867, g: 0.5018867, b: 0.5018867, a: 1}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
+    m_FadeDuration: 0
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -137,6 +137,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quantity: {fileID: 3508435855799111000}
   itemName: {fileID: 249992763461938374}
+  currSlot:
+    item: {fileID: 0}
+    itemCount: 0
   item: {fileID: 0}
 --- !u!1 &2990475725324754047
 GameObject:

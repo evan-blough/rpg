@@ -9,6 +9,15 @@ public class Class
     public int classLevel = 1;
     public bool isMaxed;
 
+    public Class(ClassSlot slot)
+    {
+        classSlot = slot;
+        currLevel = slot.levels[0];
+        isMaxed = false;
+        classXp = 0;
+        classLevel = 1;
+    }
+
     public int classAtkMod
     {
         get

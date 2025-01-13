@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Revive Item", menuName = "Items/BattleItem/Revive Item")]
@@ -26,5 +27,27 @@ public class ReviveItem : BattleItem
         }
 
         return result;
+    }
+    public override bool UseItemInField(List<PlayerCharacterData> targets)
+    {
+        List<string> result = new List<string>();
+
+        foreach (PlayerCharacterData target in targets)
+        {
+            if (target.isActive)
+            {
+                continue;
+            }
+
+            target.isActive = true;
+
+            target.currHP += effectValue;
+
+            if (target.currHP > target.maxHP) target.currHP = target.maxHP;
+
+            result.Add(effectValue.ToString());
+        }
+
+        return result.Any();
     }
 }
