@@ -68,6 +68,15 @@ public class SceneManager : MonoBehaviour
 
     }
 
+    public IEnumerator EnterGame()
+    {
+        yield return StartCoroutine(TransitionTime("Exit_Scene", 1f));
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Overworld");
+
+        yield return StartCoroutine(TransitionTime("Enter_Scene", 1f));
+    }
+
     public IEnumerator OpenMenu()
     {
         overworld = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
@@ -103,6 +112,8 @@ public class SceneManager : MonoBehaviour
         animator.SetTrigger(trigger);
 
         yield return new WaitForSeconds(time);
+
+        animator.ResetTrigger(trigger);
     }
 
     public void SaveGame()

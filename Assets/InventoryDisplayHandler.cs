@@ -3,6 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum CurrentMenu { KEYITEM, BATTLEINVENTORY, USEITEM };
 public class InventoryDisplayHandler : MonoBehaviour
 {
     Inventory inventory;
@@ -10,7 +11,7 @@ public class InventoryDisplayHandler : MonoBehaviour
     public GameObject slotPrefab;
     public Text inventoryType;
     InventorySlots currSlot;
-    bool fieldView;
+    CurrentMenu currentMenu;
 
     public void PopulateFieldMenu()
     {
@@ -39,7 +40,7 @@ public class InventoryDisplayHandler : MonoBehaviour
         }
 
         inventoryType.text = "Use Items";
-        fieldView = true;
+        currentMenu = CurrentMenu.USEITEM;
     }
 
     public void PopulateBattleItems()
@@ -69,7 +70,7 @@ public class InventoryDisplayHandler : MonoBehaviour
         }
 
         inventoryType.text = "Move To Battle Inventory";
-        fieldView = false;
+        currentMenu = CurrentMenu.BATTLEINVENTORY;
     }
 
     public void PopulateKeyItems()
@@ -89,11 +90,15 @@ public class InventoryDisplayHandler : MonoBehaviour
         }
 
         inventoryType.text = "Key Items";
+        currentMenu = CurrentMenu.KEYITEM;
     }
 
     public void SortInventory()
     {
-        return;
+        if (currentMenu == CurrentMenu.KEYITEM)
+            return;
+
+        RefreshInventoryView();
     }
 
     public void OnFieldItemClick(InventorySlots slot)
@@ -172,7 +177,7 @@ public class InventoryDisplayHandler : MonoBehaviour
                 newButton.CreateButton(slot);
 
                 var button = newButton.GetComponent<Button>();
-                if (fieldView)
+                if (currentMenu == CurrentMenu.USEITEM)
                 {
                     if (newButton.item is HealItem || newButton.item is FieldItem || newButton.item is ReviveItem)
                     {

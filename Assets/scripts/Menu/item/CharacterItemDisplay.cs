@@ -33,6 +33,7 @@ public class CharacterItemDisplay : MonoBehaviour
             temp.GetComponentInChildren<BattleInventoryDisplay>().CreateCharacterDisplay(pcd);
             temp.gameObject.GetComponent<Button>().onClick.RemoveAllListeners();
             temp.GetComponentInChildren<Button>().onClick.AddListener(() => FieldItemUse(new List<PlayerCharacterData> { pcd }));
+            temp.GetComponentInChildren<Button>().interactable = false;
         }
     }
 
@@ -45,6 +46,7 @@ public class CharacterItemDisplay : MonoBehaviour
             child.gameObject.GetComponent<Button>().onClick.RemoveAllListeners();
             var pcd = child.gameObject.GetComponent<BattleInventoryDisplay>().pcd;
             child.GetComponentInChildren<Button>().onClick.AddListener(() => BattleItemUse(pcd));
+            child.GetComponent<Button>().interactable = false;
         }
     }
 
@@ -75,10 +77,8 @@ public class CharacterItemDisplay : MonoBehaviour
     {
         var buttons = GetComponentsInChildren<Button>();
         var characters = GetComponentsInChildren<BattleInventoryDisplay>();
-
         if (item is BattleItem && ((BattleItem)item).isMultiTargeted)
         {
-            Debug.Log(item);
             allHeroesButton.interactable = true;
             foreach (Button button in buttons)
             {
@@ -114,15 +114,14 @@ public class CharacterItemDisplay : MonoBehaviour
 
     public void ActivateBattleTargets(Items item)
     {
-        var buttons = GetComponentsInChildren<Button>();
         allHeroesButton.interactable = false;
         var characters = GetComponentsInChildren<BattleInventoryDisplay>();
 
-        for (int i = 0; i < buttons.Length && i < characters.Length; i++)
+        for (int i = 0; i < characters.Length; i++)
         {
             if (characters[i].pcd.charInventory.items.Count < characters[i].pcd.charInventory.maxItems)
             {
-                buttons[i].interactable = true;
+                characters[i].GetComponent<Button>().interactable = true;
             }
         }
     }
@@ -141,7 +140,8 @@ public class CharacterItemDisplay : MonoBehaviour
     {
         var buttons = GetComponentsInChildren<Button>();
         allHeroesButton.interactable = false;
-        foreach (Button button in buttons)
+        var buttonsToCancel = buttons.Where(b => b.gameObject.GetComponent<BattleInventoryDisplay>() is not null).ToList();
+        foreach (var button in buttonsToCancel)
             button.interactable = false;
     }
 }

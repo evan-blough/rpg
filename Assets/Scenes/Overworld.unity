@@ -977,7 +977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff0ddc1ac9745a4bbac497ac146d4bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 652a926482a042445816d55325173317, type: 2}
+  item: {fileID: 11400000, guid: efc85a8dd491bf34b8cb1cdb8f54cfe2, type: 2}
   itemNum: 1
   isCollected: 0
 --- !u!135 &636204840
