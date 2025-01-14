@@ -17,4 +17,11 @@ public class MenuHandler : MonoBehaviour
         itemDisplay.SetActive(true);
         mainDisplay.SetActive(false);
     }
+
+    public void OpenMainDisplay()
+    {
+        mainDisplay.GetComponentInChildren<MenuData>().FillSlotData();
+        mainDisplay.SetActive(true);
+        itemDisplay.SetActive(false);
+    }
 }

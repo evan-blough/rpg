@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 public class MenuData : MonoBehaviour
 {
@@ -6,12 +5,18 @@ public class MenuData : MonoBehaviour
 
     private void Start()
     {
-        FillSlotData(BattlePartyHandler.instance.partyData);
+        FillSlotData();
     }
-    public void FillSlotData(List<PlayerCharacterData> dataList)
+    public void FillSlotData()
     {
         GameObject temp;
-        foreach (PlayerCharacterData data in dataList)
+
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (PlayerCharacterData data in BattlePartyHandler.instance.partyData)
         {
             if (!data.isInParty) continue;
 

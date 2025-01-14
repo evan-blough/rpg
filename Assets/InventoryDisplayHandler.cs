@@ -10,12 +10,16 @@ public class InventoryDisplayHandler : MonoBehaviour
     public CharacterItemDisplay characters;
     public GameObject slotPrefab;
     public Text inventoryType;
+    public GameObject sortOptions;
+    public Button sort;
     InventorySlots currSlot;
     CurrentMenu currentMenu;
 
     public void PopulateFieldMenu()
     {
         CheckForInventory();
+        sortOptions.gameObject.SetActive(false);
+        sort.interactable = true;
 
         foreach (Transform child in transform)
         {
@@ -46,6 +50,8 @@ public class InventoryDisplayHandler : MonoBehaviour
     public void PopulateBattleItems()
     {
         CheckForInventory();
+        sortOptions.gameObject.SetActive(false);
+        sort.interactable = true;
 
         foreach (Transform child in transform)
         {
@@ -76,6 +82,8 @@ public class InventoryDisplayHandler : MonoBehaviour
     public void PopulateKeyItems()
     {
         CheckForInventory();
+        sortOptions.gameObject.SetActive(false);
+        sort.interactable = false;
 
         foreach (Transform child in transform)
         {
@@ -93,17 +101,9 @@ public class InventoryDisplayHandler : MonoBehaviour
         currentMenu = CurrentMenu.KEYITEM;
     }
 
-    public void SortInventory()
+    public void OnSortPress()
     {
-        if (currentMenu == CurrentMenu.KEYITEM)
-            return;
-
-        SortByHealFirst();
-
-        if (currentMenu == CurrentMenu.USEITEM)
-            PopulateFieldMenu();
-        else
-            PopulateBattleItems();
+        sortOptions.gameObject.SetActive(true);
     }
 
     public void OnFieldItemClick(InventorySlots slot)
@@ -219,6 +219,11 @@ public class InventoryDisplayHandler : MonoBehaviour
         newInventory.AddRange(inventory.items.Where(i => i.item is BattleItem && !newInventory.Contains(i)).ToList());
         newInventory.AddRange(inventory.items.Where(i => !newInventory.Contains(i)).ToList());
         inventory.items = newInventory;
+
+        if (currentMenu == CurrentMenu.USEITEM)
+            PopulateFieldMenu();
+        else
+            PopulateBattleItems();
     }
 
     public void SortByAttackFirst()
@@ -230,6 +235,11 @@ public class InventoryDisplayHandler : MonoBehaviour
         newInventory.AddRange(inventory.items.Where(i => i.item is FieldItem && !newInventory.Contains(i)).ToList());
         newInventory.AddRange(inventory.items.Where(i => !newInventory.Contains(i)).ToList());
         inventory.items = newInventory;
+
+        if (currentMenu == CurrentMenu.USEITEM)
+            PopulateFieldMenu();
+        else
+            PopulateBattleItems();
     }
 
     public void SortByFieldItemFirst()
@@ -240,6 +250,26 @@ public class InventoryDisplayHandler : MonoBehaviour
         newInventory.AddRange(inventory.items.Where(i => i.item is BattleItem && !newInventory.Contains(i)).ToList());
         newInventory.AddRange(inventory.items.Where(i => !newInventory.Contains(i)).ToList());
         inventory.items = newInventory;
+
+        if (currentMenu == CurrentMenu.USEITEM)
+            PopulateFieldMenu();
+        else
+            PopulateBattleItems();
+    }
+
+    public void SortByEquipmentFirst()
+    {
+        List<InventorySlots> newInventory = new List<InventorySlots>();
+        newInventory.AddRange(inventory.items.Where(i => i.item is Weapon).ToList());
+        newInventory.AddRange(inventory.items.Where(i => i.item is Armor).ToList());
+        newInventory.AddRange(inventory.items.Where(i => i.item is Accessory).ToList());
+        newInventory.AddRange(inventory.items.Where(i => !newInventory.Contains(i)).ToList());
+        inventory.items = newInventory;
+
+        if (currentMenu == CurrentMenu.USEITEM)
+            PopulateFieldMenu();
+        else
+            PopulateBattleItems();
     }
 
     private void CheckForInventory()
