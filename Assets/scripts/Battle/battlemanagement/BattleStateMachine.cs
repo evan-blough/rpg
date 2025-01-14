@@ -209,7 +209,7 @@ public class BattleStateMachine : MonoBehaviour
 
         if (state == BattleStates.LOSS)
         {
-            uiHandler.OnLoss();
+            uiHandler.StartCoroutine(uiHandler.OnLoss());
         }
         else if (state == BattleStates.WIN)
         {

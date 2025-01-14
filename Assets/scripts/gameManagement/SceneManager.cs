@@ -107,6 +107,15 @@ public class SceneManager : MonoBehaviour
         yield return StartCoroutine(TransitionTime("Enter_Scene", .5f));
     }
 
+    public IEnumerator ReturnToMainMenu()
+    {
+        yield return StartCoroutine(TransitionTime("Exit_Scene", .5f));
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+
+        yield return StartCoroutine(TransitionTime("Enter_Scene", .5f));
+    }
+
     public IEnumerator TransitionTime(string trigger, float time)
     {
         animator.SetTrigger(trigger);

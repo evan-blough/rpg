@@ -2,11 +2,9 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    public SceneManager sceneManager;
-
     private void Start()
     {
-        sceneManager.StartCoroutine(SceneManager.instance.TransitionTime("Enter_Scene", .5f));
+        SceneManager.instance.StartCoroutine(SceneManager.instance.TransitionTime("Enter_Scene", .5f));
     }
 
     public void OnGameLoad()
@@ -16,7 +14,7 @@ public class MainMenu : MonoBehaviour
 
     public void OnNewGame()
     {
-        sceneManager.StartCoroutine(sceneManager.EnterGame());
+        SceneManager.instance.StartCoroutine(SceneManager.instance.EnterGame());
     }
 
     public void OnOptions()

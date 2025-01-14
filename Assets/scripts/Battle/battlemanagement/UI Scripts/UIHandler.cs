@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,7 +16,7 @@ public class UIHandler : MonoBehaviour
     public TargetingUI targetingUI;
     public EnemySkillUI enemySkillUI;
     public GameObject itemsUI;
-
+    public Canvas canvas;
     public void OnStart()
     {
         battleHUD.gameObject.SetActive(false);
@@ -45,9 +46,12 @@ public class UIHandler : MonoBehaviour
         targetingUI.DeactivateButtons();
     }
 
-    public void OnLoss()
+    public IEnumerator OnLoss()
     {
         lossBox.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        canvas.gameObject.SetActive(false);
+        SceneManager.instance.StartCoroutine(SceneManager.instance.ReturnToMainMenu());
     }
 
     public void OnWin(List<Enemy> enemy, List<PlayerCharacter> playerCharacterList)

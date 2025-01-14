@@ -1740,6 +1740,7 @@ MonoBehaviour:
   targetingUI: {fileID: 1184593394}
   enemySkillUI: {fileID: 1913652317}
   itemsUI: {fileID: 1090240636}
+  canvas: {fileID: 1439259821}
 --- !u!4 &491290405
 Transform:
   m_ObjectHideFlags: 0

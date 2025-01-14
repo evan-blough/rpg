@@ -98,7 +98,12 @@ public class InventoryDisplayHandler : MonoBehaviour
         if (currentMenu == CurrentMenu.KEYITEM)
             return;
 
-        RefreshInventoryView();
+        SortByHealFirst();
+
+        if (currentMenu == CurrentMenu.USEITEM)
+            PopulateFieldMenu();
+        else
+            PopulateBattleItems();
     }
 
     public void OnFieldItemClick(InventorySlots slot)
@@ -201,6 +206,40 @@ public class InventoryDisplayHandler : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SortByHealFirst()
+    {
+        List<InventorySlots> newInventory = new List<InventorySlots>();
+        newInventory.AddRange(inventory.items.Where(i => i.item is HealItem).ToList());
+        newInventory.AddRange(inventory.items.Where(i => i.item is SPRecoveryItem).ToList());
+        newInventory.AddRange(inventory.items.Where(i => i.item is ReviveItem).ToList());
+        newInventory.AddRange(inventory.items.Where(i => i.item is StatusRemovalItem).ToList());
+        newInventory.AddRange(inventory.items.Where(i => i.item is FieldItem && !newInventory.Contains(i)).ToList());
+        newInventory.AddRange(inventory.items.Where(i => i.item is BattleItem && !newInventory.Contains(i)).ToList());
+        newInventory.AddRange(inventory.items.Where(i => !newInventory.Contains(i)).ToList());
+        inventory.items = newInventory;
+    }
+
+    public void SortByAttackFirst()
+    {
+        List<InventorySlots> newInventory = new List<InventorySlots>();
+        newInventory.AddRange(inventory.items.Where(i => i.item is AttackItem).ToList());
+        newInventory.AddRange(inventory.items.Where(i => i.item is StatusApplyItem).ToList());
+        newInventory.AddRange(inventory.items.Where(i => i.item is BattleItem && !newInventory.Contains(i)).ToList());
+        newInventory.AddRange(inventory.items.Where(i => i.item is FieldItem && !newInventory.Contains(i)).ToList());
+        newInventory.AddRange(inventory.items.Where(i => !newInventory.Contains(i)).ToList());
+        inventory.items = newInventory;
+    }
+
+    public void SortByFieldItemFirst()
+    {
+        List<InventorySlots> newInventory = new List<InventorySlots>();
+        newInventory.AddRange(inventory.items.Where(i => i.item is ClassItem).ToList());
+        newInventory.AddRange(inventory.items.Where(i => i.item is SkillItem).ToList());
+        newInventory.AddRange(inventory.items.Where(i => i.item is BattleItem && !newInventory.Contains(i)).ToList());
+        newInventory.AddRange(inventory.items.Where(i => !newInventory.Contains(i)).ToList());
+        inventory.items = newInventory;
     }
 
     private void CheckForInventory()
