@@ -46,7 +46,7 @@ public class OptionsList : MonoBehaviour
 
     public void OnExitButton()
     {
-        Application.Quit();
+        SceneManager.instance.StartCoroutine(SceneManager.instance.ReturnToMainMenu());
     }
 
     public void ReturnToOverworld(InputAction.CallbackContext ctx)
