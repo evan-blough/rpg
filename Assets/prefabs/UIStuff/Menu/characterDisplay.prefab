@@ -895,6 +895,9 @@ GameObject:
   - component: {fileID: 4122317600593437337}
   - component: {fileID: 7246529070722286594}
   - component: {fileID: 4493666986734048201}
+  - component: {fileID: 2737835622423881104}
+  - component: {fileID: 1996945860611920187}
+  - component: {fileID: 7025721156989373859}
   m_Layer: 5
   m_Name: characterDisplay
   m_TagString: Untagged
@@ -968,6 +971,148 @@ MonoBehaviour:
   health: {fileID: 6522202112804082562}
   skillPoints: {fileID: 4183465313414317181}
   status: {fileID: 8496341421758488952}
+  pcd:
+    unitName: 
+    level: 0
+    maxHP: 0
+    maxSP: 0
+    currSP: 0
+    currHP: 0
+    strength: 0
+    constitution: 0
+    intelligence: 0
+    spirit: 0
+    speed: 0
+    luck: 0
+    currStatuses: []
+    isActive: 0
+    isBackRow: 0
+    portrait: {fileID: 0}
+    expHandler:
+      experienceCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    classExpHandler:
+      nextLevelExp: 0
+    weightClass: 0
+    skills: []
+    equippedSkills: []
+    classes: []
+    equippedClass:
+      rid: -2
+    excessClassPoints: 0
+    charInventory:
+      items: []
+      maxItems: 0
+    weapon: {fileID: 0}
+    armor: {fileID: 0}
+    accessory1: {fileID: 0}
+    accessory2: {fileID: 0}
+    isInParty: 0
+    exp: 0
+    skillCount: 12
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+--- !u!114 &2737835622423881104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5164842281949841611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.050980397, b: 0.5686275, a: 1}
+    m_PressedColor: {r: 0, g: 0.050980397, b: 0.5686275, a: 1}
+    m_SelectedColor: {r: 0, g: 0.050980397, b: 0.5686275, a: 1}
+    m_DisabledColor: {r: 0.5018867, g: 0.5018867, b: 0.5018867, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 7025721156989373859}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: OptionsList, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!222 &1996945860611920187
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5164842281949841611}
+  m_CullTransparentMesh: 1
+--- !u!114 &7025721156989373859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5164842281949841611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &5238203631141416602
 GameObject:
   m_ObjectHideFlags: 0

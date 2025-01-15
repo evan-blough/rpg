@@ -11,15 +11,15 @@ public class CharacterDisplay : MonoBehaviour
     public Text health;
     public Text skillPoints;
     public Text status;
-
-    public void SetDisplayData(PlayerCharacterData data)
+    public PlayerCharacterData pcd;
+    public void SetDisplayData()
     {
-        portrait.sprite = data.portrait;
-        level.text = data.level.ToString();
-        string statusText = data.currStatuses.Any() ? data.currStatuses.First().status.ToString() : string.Empty;
+        portrait.sprite = pcd.portrait;
+        level.text = pcd.level.ToString();
+        string statusText = pcd.currStatuses.Any() ? pcd.currStatuses.First().status.ToString() : string.Empty;
         status.text = statusText;
-        nameText.text = data.unitName;
-        health.text = $"{data.currHP} / {data.maxHP}";
-        skillPoints.text = $"{data.currSP} / {data.maxHP}";
+        nameText.text = pcd.unitName;
+        health.text = $"{pcd.currHP} / {pcd.maxHP}";
+        skillPoints.text = $"{pcd.currSP} / {pcd.maxHP}";
     }
 }

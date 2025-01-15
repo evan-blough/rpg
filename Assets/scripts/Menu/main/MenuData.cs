@@ -21,7 +21,9 @@ public class MenuData : MonoBehaviour
             if (!data.isInParty) continue;
 
             temp = Instantiate(menuSlotPrefab, transform);
-            temp.GetComponent<CharacterDisplay>().SetDisplayData(data);
+            CharacterDisplay display = temp.GetComponent<CharacterDisplay>();
+            display.pcd = data;
+            display.SetDisplayData();
         }
     }
 }
