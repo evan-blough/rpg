@@ -24,6 +24,16 @@ public class BattlePartyHandler : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        if (heroData.equippedClass is null)
+            heroData.equippedClass = heroData.classes[0];
+        if (wizardData.equippedClass is null)
+            wizardData.equippedClass = wizardData.classes[0];
+        if (senatorData.equippedClass is null)
+            senatorData.equippedClass = senatorData.classes[0];
+    }
+
     public void SetCurrentPartyData()
     {
         SetCharacterPartyStatus(heroData);

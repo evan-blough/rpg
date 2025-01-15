@@ -4,7 +4,8 @@ using UnityEngine;
 public class ExperienceHandler
 {
     public AnimationCurve experienceCurve;
-    int nextLevelExp, prevLevelExp;
+    public int nextLevelExp;
+    int prevLevelExp;
 
 
     public void AddExperience(PlayerCharacter character, int amount)
