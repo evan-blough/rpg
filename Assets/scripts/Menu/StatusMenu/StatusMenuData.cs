@@ -50,5 +50,9 @@ public class StatusMenuData : MonoBehaviour
     private void OnDisable()
     {
         controls.menu.Confirm.started -= NextPage;
+        stats.gameObject.SetActive(false);
+        elements.gameObject.SetActive(false);
+        statuses.gameObject.SetActive(false);
+
     }
 }
