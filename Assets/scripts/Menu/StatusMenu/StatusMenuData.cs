@@ -1,57 +1,54 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.InputSystem;
+
 public class StatusMenuData : MonoBehaviour
 {
-    PlayerCharacterData data;
-    public Image portrait;
-    public Text nameText;
-    public Text levelText;
-    public Text hpText;
-    public Text spText;
-    public Text currClassText;
-    public Text currExpText;
-    public Text nextLevelExpText;
-    public Text classLevelText;
-    public Text nextClassLevelText;
-    public Text strengthText;
-    public Text constitutionText;
-    public Text intelligenceText;
-    public Text spiritText;
-    public Text speedText;
-    public Text luckText;
-    public Text attackText;
-    public Text defenseText;
-    public Text magAtkText;
-    public Text magDefText;
-    public Text agilityText;
-    public Text accuracyText;
-    public Text evasionText;
-
-    public void PopulateData(PlayerCharacterData pcd)
+    public StatusMenuStats stats;
+    public StatusMenuElements elements;
+    public StatusMenuStatuses statuses;
+    PlayerControls controls;
+    private void Awake()
     {
-        data = pcd;
-        portrait.sprite = data.portrait;
-        nameText.text = data.unitName;
-        levelText.text = $"Level {data.level}";
-        hpText.text = $"HP: {data.currHP} / {data.maxHP}";
-        spText.text = $"SP: {data.currSP} / {data.maxSP}";
-        currClassText.text = data.equippedClass.classSlot.name;
-        currExpText.text = $"Curr EXP: {data.exp}";
-        nextLevelExpText.text = $"To Next Level: {data.expHandler.nextLevelExp - data.exp}";
-        classLevelText.text = $"Class Level: {(data.equippedClass.isMaxed ? "MAX" : data.equippedClass.classLevel)}";
-        nextClassLevelText.text = $"Next Class Level: {(data.equippedClass.isMaxed ? "MAXED" : data.equippedClass.currLevel.expNeeded - data.equippedClass.classXp)}";
-        strengthText.text = $"Strength: {data.strength}";
-        constitutionText.text = $"Constitution: {data.constitution}";
-        intelligenceText.text = $"Intelligence: {data.intelligence}";
-        spiritText.text = $"Spirit: {data.spirit}";
-        speedText.text = $"Speed: {data.speed}";
-        luckText.text = $"Luck: {data.luck}";
-        attackText.text = $"Attack: {data.attack}";
-        defenseText.text = $"Defense: {data.defense}";
-        magAtkText.text = $"Magic Atk: {data.magAtk}";
-        magDefText.text = $"Magic Def: {data.magDef}";
-        agilityText.text = $"Agility: {data.agility}";
-        accuracyText.text = $"Accuracy: {data.hitPercent}%";
-        evasionText.text = $"Evasion: {data.dodgePercent}%";
+        stats.gameObject.SetActive(false);
+        elements.gameObject.SetActive(false);
+        statuses.gameObject.SetActive(false);
+        controls = ControlsHandler.instance.playerControls;
+    }
+
+    public void PrepareData(PlayerCharacterData pcd)
+    {
+        stats.PopulateData(pcd);
+        elements.PopulateData(pcd);
+        statuses.PopulateData(pcd);
+        stats.gameObject.SetActive(true);
+    }
+
+    public void NextPage(InputAction.CallbackContext ctx)
+    {
+        if (stats.gameObject.activeInHierarchy)
+        {
+            elements.gameObject.SetActive(true);
+            stats.gameObject.SetActive(false);
+        }
+        else if (elements.gameObject.activeInHierarchy)
+        {
+            statuses.gameObject.SetActive(true);
+            elements.gameObject.SetActive(false);
+        }
+        else if (statuses.gameObject.activeInHierarchy)
+        {
+            stats.gameObject.SetActive(true);
+            statuses.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnEnable()
+    {
+        controls.menu.Confirm.started += NextPage;
+    }
+
+    private void OnDisable()
+    {
+        controls.menu.Confirm.started -= NextPage;
     }
 }

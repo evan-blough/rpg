@@ -19,7 +19,7 @@ public class AttackSkill : Skill
                 continue;
             }
 
-            if (target.elemAbsorptions.Where(e => e == elemAttribute).Any()) { returnDamages.Add("Immune"); }
+            if (target.elemImmunities.Where(e => e == elemAttribute).Any()) { returnDamages.Add("Immune"); }
             else
             {
                 hitCheck = character.hitPercent - target.dodgePercent;

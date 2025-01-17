@@ -509,6 +509,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Confirm"",
+                    ""type"": ""Button"",
+                    ""id"": ""cf188762-6882-41de-a104-dc12292f6686"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -531,6 +540,39 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""keyboard"",
                     ""action"": ""Return"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bc2ed655-a72b-4208-a5c4-fd01dde2fc4e"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""09189c6c-b980-43e0-ae0f-f6745f26e4e9"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keyboard"",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c10b944a-c297-4744-bac6-1c4efcdaf566"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keyboard"",
+                    ""action"": ""Confirm"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -564,6 +606,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         // menu
         m_menu = asset.FindActionMap("menu", throwIfNotFound: true);
         m_menu_Return = m_menu.FindAction("Return", throwIfNotFound: true);
+        m_menu_Confirm = m_menu.FindAction("Confirm", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -736,11 +779,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_menu;
     private List<IMenuActions> m_MenuActionsCallbackInterfaces = new List<IMenuActions>();
     private readonly InputAction m_menu_Return;
+    private readonly InputAction m_menu_Confirm;
     public struct MenuActions
     {
         private @PlayerControls m_Wrapper;
         public MenuActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Return => m_Wrapper.m_menu_Return;
+        public InputAction @Confirm => m_Wrapper.m_menu_Confirm;
         public InputActionMap Get() { return m_Wrapper.m_menu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -753,6 +798,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Return.started += instance.OnReturn;
             @Return.performed += instance.OnReturn;
             @Return.canceled += instance.OnReturn;
+            @Confirm.started += instance.OnConfirm;
+            @Confirm.performed += instance.OnConfirm;
+            @Confirm.canceled += instance.OnConfirm;
         }
 
         private void UnregisterCallbacks(IMenuActions instance)
@@ -760,6 +808,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Return.started -= instance.OnReturn;
             @Return.performed -= instance.OnReturn;
             @Return.canceled -= instance.OnReturn;
+            @Confirm.started -= instance.OnConfirm;
+            @Confirm.performed -= instance.OnConfirm;
+            @Confirm.canceled -= instance.OnConfirm;
         }
 
         public void RemoveCallbacks(IMenuActions instance)
@@ -810,5 +861,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     public interface IMenuActions
     {
         void OnReturn(InputAction.CallbackContext context);
+        void OnConfirm(InputAction.CallbackContext context);
     }
 }

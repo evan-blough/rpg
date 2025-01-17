@@ -83,7 +83,7 @@ public class PlayerCharacterData : CharacterData
             return elemList;
         }
     }
-    public override List<Elements> elemAbsorptions
+    public override List<Elements> elemImmunities
     {
         get
         {

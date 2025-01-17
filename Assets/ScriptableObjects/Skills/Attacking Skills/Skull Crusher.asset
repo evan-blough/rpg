@@ -9,13 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 835f6ecd3b3280f4caff404ed7ba24dc, type: 3}
   m_Name: Skull Crusher
-  m_EditorClassIdentifier: Assembly-CSharp::AttackSkill
+  m_EditorClassIdentifier: 
   skillName: Skull Crusher
-  skillDescription: A frontflip overhead kick with a high chance to critically hit.
-  skillPointCost: 5
-  criticalModifier: 2.5
+  skillDescription: Perform a spinning axe kick onto the opponent's head. Has a high
+    chance to critically hit.
+  skillPointCost: 8
+  criticalModifier: 2
   powerModifier: 2
   isMagic: 0
   isRanged: 0

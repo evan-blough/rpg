@@ -53,7 +53,7 @@ public class MenuHandler : MonoBehaviour
 
     public void OpenStatusMenu(PlayerCharacterData pcd)
     {
-        statusMenu.GetComponentInChildren<StatusMenuData>().PopulateData(pcd);
+        statusMenu.GetComponentInChildren<StatusMenuData>().PrepareData(pcd);
         statusMenu.gameObject.SetActive(true);
         CloseAllUnusedTabs(statusMenu.transform);
     }

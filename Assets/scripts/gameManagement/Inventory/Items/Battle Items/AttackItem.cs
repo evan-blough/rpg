@@ -18,7 +18,7 @@ public class AttackItem : BattleItem
                 continue;
             }
 
-            if (target.elemAbsorptions.Any(e => e == element)) result.Add("Immune");
+            if (target.elemImmunities.Any(e => e == element)) result.Add("Immune");
             else
             {
                 newEffectVal = (int)(effectValue * target.FindElementalDamageModifier(element));

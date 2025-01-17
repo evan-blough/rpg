@@ -20,7 +20,7 @@ public class Enemy : Character
     public override List<Status> immunities { get { return enemyStatusAbsorb; } }
     public override List<Elements> elemWeaknesses { get { return enemyElemWeakness; } }
     public override List<Elements> elemResistances { get { return enemyElemResist; } }
-    public override List<Elements> elemAbsorptions { get { return enemyElemAbsorb; } }
+    public override List<Elements> elemImmunities { get { return enemyElemAbsorb; } }
     public static Rarity InitializeRarity()
     {
         System.Random random = new System.Random();
@@ -55,7 +55,7 @@ public class Enemy : Character
         }
         hitChance = ((charAgility * 2 / enemyAgility) + .01) * 100;
 
-        if (enemy.elemAbsorptions.Where(e => e == atkElement).Any()) { return -1; }
+        if (enemy.elemImmunities.Where(e => e == atkElement).Any()) { return -1; }
 
         if (hitChance >= UnityEngine.Random.Range(0, 100))
         {

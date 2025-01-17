@@ -92,7 +92,7 @@ public class PlayerCharacter : Character
             return elemList;
         }
     }
-    public override List<Elements> elemAbsorptions
+    public override List<Elements> elemImmunities
     {
         get
         {
@@ -105,7 +105,7 @@ public class PlayerCharacter : Character
     {
         double hitChance = hitPercent - enemy.dodgePercent;
 
-        if (weapon is not null && weapon.element != Elements.NONE && enemy.elemAbsorptions.Where(e => e == weapon.element).Any()) { return -1; }
+        if (weapon is not null && weapon.element != Elements.NONE && enemy.elemImmunities.Where(e => e == weapon.element).Any()) { return -1; }
 
         if (hitChance >= UnityEngine.Random.Range(0, 100))
         {

@@ -21,7 +21,7 @@ public class CharacterData
     public virtual List<Status> immunities { get; }
     public virtual List<Elements> elemWeaknesses { get; }
     public virtual List<Elements> elemResistances { get; }
-    public virtual List<Elements> elemAbsorptions { get; }
+    public virtual List<Elements> elemImmunities { get; }
     public bool isActive;
     public bool isBackRow;
 
