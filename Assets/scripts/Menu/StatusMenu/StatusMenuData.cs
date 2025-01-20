@@ -53,6 +53,5 @@ public class StatusMenuData : MonoBehaviour
         stats.gameObject.SetActive(false);
         elements.gameObject.SetActive(false);
         statuses.gameObject.SetActive(false);
-
     }
 }

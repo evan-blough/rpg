@@ -18,6 +18,7 @@ public class OverworldPartyHandler : MonoBehaviour
     void Start()
     {
         GameObject temp;
+        currParty.Clear();
         int index = 0;
 
         foreach (PlayerCharacterData pcd in BattlePartyHandler.instance.partyData)
@@ -41,18 +42,38 @@ public class OverworldPartyHandler : MonoBehaviour
             else if (pcd is SenatorData)
             {
                 temp = Instantiate(senatorPrefab, transform);
-                //var senator = temp.GetComponent<Senator>();
-
-                //if (senatorData is null)
-                //    senatorData.DeepDataCopy(senator);
-                //else
-                //    senator.DeepCopyFrom(pcd);
 
                 senatorController = temp.GetComponent<PlayerCharacterHandler>();
                 senatorController.partyHandler = this;
                 if (!currParty.Any(pc => pc == senatorController)) currParty.Add(senatorController);
             }
             index++;
+        }
+        SetLeadCharacterCam();
+    }
+
+    public void FillPartyData()
+    {
+        if (currParty.Any())
+            currParty.Clear();
+
+        foreach (PlayerCharacterData data in BattlePartyHandler.instance.partyData)
+        {
+            if (data is HeroData)
+            {
+                if (data.isInParty && heroController is not null)
+                    currParty.Add(heroController);
+            }
+            else if (data is WizardData)
+            {
+                if (data.isInParty && wizardController is not null)
+                    currParty.Add(wizardController);
+            }
+            else if (data is SenatorData)
+            {
+                if (data.isInParty && senatorController is not null)
+                    currParty.Add(senatorController);
+            }
         }
         SetLeadCharacterCam();
     }
@@ -72,5 +93,10 @@ public class OverworldPartyHandler : MonoBehaviour
     public void SwapLeader()
     {
         // need to map input to swapping lead character
+    }
+
+    private void OnEnable()
+    {
+        FillPartyData();
     }
 }

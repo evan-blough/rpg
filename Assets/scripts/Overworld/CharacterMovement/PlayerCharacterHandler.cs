@@ -212,6 +212,11 @@ public class PlayerCharacterHandler : CharacterHandler
 
     public void OnDisable()
     {
+        moveHistory.Clear();
+        currentSpeed = 0f;
+        move = Vector2.zero;
+        leaderPosition = Vector2.zero;
+        speedMultiplier = 1f;
         controls.overworld.Disable();
     }
 }

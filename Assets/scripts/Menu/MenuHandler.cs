@@ -69,6 +69,20 @@ public class MenuHandler : MonoBehaviour
         }
     }
 
+    public void PrepareFormationTargets(Action controls, Action<PlayerCharacterData> swap2)
+    {
+        foreach (CharacterDisplay display in mainDisplay.GetComponentsInChildren<CharacterDisplay>())
+        {
+            var button = display.GetComponent<Button>();
+            if (display.pcd.isActive)
+            {
+                button.onClick.AddListener(() => controls());
+                button.onClick.AddListener(() => swap2(display.pcd));
+                button.interactable = true;
+            }
+        }
+    }
+
     public void CancelTargets()
     {
         foreach (CharacterDisplay display in mainDisplay.GetComponentsInChildren<CharacterDisplay>())
@@ -77,6 +91,30 @@ public class MenuHandler : MonoBehaviour
             button.onClick.RemoveAllListeners();
             button.interactable = false;
         }
+    }
+
+    public void PrepareFormationSwap(PlayerCharacterData pcd, Action<PlayerCharacterData, PlayerCharacterData> swap)
+    {
+        foreach (CharacterDisplay display in mainDisplay.GetComponentsInChildren<CharacterDisplay>())
+        {
+            var button = display.GetComponent<Button>();
+            button.onClick.RemoveAllListeners();
+            if (display.pcd != pcd && pcd.isActive)
+            {
+                button.onClick.AddListener(() => swap(display.pcd, pcd));
+                button.interactable = true;
+            }
+            else
+                button.interactable = false;
+        }
+    }
+
+    public void CheckIfMainIsOpen()
+    {
+        if (mainDisplay.activeInHierarchy) return;
+
+        mainDisplay.SetActive(true);
+        CloseAllUnusedTabs(mainDisplay.transform);
     }
 
     public void CloseAllUnusedTabs(Transform openTab)

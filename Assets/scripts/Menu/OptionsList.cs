@@ -1,10 +1,13 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class OptionsList : MonoBehaviour
 {
     PlayerControls controls;
     public MenuHandler menuHandler;
+    public Button formationButton;
 
     private void Awake()
     {
@@ -15,6 +18,9 @@ public class OptionsList : MonoBehaviour
         SceneManager.instance.TransitionTime("Enter_Scene", .5f);
 
         controls.menu.Return.started += ReturnToOverworld;
+
+        if (BattlePartyHandler.instance.partyData.Count <= 1)
+            formationButton.interactable = false;
     }
 
     public void OnItemsButton()
@@ -24,24 +30,59 @@ public class OptionsList : MonoBehaviour
     }
     public void OnEquipButton()
     {
+        menuHandler.CheckIfMainIsOpen();
         menuHandler.PrepareTargets(ActivateSubmenuControls, menuHandler.OpenEquipMenu);
         ActivateCharacterSelectionControls();
     }
     public void OnSkillsButton()
     {
+        menuHandler.CheckIfMainIsOpen();
         menuHandler.PrepareTargets(ActivateSubmenuControls, menuHandler.OpenSkillsMenu);
         ActivateCharacterSelectionControls();
     }
     public void OnClassesButton()
     {
+        menuHandler.CheckIfMainIsOpen();
         menuHandler.PrepareTargets(ActivateSubmenuControls, menuHandler.OpenClassMenu);
         ActivateCharacterSelectionControls();
     }
 
     public void OnStatusButton()
     {
+        menuHandler.CheckIfMainIsOpen();
         menuHandler.PrepareTargets(ActivateSubmenuControls, menuHandler.OpenStatusMenu);
         ActivateCharacterSelectionControls();
+    }
+
+    public void OnFormationButton()
+    {
+        menuHandler.CheckIfMainIsOpen();
+        menuHandler.PrepareFormationTargets(ActivateSubmenuControls, PickFormationSwap);
+        ActivateCharacterSelectionControls();
+    }
+
+    public void PickFormationSwap(PlayerCharacterData pcd)
+    {
+        menuHandler.PrepareFormationSwap(pcd, SwapFormation);
+    }
+
+    public void SwapFormation(PlayerCharacterData pcd1, PlayerCharacterData pcd2)
+    {
+        List<PlayerCharacterData> battleParty = BattlePartyHandler.instance.partyData;
+        if (!battleParty.Contains(pcd1) && !battleParty.Contains(pcd2)) return;
+
+        var indexOf2 = battleParty.IndexOf(pcd2);
+        battleParty[battleParty.IndexOf(pcd1)] = pcd2;
+        battleParty[indexOf2] = pcd1;
+
+        for (int i = 0; i < battleParty.Count; i++)
+        {
+            if (i == 2) battleParty[i].isBackRow = true;
+            else battleParty[i].isBackRow = false;
+        }
+
+        menuHandler.OpenMainDisplay();
+        ReturnToMainStatusMenu(new InputAction.CallbackContext { });
     }
 
     public void OnExitButton()
