@@ -8,6 +8,7 @@ public class OptionsList : MonoBehaviour
     PlayerControls controls;
     public MenuHandler menuHandler;
     public Button formationButton;
+    public ExitModal exitModal;
 
     private void Awake()
     {
@@ -18,6 +19,7 @@ public class OptionsList : MonoBehaviour
         SceneManager.instance.TransitionTime("Enter_Scene", .5f);
 
         controls.menu.Return.started += ReturnToOverworld;
+        exitModal.gameObject.SetActive(false);
 
         if (BattlePartyHandler.instance.partyData.Count <= 1)
             formationButton.interactable = false;
@@ -87,7 +89,7 @@ public class OptionsList : MonoBehaviour
 
     public void OnExitButton()
     {
-        SceneManager.instance.StartCoroutine(SceneManager.instance.ReturnToMainMenu());
+        exitModal.gameObject.SetActive(true);
     }
 
     public void ReturnToOverworld(InputAction.CallbackContext ctx)
