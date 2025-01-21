@@ -63,6 +63,7 @@ public class MenuHandler : MonoBehaviour
         foreach (CharacterDisplay display in mainDisplay.GetComponentsInChildren<CharacterDisplay>())
         {
             var button = display.GetComponent<Button>();
+            button.onClick.RemoveAllListeners();
             button.onClick.AddListener(() => controls());
             button.onClick.AddListener(() => openMenu(display.pcd));
             button.interactable = true;
@@ -74,6 +75,7 @@ public class MenuHandler : MonoBehaviour
         foreach (CharacterDisplay display in mainDisplay.GetComponentsInChildren<CharacterDisplay>())
         {
             var button = display.GetComponent<Button>();
+            button.onClick.RemoveAllListeners();
             if (display.pcd.isActive)
             {
                 button.onClick.AddListener(() => controls());
