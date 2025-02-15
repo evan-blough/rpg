@@ -109,9 +109,8 @@ public class PlayerCharacter : Character
 
         if (hitChance >= UnityEngine.Random.Range(0, 100))
         {
-            int criticalValue = UnityEngine.Random.Range(1, 20) == 20 ? 2 : 1;
-            int damage = (int)((attack *
-                FindPhysicalAttackStatusModifier() * UnityEngine.Random.Range(1f, 1.25f) * criticalValue) - enemy.defense);
+            bool criticalValue = UnityEngine.Random.Range(1, 20) == 20 ? true : false;
+            int damage = FindDamage(enemy, criticalValue);
 
             damage = (int)(damage * enemy.FindPhysicalDamageStatusModifier());
 
@@ -137,6 +136,24 @@ public class PlayerCharacter : Character
         return 0;
     }
 
+    public int FindDamage(Character enemy, bool isCritical)
+    {
+        int attackVal;
+        int defenseVal;
+        if (weapon.isMagic)
+        {
+            attackVal = magAtk;
+            defenseVal = enemy.magDef;
+        }
+        else
+        {
+            attackVal = attack;
+            defenseVal = enemy.defense;
+        }
+
+        return (int)((attackVal *
+                FindPhysicalAttackStatusModifier() * UnityEngine.Random.Range(1f, 1.25f) * (isCritical ? 2 : 1) - defenseVal));
+    }
     public virtual void OnLevelUp()
     {
         maxHP += 20;

@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Weapon", menuName = "Equipment/Weapon")]
 public class Weapon : Equipment
 {
+    public bool isMagic;
     public Elements element;
     public List<Statuses> statuses;
 
