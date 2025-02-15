@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ArmorButton : MonoBehaviour
 {
-    Armor armor;
+    public Armor armor;
     public Text text;
 
     public void PopulateButton(Armor newArmor)

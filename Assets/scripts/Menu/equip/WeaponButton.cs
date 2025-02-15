@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class WeaponButton : MonoBehaviour
 {
-    Weapon weapon;
+    public Weapon weapon;
     public Text text;
 
     public void PopulateButton(Weapon newWeapon)

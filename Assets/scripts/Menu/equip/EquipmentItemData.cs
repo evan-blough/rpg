@@ -6,13 +6,15 @@ using UnityEngine.UI;
 public class EquipmentItemData : MonoBehaviour
 {
     public GameObject slotPrefab;
+    EquipMenuData equipMenuData;
     PlayerCharacterData data;
     List<InventorySlots> inventory;
 
-    public void PopulateData(PlayerCharacterData pcd)
+    public void PopulateData(PlayerCharacterData pcd, EquipMenuData emd)
     {
         data = pcd;
         inventory = BattlePartyHandler.instance.inventory.items;
+        equipMenuData = emd;
     }
 
     public void EraseEquipment()
@@ -95,7 +97,6 @@ public class EquipmentItemData : MonoBehaviour
         }
     }
 
-
     public void SwapWeapon(Weapon newWeapon)
     {
         Weapon toSwap = data.weapon;
@@ -115,7 +116,7 @@ public class EquipmentItemData : MonoBehaviour
         {
             inventory.Add(new InventorySlots(toSwap));
         }
-
+        equipMenuData.UpdateMenu();
         EraseEquipment();
     }
 
@@ -138,7 +139,7 @@ public class EquipmentItemData : MonoBehaviour
         {
             inventory.Add(new InventorySlots(toSwap));
         }
-
+        equipMenuData.UpdateMenu();
         EraseEquipment();
     }
 
@@ -164,7 +165,7 @@ public class EquipmentItemData : MonoBehaviour
         {
             inventory.Add(new InventorySlots(toSwap));
         }
-
+        equipMenuData.UpdateMenu();
         EraseEquipment();
     }
 }

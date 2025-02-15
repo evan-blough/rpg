@@ -12,7 +12,7 @@ public class EquipMenuData : MonoBehaviour
         data = pcd;
         equipDisplay.PopulateView(data, this);
         statDiffBlock.PopulateBlock(data);
-        equipItemData.PopulateData(data);
+        equipItemData.PopulateData(data, this);
     }
 
     public void WeaponTargets(Weapon weapon)
@@ -37,5 +37,11 @@ public class EquipMenuData : MonoBehaviour
     {
         statDiffBlock.PopulateAccessory2Block(data, accessory);
         equipItemData.PopulateAccessories(accessory);
+    }
+
+    public void UpdateMenu()
+    {
+        equipDisplay.UpdateView(this);
+        statDiffBlock.PopulateBlock(data);
     }
 }

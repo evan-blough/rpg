@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class AccessoryButton : MonoBehaviour
 {
-    Accessory accessory;
+    public Accessory accessory;
     public Text text;
     public void PopulateButton(Accessory newAccessory)
     {
