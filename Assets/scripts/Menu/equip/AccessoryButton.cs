@@ -4,6 +4,7 @@ public class AccessoryButton : MonoBehaviour
 {
     public Accessory accessory;
     public Text text;
+    public bool isFirst;
     public void PopulateButton(Accessory newAccessory)
     {
         accessory = newAccessory;

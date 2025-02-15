@@ -136,38 +136,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: -334632591852160996}
-          m_TargetAssemblyTypeName: SkillButton, Assembly-CSharp
-          m_MethodName: SetDetails
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: -334632591852160996}
-          m_TargetAssemblyTypeName: SkillButton, Assembly-CSharp
-          m_MethodName: RemoveDetails
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 10
     callback:
       m_PersistentCalls:
@@ -175,6 +143,22 @@ MonoBehaviour:
         - m_Target: {fileID: -334632591852160996}
           m_TargetAssemblyTypeName: SkillButton, Assembly-CSharp
           m_MethodName: RemoveDetails
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -334632591852160996}
+          m_TargetAssemblyTypeName: SkillButton, Assembly-CSharp
+          m_MethodName: SetDetails
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -197,23 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 7291518358906035485}
-  skill:
-    skillName: 
-    skillDescription: 
-    skillPointCost: 0
-    active: 0
-    levelReq: 0
-    criticalModifier: 0
-    powerModifier: 0
-    accuracyModifier: 0
-    isMagic: 0
-    type: 0
-    isRanged: 0
-    isMultiTargeted: 0
-    applySelfStatuses: []
-    applyTargetStatuses: []
-    removeSelfStatuses: []
-    removeTargetStatuses: []
+  skill: {fileID: 0}
   currentCharacter: {fileID: 0}
   uiHandler: {fileID: 0}
 --- !u!1 &8264177408644971371

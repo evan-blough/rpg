@@ -36,7 +36,7 @@ public class EquipmentItemData : MonoBehaviour
             if (equipmentSlot.item is not Weapon) continue;
 
             GameObject temp = Instantiate(slotPrefab, transform);
-            temp.GetComponent<EquipmentButton>().CreateButton(equipmentSlot);
+            temp.GetComponent<EquipmentButton>().CreateButton(equipmentSlot, equipMenuData.statDiffBlock);
             Button button = temp.GetComponent<Button>();
 
             if (((Weapon)equipmentSlot.item).weight > data.weightClass)
@@ -60,7 +60,7 @@ public class EquipmentItemData : MonoBehaviour
             if (equipmentSlot.item is not Armor) continue;
 
             GameObject temp = Instantiate(slotPrefab, transform);
-            temp.GetComponent<EquipmentButton>().CreateButton(equipmentSlot);
+            temp.GetComponent<EquipmentButton>().CreateButton(equipmentSlot, equipMenuData.statDiffBlock);
             Button button = temp.GetComponent<Button>();
 
             if (((Armor)equipmentSlot.item).weight > data.weightClass)
@@ -75,6 +75,7 @@ public class EquipmentItemData : MonoBehaviour
 
     public void PopulateAccessories(Accessory accessoryToSwap)
     {
+        bool isFirst = data.accessory1 == accessoryToSwap ? true : false;
         foreach (Transform child in transform)
         {
             Destroy(child.gameObject);
@@ -84,7 +85,7 @@ public class EquipmentItemData : MonoBehaviour
             if (equipmentSlot.item is not Accessory) continue;
 
             GameObject temp = Instantiate(slotPrefab, transform);
-            temp.GetComponent<EquipmentButton>().CreateButton(equipmentSlot);
+            temp.GetComponent<EquipmentButton>().CreateButton(equipmentSlot, equipMenuData.statDiffBlock, isFirst);
             Button button = temp.GetComponent<Button>();
 
             if (((Equipment)equipmentSlot.item).weight > data.weightClass)

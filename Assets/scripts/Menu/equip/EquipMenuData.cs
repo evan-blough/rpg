@@ -17,25 +17,21 @@ public class EquipMenuData : MonoBehaviour
 
     public void WeaponTargets(Weapon weapon)
     {
-        statDiffBlock.PopulateBlock(data, weapon);
         equipItemData.PopulateWeapons();
     }
 
     public void ArmorTargets(Armor armor)
     {
-        statDiffBlock.PopulateBlock(data, armor);
         equipItemData.PopulateArmor();
     }
 
     public void Accessory1Targets(Accessory accessory)
     {
-        statDiffBlock.PopulateAccessory1Block(data, accessory);
         equipItemData.PopulateAccessories(accessory);
     }
 
     public void Accessory2Targets(Accessory accessory)
     {
-        statDiffBlock.PopulateAccessory2Block(data, accessory);
         equipItemData.PopulateAccessories(accessory);
     }
 

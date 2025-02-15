@@ -6,13 +6,17 @@ public class EquipmentButton : MonoBehaviour
     public Text itemName;
     public InventorySlots currSlot;
     public Equipment item;
+    StatDiffBlock sdb;
+    bool isFirst;
 
-    public void CreateButton(InventorySlots slot)
+    public void CreateButton(InventorySlots slot, StatDiffBlock diffBlock, bool isFirstAccessory = false)
     {
         currSlot = slot;
         item = (Equipment)slot.item;
         quantity.text = currSlot.itemCount.ToString();
         itemName.text = item.itemName;
+        sdb = diffBlock;
+        isFirst = isFirstAccessory;
     }
 
     public void UpdateButtonData()
@@ -22,5 +26,25 @@ public class EquipmentButton : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void AddStats()
+    {
+        if (item is Weapon)
+            sdb.PopulateBlock((Weapon)item);
+        else if (item is Armor)
+            sdb.PopulateBlock((Armor)item);
+        else if (item is Accessory)
+        {
+            if (isFirst)
+                sdb.PopulateAccessory1Block((Accessory)item);
+            else
+                sdb.PopulateAccessory2Block((Accessory)item);
+        }
+    }
+
+    public void RemoveStats()
+    {
+        sdb.PopulateBlock(sdb.data);
     }
 }
