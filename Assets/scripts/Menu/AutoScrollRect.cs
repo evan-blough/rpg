@@ -49,7 +49,7 @@ public class AutoScrollRect : MonoBehaviour
         float selectedPosition = (contentRectTransform.rect.height - selectedDifference.y);
         float currentScrollRectPosition = scrollRect.normalizedPosition.y * contentHeightDifference;
         float above = currentScrollRectPosition - (m_SelectedRectTransform.rect.height) + viewportRectTransform.rect.height;
-        float below = currentScrollRectPosition + (m_SelectedRectTransform.rect.height);
+        float below = currentScrollRectPosition + (m_SelectedRectTransform.rect.height) + viewportRectTransform.rect.height / 2;
 
         // Check if selected option is out of bounds.
         if (selectedPosition > above)

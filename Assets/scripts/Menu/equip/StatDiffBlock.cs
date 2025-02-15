@@ -66,8 +66,8 @@ public class StatDiffBlock : MonoBehaviour
         else
             agilityText.color = Color.white;
 
-        weaponTypeText.text = $"{data.weapon.weight} => {newWeapon.weight}";
-        if (data.weapon.weight != newWeapon.weight)
+        weaponTypeText.text = $"{(data.weapon is not null ? data.weapon.weight : "None")} => {newWeapon.weight}";
+        if (data.weapon is not null && data.weapon.weight != newWeapon.weight)
             weaponTypeText.color = data.weapon.weight < newWeapon.weight ? Color.red : Color.green;
         else
             weaponTypeText.color = Color.white;
@@ -111,8 +111,8 @@ public class StatDiffBlock : MonoBehaviour
         else
             agilityText.color = Color.white;
 
-        weaponTypeText.text = $"{data.armor.weight} => {newArmor.weight}";
-        if (data.armor.weight != newArmor.weight)
+        weaponTypeText.text = $"{(data.armor is not null ? data.armor.weight : "None")} => {newArmor.weight}";
+        if (data.armor is not null && data.armor.weight != newArmor.weight)
             weaponTypeText.color = data.armor.weight < newArmor.weight ? Color.red : Color.green;
         else
             weaponTypeText.color = Color.white;
@@ -155,8 +155,8 @@ public class StatDiffBlock : MonoBehaviour
         else
             agilityText.color = Color.white;
 
-        weaponTypeText.text = $"{data.accessory1.weight} => {newAccessory.weight}";
-        if (data.accessory1.weight != newAccessory.weight)
+        weaponTypeText.text = $"{(data.accessory1 is not null ? data.accessory1.weight : "None")} => {newAccessory.weight}";
+        if (data.accessory1 is not null && data.accessory1.weight != newAccessory.weight)
             weaponTypeText.color = data.accessory1.weight < newAccessory.weight ? Color.red : Color.green;
         else
             weaponTypeText.color = Color.white;
@@ -200,8 +200,8 @@ public class StatDiffBlock : MonoBehaviour
         else
             agilityText.color = Color.white;
 
-        weaponTypeText.text = $"{data.accessory2.weight} => {newAccessory.weight}";
-        if (data.accessory2.weight != newAccessory.weight)
+        weaponTypeText.text = $"{(data.accessory2 is not null ? data.accessory2.weight : "None")} => {newAccessory.weight}";
+        if (data.accessory2 is not null && data.accessory2.weight != newAccessory.weight)
             weaponTypeText.color = data.accessory2.weight < newAccessory.weight ? Color.red : Color.green;
         else
             weaponTypeText.color = Color.white;

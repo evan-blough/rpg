@@ -4880,7 +4880,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9552bf95ba164f547bb9dddce3fad4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accessory: {fileID: 0}
   text: {fileID: 2047928202}
+  isFirst: 0
 --- !u!1 &514684675
 GameObject:
   m_ObjectHideFlags: 0
@@ -9637,6 +9639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotPrefab: {fileID: 6440477798390951662, guid: f5a2c94b44d42b84c99a165c707add9d, type: 3}
+  removePrefab: {fileID: 4289626894663911178, guid: e26f7a74742b2704e9b3e5acfb1881f7, type: 3}
 --- !u!1 &1138021966
 GameObject:
   m_ObjectHideFlags: 0
@@ -10075,12 +10078,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e902567f8f6153f49839642cd81bd941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data:
+    unitName: 
+    level: 0
+    maxHP: 0
+    maxSP: 0
+    currSP: 0
+    currHP: 0
+    strength: 0
+    constitution: 0
+    intelligence: 0
+    spirit: 0
+    speed: 0
+    luck: 0
+    currStatuses: []
+    isActive: 0
+    isBackRow: 0
+    portrait: {fileID: 0}
+    expHandler:
+      experienceCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      nextLevelExp: 0
+    classExpHandler:
+      nextLevelExp: 0
+    weightClass: 0
+    skills: []
+    equippedSkills: []
+    classes: []
+    equippedClass:
+      rid: -2
+    excessClassPoints: 0
+    charInventory:
+      items: []
+      maxItems: 0
+    weapon: {fileID: 0}
+    armor: {fileID: 0}
+    accessory1: {fileID: 0}
+    accessory2: {fileID: 0}
+    isInParty: 0
+    exp: 0
+    skillCount: 12
   attackText: {fileID: 1625101936}
   defenseText: {fileID: 524306219}
   magAtkText: {fileID: 149795066}
   magDefText: {fileID: 732713677}
   agilityText: {fileID: 935358551}
   weaponTypeText: {fileID: 1966604105}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &1184623481
 GameObject:
   m_ObjectHideFlags: 0
@@ -10914,6 +10966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbfe2b6b89682a74a81c6befb48f99e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  armor: {fileID: 0}
   text: {fileID: 1087394778}
 --- !u!1 &1279198173
 GameObject:
@@ -14002,7 +14055,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9552bf95ba164f547bb9dddce3fad4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accessory: {fileID: 0}
   text: {fileID: 69949905}
+  isFirst: 0
 --- !u!1 &1781822915
 GameObject:
   m_ObjectHideFlags: 0
@@ -15105,6 +15160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf88ce31d347cf4d869db96d0e4eff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
   text: {fileID: 914492764}
 --- !u!1 &1960266962
 GameObject:
