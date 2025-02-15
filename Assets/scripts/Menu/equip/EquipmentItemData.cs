@@ -51,10 +51,7 @@ public class EquipmentItemData : MonoBehaviour
             button = temp.GetComponent<Button>();
 
             if (((Weapon)equipmentSlot.item).weight > data.weightClass)
-            {
-                button.interactable = false;
                 continue;
-            }
 
             button.onClick.AddListener(() => SwapWeapon((Weapon)equipmentSlot.item));
         }
@@ -85,10 +82,7 @@ public class EquipmentItemData : MonoBehaviour
             button = temp.GetComponent<Button>();
 
             if (((Armor)equipmentSlot.item).weight > data.weightClass)
-            {
-                button.interactable = false;
                 continue;
-            }
 
             button.onClick.AddListener(() => SwapArmor((Armor)equipmentSlot.item));
         }
@@ -125,10 +119,7 @@ public class EquipmentItemData : MonoBehaviour
             button = temp.GetComponent<Button>();
 
             if (((Equipment)equipmentSlot.item).weight > data.weightClass)
-            {
-                button.interactable = false;
                 continue;
-            }
 
             button.onClick.AddListener(() => SwapAccessory(accessoryToSwap, (Accessory)equipmentSlot.item));
         }

@@ -1,4 +1,4 @@
-public enum EquipmentWeight { MAGIC = 0, LIGHT = 1, MEDIUM = 2, HEAVY = 3, VERY_HEAVY = 4 }
+public enum EquipmentWeight { Magic = 0, Light = 1, Medium = 2, Heavy = 3, Cumbersome = 4 }
 public class Equipment : Items
 {
     public int attackBuff;

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public enum Elements { NONE, FIRE, WATER, EARTH, ELECTRIC, WIND, LIGHT, DARK, }
+public enum Elements { None, Fire, Water, Earth, Electric, Wind, Light, Dark, }
 public abstract class Character : MonoBehaviour
 {
     public string unitName;

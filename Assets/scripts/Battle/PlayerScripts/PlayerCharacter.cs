@@ -105,7 +105,7 @@ public class PlayerCharacter : Character
     {
         double hitChance = hitPercent - enemy.dodgePercent;
 
-        if (weapon is not null && weapon.element != Elements.NONE && enemy.elemImmunities.Where(e => e == weapon.element).Any()) { return -1; }
+        if (weapon is not null && weapon.element != Elements.None && enemy.elemImmunities.Where(e => e == weapon.element).Any()) { return -1; }
 
         if (hitChance >= UnityEngine.Random.Range(0, 100))
         {
@@ -116,7 +116,7 @@ public class PlayerCharacter : Character
 
             if (weapon is not null)
             {
-                if (weapon.element != Elements.NONE)
+                if (weapon.element != Elements.None)
                     damage = (int)(damage * enemy.FindElementalDamageModifier(weapon.element));
 
                 weapon.ApplyWeaponStatuses(enemy, turnCounter);

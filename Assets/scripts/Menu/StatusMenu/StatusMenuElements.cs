@@ -26,7 +26,7 @@ public class StatusMenuElements : MonoBehaviour
 
         foreach (Elements element in Enum.GetValues(typeof(Elements)))
         {
-            if (element == Elements.NONE) continue;
+            if (element == Elements.None) continue;
 
             var temp = Instantiate(elemTextPrefab, weaknessBox.transform);
             temp.GetComponent<ElementText>().PopulateText(element, pcd.elemWeaknesses.Contains(element));
