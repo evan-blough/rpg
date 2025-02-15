@@ -22,6 +22,6 @@ MonoBehaviour:
   agilityBuff: 5
   weight: 4
   accuracyMod: 0
-  elemResists: 
+  elemResists: 06000000
   elemWeaknesses: 
-  elemAbsorption: 
+  elemAbsorption: 07000000

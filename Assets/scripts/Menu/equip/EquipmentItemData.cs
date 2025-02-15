@@ -47,7 +47,7 @@ public class EquipmentItemData : MonoBehaviour
             if (equipmentSlot.item is not Weapon) continue;
 
             temp = Instantiate(slotPrefab, transform);
-            temp.GetComponent<EquipmentButton>().CreateButton(equipmentSlot, equipMenuData.statDiffBlock);
+            temp.GetComponent<EquipmentButton>().CreateButton(equipmentSlot, equipMenuData.statDiffBlock, equipMenuData.elemDiffBlock);
             button = temp.GetComponent<Button>();
 
             if (((Weapon)equipmentSlot.item).weight > data.weightClass)
@@ -78,7 +78,7 @@ public class EquipmentItemData : MonoBehaviour
             if (equipmentSlot.item is not Armor) continue;
 
             temp = Instantiate(slotPrefab, transform);
-            temp.GetComponent<EquipmentButton>().CreateButton(equipmentSlot, equipMenuData.statDiffBlock);
+            temp.GetComponent<EquipmentButton>().CreateButton(equipmentSlot, equipMenuData.statDiffBlock, equipMenuData.elemDiffBlock);
             button = temp.GetComponent<Button>();
 
             if (((Armor)equipmentSlot.item).weight > data.weightClass)
@@ -115,7 +115,7 @@ public class EquipmentItemData : MonoBehaviour
             if (equipmentSlot.item is not Accessory) continue;
 
             temp = Instantiate(slotPrefab, transform);
-            temp.GetComponent<EquipmentButton>().CreateButton(equipmentSlot, equipMenuData.statDiffBlock, isFirst);
+            temp.GetComponent<EquipmentButton>().CreateButton(equipmentSlot, equipMenuData.statDiffBlock, equipMenuData.elemDiffBlock, isFirst);
             button = temp.GetComponent<Button>();
 
             if (((Equipment)equipmentSlot.item).weight > data.weightClass)
