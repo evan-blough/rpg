@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class OverworldPartyHandler : MonoBehaviour
@@ -8,20 +7,21 @@ public class OverworldPartyHandler : MonoBehaviour
     public GameObject playerCharacterPrefab;
     PlayerControls controls;
 
-    public List<AnimatorController> currParty;
+    public List<RuntimeAnimatorController> currParty;
     [SerializeField]
-    AnimatorController heroAnimation;
+    RuntimeAnimatorController heroAnimation;
     [SerializeField]
-    AnimatorController wizardAnimation;
+    RuntimeAnimatorController wizardAnimation;
     [SerializeField]
-    AnimatorController senatorAnimation;
+    RuntimeAnimatorController senatorAnimation;
 
     public PlayerCharacterHandler playerCharacter;
-    public AnimatorController currCharacter { get { return currParty.FirstOrDefault(); } }
-
+    public RuntimeAnimatorController currCharacter { get { return currParty.FirstOrDefault(); } }
+    bool created = false;
 
     void Start()
     {
+        created = false;
         controls = ControlsHandler.instance.playerControls;
         controls.overworld.SwapLead.performed += ctx => QuickSwapLead();
         GameObject temp;
@@ -105,7 +105,8 @@ public class OverworldPartyHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        FillPartyData();
+        if (created)
+            FillPartyData();
     }
 
 }

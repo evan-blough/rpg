@@ -20,12 +20,11 @@ public class CircleMovement : NPCMovement
         // never manually code a circular path again... hacky solution to maintain a distance equal to the 
         // radius from the fixed point
 
-        angle = angle + Time.deltaTime * ((speed * (speed / ((speed + movementRadius) / 2f))) / movementRadius);
+        angle += Time.deltaTime * speed / movementRadius;
 
         Vector3 target = new Vector3(xVal, 0f, zVal);
-        Vector3 toMove = (target - currentPos).normalized;
-        if (angle >= 360f)
-            angle = 0f;
+        Vector3 toMove = (target - currentPos).normalized * speed * Time.deltaTime;
+        angle %= 360f;
 
         return new Vector2(toMove.x, toMove.z);
     }
