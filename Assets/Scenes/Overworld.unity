@@ -1964,10 +1964,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4352d667ac64d41b4196348c69cf0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroPrefab: {fileID: 1821854497350483283, guid: c06f7d56bf387e54ba9f9850e1b9f5da, type: 3}
-  wizardPrefab: {fileID: 3697426939189310273, guid: 9044b944bc1b74c4aaa0ca4c7e3ecb6b, type: 3}
-  senatorPrefab: {fileID: 3249916330583930320, guid: 3065430a3a73fa249804b554fdfc5074, type: 3}
+  playerCharacterPrefab: {fileID: 3697426939189310273, guid: 9044b944bc1b74c4aaa0ca4c7e3ecb6b, type: 3}
   currParty: []
+  heroAnimation: {fileID: 9100000, guid: 6a48e4f3cf939954ab30acfea43311a7, type: 2}
+  wizardAnimation: {fileID: 9100000, guid: 447aae35b84515e48b2c484084356670, type: 2}
+  senatorAnimation: {fileID: 9100000, guid: 0685ec317c95db64f8bfa223a52eb43c, type: 2}
+  playerCharacter: {fileID: 0}
 --- !u!4 &1344321835
 Transform:
   m_ObjectHideFlags: 0
@@ -2833,7 +2835,7 @@ MonoBehaviour:
     currStatuses: []
     isActive: 1
     isBackRow: 0
-    portrait: {fileID: -608852291, guid: fae09291a07f8ec4cae064be59d978c3, type: 3}
+    portrait: {fileID: 21300000, guid: 302686a9bc5d023468e6c753925549d9, type: 3}
     expHandler:
       experienceCurve:
         serializedVersion: 2

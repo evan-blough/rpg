@@ -1,51 +1,48 @@
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class OverworldPartyHandler : MonoBehaviour
 {
-    public GameObject heroPrefab;
-    public GameObject wizardPrefab;
-    public GameObject senatorPrefab;
+    public GameObject playerCharacterPrefab;
+    PlayerControls controls;
 
-    public List<PlayerCharacterHandler> currParty;
-    PlayerCharacterHandler heroController;
-    PlayerCharacterHandler wizardController;
-    PlayerCharacterHandler senatorController;
+    public List<AnimatorController> currParty;
+    [SerializeField]
+    AnimatorController heroAnimation;
+    [SerializeField]
+    AnimatorController wizardAnimation;
+    [SerializeField]
+    AnimatorController senatorAnimation;
 
-    public PlayerCharacterHandler leadCharacter { get { return currParty.FirstOrDefault(); } }
+    public PlayerCharacterHandler playerCharacter;
+    public AnimatorController currCharacter { get { return currParty.FirstOrDefault(); } }
+
 
     void Start()
     {
+        controls = ControlsHandler.instance.playerControls;
+        controls.overworld.SwapLead.performed += ctx => QuickSwapLead();
         GameObject temp;
         currParty.Clear();
         int index = 0;
+        temp = Instantiate(playerCharacterPrefab, transform);
+        playerCharacter = temp.GetComponent<PlayerCharacterHandler>();
 
         foreach (PlayerCharacterData pcd in BattlePartyHandler.instance.partyData)
         {
             if (pcd is HeroData && pcd.isInParty)
             {
-                temp = Instantiate(heroPrefab, transform);
-
-                heroController = temp.GetComponent<PlayerCharacterHandler>();
-                heroController.partyHandler = this;
-                if (!currParty.Any(pc => pc == heroController)) currParty.Add(heroController);
+                if (!currParty.Any(pc => pc == heroAnimation)) currParty.Add(heroAnimation);
             }
             else if (pcd is WizardData)
             {
-                temp = Instantiate(wizardPrefab, transform);
-
-                wizardController = temp.GetComponent<PlayerCharacterHandler>();
-                wizardController.partyHandler = this;
-                if (!currParty.Any(pc => pc == wizardController)) currParty.Add(wizardController);
+                if (!currParty.Any(pc => pc == wizardAnimation)) currParty.Add(wizardAnimation);
             }
             else if (pcd is SenatorData)
             {
-                temp = Instantiate(senatorPrefab, transform);
-
-                senatorController = temp.GetComponent<PlayerCharacterHandler>();
-                senatorController.partyHandler = this;
-                if (!currParty.Any(pc => pc == senatorController)) currParty.Add(senatorController);
+                if (!currParty.Any(pc => pc == senatorAnimation)) currParty.Add(senatorAnimation);
             }
             index++;
         }
@@ -61,18 +58,18 @@ public class OverworldPartyHandler : MonoBehaviour
         {
             if (data is HeroData)
             {
-                if (data.isInParty && heroController is not null)
-                    currParty.Add(heroController);
+                if (data.isInParty && heroAnimation is not null)
+                    currParty.Add(heroAnimation);
             }
-            else if (data is WizardData)
+            else if (data is WizardData && wizardAnimation is not null)
             {
-                if (data.isInParty && wizardController is not null)
-                    currParty.Add(wizardController);
+                if (data.isInParty)
+                    currParty.Add(wizardAnimation);
             }
-            else if (data is SenatorData)
+            else if (data is SenatorData && senatorAnimation is not null)
             {
-                if (data.isInParty && senatorController is not null)
-                    currParty.Add(senatorController);
+                if (data.isInParty)
+                    currParty.Add(senatorAnimation);
             }
         }
         SetLeadCharacterCam();
@@ -80,23 +77,35 @@ public class OverworldPartyHandler : MonoBehaviour
 
     void Update()
     {
-        if (leadCharacter != SceneManager.instance.cam.cam.LookAt)
+        if (playerCharacter != SceneManager.instance.cam.cam.LookAt)
         {
             SetLeadCharacterCam();
         }
     }
     public void SetLeadCharacterCam()
     {
-        SceneManager.instance.cam.cam.Follow = leadCharacter.transform;
-        SceneManager.instance.cam.cam.LookAt = leadCharacter.transform;
+        playerCharacter.animator.runtimeAnimatorController = currCharacter;
+        SceneManager.instance.cam.cam.Follow = playerCharacter.transform;
+        SceneManager.instance.cam.cam.LookAt = playerCharacter.transform;
     }
     public void SwapLeader()
     {
         // need to map input to swapping lead character
     }
 
+    public void QuickSwapLead()
+    {
+        BattlePartyHandler.instance.QuickSwapLead();
+
+        var temp = currParty[0];
+        currParty[0] = currParty[1];
+        currParty[1] = currParty[2];
+        currParty[2] = temp;
+    }
+
     private void OnEnable()
     {
         FillPartyData();
     }
+
 }

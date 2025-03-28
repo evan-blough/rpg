@@ -107,6 +107,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwapLead"",
+                    ""type"": ""Button"",
+                    ""id"": ""de495be3-04af-40c7-8b33-101df29578b7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -494,6 +503,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Menu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6ec1fe78-4fc7-4743-a0b1-fde89e7a0a44"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keyboard"",
+                    ""action"": ""SwapLead"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""65b4287d-67e6-46f0-9f82-2b42f83692e5"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""SwapLead"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -832,6 +863,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_overworld_QuickMenu = m_overworld.FindAction("QuickMenu", throwIfNotFound: true);
         m_overworld_Cancel = m_overworld.FindAction("Cancel", throwIfNotFound: true);
         m_overworld_Menu = m_overworld.FindAction("Menu", throwIfNotFound: true);
+        m_overworld_SwapLead = m_overworld.FindAction("SwapLead", throwIfNotFound: true);
         // menu
         m_menu = asset.FindActionMap("menu", throwIfNotFound: true);
         m_menu_Return = m_menu.FindAction("Return", throwIfNotFound: true);
@@ -907,6 +939,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_overworld_QuickMenu;
     private readonly InputAction m_overworld_Cancel;
     private readonly InputAction m_overworld_Menu;
+    private readonly InputAction m_overworld_SwapLead;
     public struct OverworldActions
     {
         private @PlayerControls m_Wrapper;
@@ -920,6 +953,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @QuickMenu => m_Wrapper.m_overworld_QuickMenu;
         public InputAction @Cancel => m_Wrapper.m_overworld_Cancel;
         public InputAction @Menu => m_Wrapper.m_overworld_Menu;
+        public InputAction @SwapLead => m_Wrapper.m_overworld_SwapLead;
         public InputActionMap Get() { return m_Wrapper.m_overworld; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -956,6 +990,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Menu.started += instance.OnMenu;
             @Menu.performed += instance.OnMenu;
             @Menu.canceled += instance.OnMenu;
+            @SwapLead.started += instance.OnSwapLead;
+            @SwapLead.performed += instance.OnSwapLead;
+            @SwapLead.canceled += instance.OnSwapLead;
         }
 
         private void UnregisterCallbacks(IOverworldActions instance)
@@ -987,6 +1024,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Menu.started -= instance.OnMenu;
             @Menu.performed -= instance.OnMenu;
             @Menu.canceled -= instance.OnMenu;
+            @SwapLead.started -= instance.OnSwapLead;
+            @SwapLead.performed -= instance.OnSwapLead;
+            @SwapLead.canceled -= instance.OnSwapLead;
         }
 
         public void RemoveCallbacks(IOverworldActions instance)
@@ -1095,6 +1135,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnQuickMenu(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
         void OnMenu(InputAction.CallbackContext context);
+        void OnSwapLead(InputAction.CallbackContext context);
     }
     public interface IMenuActions
     {

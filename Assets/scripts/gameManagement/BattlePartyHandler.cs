@@ -51,6 +51,14 @@ public class BattlePartyHandler : MonoBehaviour
         }
     }
 
+    public void QuickSwapLead()
+    {
+        var temp = partyData[0];
+        partyData[0] = partyData[1];
+        partyData[1] = partyData[2];
+        partyData[2] = temp;
+    }
+
     public void SetCharacterPartyStatus(PlayerCharacterData data)
     {
         if (data is not null && data.isInParty && !partyData.Any(c => c == data))

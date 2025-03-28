@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 public enum CharacterState { STANDING, WALKING, RUNNING, JUMPING, FALLING }
@@ -7,15 +6,15 @@ public class PlayerCharacterHandler : CharacterHandler
     public OverworldPartyHandler partyHandler;
     public CharacterState state;
     public PlayerControls controls;
-    public Queue<Vector3> moveHistory = new Queue<Vector3>(20);
-    Vector3 leaderPosition;
+    //public Queue<Vector3> moveHistory = new Queue<Vector3>(20);
+    //Vector3 leaderPosition;
     Vector2 runMove;
     Vector2 walkMove;
     bool jumped;
     Ray ray;
 
     float speedMultiplier = 1f;
-    float followDistance = 1.5f;
+    //float followDistance = 1.5f;
     float jumpHeight = 3;
     float fallMultiplier = 2f;
 
@@ -29,7 +28,7 @@ public class PlayerCharacterHandler : CharacterHandler
         controls.overworld.Walk.performed += ctx => walkMove = ctx.ReadValue<Vector2>();
         controls.overworld.Walk.canceled += ctx => walkMove = Vector2.zero;
 
-        controls.overworld.Jump.performed += ctx => OnJump(partyHandler.leadCharacter == this);
+        controls.overworld.Jump.performed += ctx => OnJump();
     }
 
     private void Start()
@@ -41,25 +40,25 @@ public class PlayerCharacterHandler : CharacterHandler
     // Update is called once per frame
     void Update()
     {
-        moveHistory.Enqueue(transform.position);
+        //moveHistory.Enqueue(transform.position);
 
-        if (partyHandler.leadCharacter == this)
-        {
-            GetLeadCharacterMove();
-        }
-        else
+        //if (partyHandler.leadCharacter == this)
+        //{
+        GetLeadCharacterMove();
+        //}
+        /*else
         {
             int index = partyHandler.currParty.IndexOf(this);
             PlayerCharacterHandler leader = partyHandler.currParty.ElementAt(index - 1);
             FollowLeadCharacter(leader);
-        }
+        }*/
         VerticalMovement();
         Move();
         AnimationStateCheck();
     }
-    public void OnJump(bool isLeader = false)
+    public void OnJump()
     {
-        if (isGrounded && isLeader)
+        if (isGrounded)
         {
             state = CharacterState.JUMPING;
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
@@ -114,7 +113,7 @@ public class PlayerCharacterHandler : CharacterHandler
         }
     }
 
-    public void FollowLeadCharacter(PlayerCharacterHandler leader)
+    /*public void FollowLeadCharacter(PlayerCharacterHandler leader)
     {
         if (leader.moveHistory.Count > 5)
         {
@@ -162,7 +161,7 @@ public class PlayerCharacterHandler : CharacterHandler
             else
                 state = CharacterState.STANDING;
         }
-    }
+    }*/
 
     public override void Move()
     {
@@ -212,10 +211,10 @@ public class PlayerCharacterHandler : CharacterHandler
 
     public void OnDisable()
     {
-        moveHistory.Clear();
+        //moveHistory.Clear();
         currentSpeed = 0f;
         move = Vector2.zero;
-        leaderPosition = Vector2.zero;
+        //leaderPosition = Vector2.zero;
         speedMultiplier = 1f;
         controls.overworld.Disable();
     }

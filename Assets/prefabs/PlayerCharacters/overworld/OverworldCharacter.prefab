@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4403209782889309760}
   - component: {fileID: 884710461612806910}
   m_Layer: 8
-  m_Name: WizardSprite
+  m_Name: CharacterSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 3657223964525729659}
   - component: {fileID: 8012809271602870826}
   m_Layer: 8
-  m_Name: Wizard
+  m_Name: OverworldCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,6 @@ MonoBehaviour:
   move: {x: 0, y: 0}
   isGrounded: 0
   groundCheck: {fileID: 531982098335607982}
-  groundDistance: 1
   groundMask:
     serializedVersion: 2
     m_Bits: 128
