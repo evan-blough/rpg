@@ -23,9 +23,9 @@ public class CharacterItemDisplay : MonoBehaviour
 
         GameObject temp;
         allHeroesButton.onClick.RemoveAllListeners();
-        var list = BattlePartyHandler.instance.partyData.Where(pcd => pcd.isInParty).ToList();
+        var list = GameManager.instance.partyManager.partyData.Where(pcd => pcd.isInParty).ToList();
         allHeroesButton.onClick.AddListener(() => FieldItemUse(list));
-        foreach (PlayerCharacterData pcd in BattlePartyHandler.instance.partyData)
+        foreach (PlayerCharacterData pcd in GameManager.instance.partyManager.partyData)
         {
             if (!pcd.isInParty) continue;
 
@@ -65,7 +65,7 @@ public class CharacterItemDisplay : MonoBehaviour
     public List<PlayerCharacterData> FindMultiTarget()
     {
         List<PlayerCharacterData> list = new List<PlayerCharacterData>();
-        foreach (var pcd in BattlePartyHandler.instance.partyData)
+        foreach (var pcd in GameManager.instance.partyManager.partyData)
         {
             if (pcd.isInParty)
                 list.Add(pcd);

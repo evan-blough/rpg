@@ -16,7 +16,7 @@ public class MenuData : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        foreach (PlayerCharacterData data in BattlePartyHandler.instance.partyData)
+        foreach (PlayerCharacterData data in GameManager.instance.partyManager.partyData)
         {
             if (!data.isInParty) continue;
 

@@ -5,31 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
-    public static SceneManager instance;
-
     public CameraHandler cam;
     public EnemyHandler enemyInBattle;
     public Animator animator;
     Scene overworld;
 
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject); // Keep the SceneManager object alive across scenes
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
     public IEnumerator StartBattle(EnemyHandler enemy)
     {
         enemyInBattle = enemy;
 
-        ControlsHandler.OverworldToBattle();
+        ControlsManager.OverworldToBattle();
 
         overworld = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
         foreach (var thing in overworld.GetRootGameObjects())
@@ -44,9 +29,9 @@ public class SceneManager : MonoBehaviour
 
     public IEnumerator TransitionFromBattle(List<PlayerCharacter> playerCharacterList, bool battleWon)
     {
-        BattlePartyHandler.instance.SetPartyData(playerCharacterList);
+        GameManager.instance.partyManager.SetPartyData(playerCharacterList);
 
-        ControlsHandler.BattleToOverworld();
+        ControlsManager.BattleToOverworld();
 
         while (!Input.anyKeyDown)
         {
@@ -81,7 +66,7 @@ public class SceneManager : MonoBehaviour
     {
         overworld = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
 
-        ControlsHandler.OverworldToMenu();
+        GameManager.instance.controlsManager.OverworldToMenu();
 
         foreach (var thing in overworld.GetRootGameObjects())
         {
@@ -97,7 +82,7 @@ public class SceneManager : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("Menu");
 
-        ControlsHandler.MenuToOverworld();
+        GameManager.instance.controlsManager.MenuToOverworld();
 
         foreach (var thing in overworld.GetRootGameObjects())
         {

@@ -2,9 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class BattlePartyHandler : MonoBehaviour
+public class PartyManager : MonoBehaviour
 {
-    public static BattlePartyHandler instance;
     public List<PlayerCharacterData> partyData;
     public HeroData heroData;
     public WizardData wizardData;
@@ -14,14 +13,7 @@ public class BattlePartyHandler : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-            SetCurrentPartyData();
-        }
-        else
-            Destroy(gameObject);
+        SetCurrentPartyData();
     }
 
     private void Start()

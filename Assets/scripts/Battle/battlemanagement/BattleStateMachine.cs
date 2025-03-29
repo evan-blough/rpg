@@ -9,14 +9,15 @@ public enum BattleStates
 }
 public class BattleStateMachine : MonoBehaviour
 {
-    SceneManager gameManager;
-    BattlePartyHandler partyHandler;
+    SceneManager sceneManager;
+    PartyManager partyHandler;
     public AudioClip victory;
     public GameObject heroPrefab;
     public GameObject ogrePrefab;
     public GameObject wizardPrefab;
     public GameObject senatorPrefab;
     public GameObject wolfPrefab;
+    public EnemyHandler fallbackEnemy;
     public BattleStationManager battleStationManager;
     public Button attackButton;
 
@@ -36,9 +37,9 @@ public class BattleStateMachine : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        gameManager = SceneManager.instance;
-        StartCoroutine(gameManager.TransitionTime("Enter_Scene", .5f));
-        partyHandler = BattlePartyHandler.instance;
+        sceneManager = GameManager.instance.sceneManager;
+        StartCoroutine(sceneManager.TransitionTime("Enter_Scene", .5f));
+        partyHandler = GameManager.instance.partyManager;
         uiHandler.OnStart();
         state = BattleStates.START;
         StartCoroutine(SetupBattle());
@@ -66,7 +67,10 @@ public class BattleStateMachine : MonoBehaviour
         }
 
         index = 3;
-        foreach (GameObject enemyPrefab in gameManager.enemyInBattle.encounterFormation)
+
+        if (sceneManager.enemyInBattle is null) sceneManager.enemyInBattle = fallbackEnemy;
+
+        foreach (GameObject enemyPrefab in sceneManager.enemyInBattle.encounterFormation)
         {
             if (index > 6) break;
 
@@ -214,13 +218,13 @@ public class BattleStateMachine : MonoBehaviour
         else if (state == BattleStates.WIN)
         {
             uiHandler.OnWin(enemies, playerCharacterList);
-            AudioManager.instance.ChangeAudio(victory);
-            StartCoroutine(gameManager.TransitionFromBattle(playerCharacterList, true));
+            GameManager.instance.audioManager.ChangeAudio(victory);
+            StartCoroutine(sceneManager.TransitionFromBattle(playerCharacterList, true));
         }
         else if (state == BattleStates.FLEE)
         {
             uiHandler.OnFlee(true);
-            StartCoroutine(gameManager.TransitionFromBattle(playerCharacterList, false));
+            StartCoroutine(sceneManager.TransitionFromBattle(playerCharacterList, false));
         }
     }
     public IEnumerator EnemyTurn(Enemy currentEnemy)

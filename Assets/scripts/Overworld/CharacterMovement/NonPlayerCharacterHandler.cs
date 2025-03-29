@@ -8,7 +8,7 @@ public class NonPlayerCharacterHandler : CharacterHandler
 
     private void Start()
     {
-        cam = SceneManager.instance.cam.transform;
+        cam = GameManager.instance.sceneManager.cam.transform;
         mainCamera = Camera.main;
         StartCoroutine(WaitToStart(2f));
     }

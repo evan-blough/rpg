@@ -4,7 +4,7 @@ public class MainMenu : MonoBehaviour
 {
     private void Start()
     {
-        SceneManager.instance.StartCoroutine(SceneManager.instance.TransitionTime("Enter_Scene", .5f));
+        GameManager.instance.sceneManager.StartCoroutine(GameManager.instance.sceneManager.TransitionTime("Enter_Scene", .5f));
     }
 
     public void OnGameLoad()
@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
 
     public void OnNewGame()
     {
-        SceneManager.instance.StartCoroutine(SceneManager.instance.EnterGame());
+        GameManager.instance.sceneManager.StartCoroutine(GameManager.instance.sceneManager.EnterGame());
     }
 
     public void OnOptions()

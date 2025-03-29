@@ -12,8 +12,8 @@ public class CameraHandler : MonoBehaviour
     public bool isKeyboard = false;
     void Awake()
     {
-        SceneManager.instance.cam = this;
-        controls = ControlsHandler.instance.playerControls;
+        GameManager.instance.sceneManager.cam = this;
+        controls = GameManager.instance.controlsManager.playerControls;
         cam.m_XAxis.Value = 0f;
         cam.m_YAxis.Value = .5f;
 

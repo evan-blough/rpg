@@ -7,7 +7,7 @@ public class QuickMenuHandler : MonoBehaviour
 
     private void Start()
     {
-        controls = ControlsHandler.instance.playerControls;
+        controls = GameManager.instance.controlsManager.playerControls;
 
         controls.overworld.QuickMenu.performed += ctx => ActivateQuickMenu();
 
@@ -39,6 +39,6 @@ public class QuickMenuHandler : MonoBehaviour
 
     public void OpenMenu()
     {
-        SceneManager.instance.StartCoroutine(SceneManager.instance.OpenMenu());
+        GameManager.instance.sceneManager.StartCoroutine(GameManager.instance.sceneManager.OpenMenu());
     }
 }

@@ -7,8 +7,10 @@ public class SkillDisplayHandler : MonoBehaviour
     public PlayerCharacterData data;
     public GameObject skillButtonPrefab;
     public GameObject sortOptions;
+    public SkillUseModal skillUseModal;
     public Button sort;
     public SkillsCharacterHolder characterHolder;
+    bool isUse = false;
 
     public void PopulateUseMenu(PlayerCharacterData pcd)
     {
@@ -18,8 +20,11 @@ public class SkillDisplayHandler : MonoBehaviour
 
     public void PopulateUseMenu()
     {
+        if (isUse) return;
+
         sortOptions.gameObject.SetActive(false);
         sort.interactable = true;
+        isUse = true;
 
         foreach (Transform child in transform)
         {
@@ -46,8 +51,11 @@ public class SkillDisplayHandler : MonoBehaviour
 
     public void PopulateAddMenu()
     {
+        if (!isUse) return;
+
         sortOptions.gameObject.SetActive(false);
         sort.interactable = true;
+        isUse = false;
 
         foreach (Transform child in transform)
         {
@@ -76,6 +84,7 @@ public class SkillDisplayHandler : MonoBehaviour
             return;
 
         data.equippedSkills.Add(skill);
+        isUse = true;
         characterHolder.PopulateBattleSkillsDisplay();
     }
 }

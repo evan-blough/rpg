@@ -9,14 +9,14 @@ public class OverworldItem : MonoBehaviour
 
     private void Start()
     {
-        controls = ControlsHandler.instance.playerControls;
+        controls = GameManager.instance.controlsManager.playerControls;
     }
 
     public void InteractWithObject()
     {
         if (!isCollected)
         {
-            var text = BattlePartyHandler.instance.inventory.AddItem(item, itemNum);
+            var text = GameManager.instance.partyManager.inventory.AddItem(item, itemNum);
             isCollected = true;
             controls.overworld.Interact.performed -= ctx => InteractWithObject();
         }

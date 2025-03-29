@@ -20,7 +20,7 @@ public class PlayerCharacterHandler : CharacterHandler
 
     private void Awake()
     {
-        controls = ControlsHandler.instance.playerControls;
+        controls = GameManager.instance.controlsManager.playerControls;
 
         controls.overworld.Run.performed += ctx => runMove = ctx.ReadValue<Vector2>();
         controls.overworld.Run.canceled += ctx => runMove = Vector2.zero;
@@ -33,7 +33,7 @@ public class PlayerCharacterHandler : CharacterHandler
 
     private void Start()
     {
-        cam = SceneManager.instance.cam.transform;
+        cam = GameManager.instance.sceneManager.cam.transform;
         mainCamera = Camera.main;
     }
 

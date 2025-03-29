@@ -4,7 +4,7 @@ public class ExitModal : MonoBehaviour
 {
     public void ExitGame()
     {
-        SceneManager.instance.StartCoroutine(SceneManager.instance.ReturnToMainMenu());
+        GameManager.instance.sceneManager.StartCoroutine(GameManager.instance.sceneManager.ReturnToMainMenu());
     }
 
     public void CancelExit()

@@ -22,7 +22,7 @@ public class WinLossScript : MonoBehaviour
             classXpGained += enemy.classXpValue;
         }
 
-        BattlePartyHandler.instance.gold += goldGained;
+        GameManager.instance.partyManager.gold += goldGained;
         goldText.text = goldGained.ToString();
 
         for (int i = 0; i < 3; i++)

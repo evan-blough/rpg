@@ -16,6 +16,6 @@ public class MainModalHandler : MonoBehaviour
     public void PopulateModal()
     {
         // need game timer and location name
-        gold.text = BattlePartyHandler.instance.gold.ToString();
+        gold.text = GameManager.instance.partyManager.gold.ToString();
     }
 }

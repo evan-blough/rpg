@@ -12,7 +12,7 @@ public class StatusMenuData : MonoBehaviour
         stats.gameObject.SetActive(false);
         elements.gameObject.SetActive(false);
         statuses.gameObject.SetActive(false);
-        controls = ControlsHandler.instance.playerControls;
+        controls = GameManager.instance.controlsManager.playerControls;
     }
 
     public void PrepareData(PlayerCharacterData pcd)

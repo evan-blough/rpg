@@ -12,16 +12,16 @@ public class OptionsList : MonoBehaviour
 
     private void Awake()
     {
-        controls = ControlsHandler.instance.playerControls;
+        controls = GameManager.instance.controlsManager.playerControls;
     }
     private void Start()
     {
-        SceneManager.instance.TransitionTime("Enter_Scene", .5f);
+        GameManager.instance.sceneManager.TransitionTime("Enter_Scene", .5f);
 
         controls.menu.Return.started += ReturnToOverworld;
         exitModal.gameObject.SetActive(false);
 
-        if (BattlePartyHandler.instance.partyData.Count <= 1)
+        if (GameManager.instance.partyManager.partyData.Count <= 1)
             formationButton.interactable = false;
     }
 
@@ -70,7 +70,7 @@ public class OptionsList : MonoBehaviour
 
     public void SwapFormation(PlayerCharacterData pcd1, PlayerCharacterData pcd2)
     {
-        List<PlayerCharacterData> battleParty = BattlePartyHandler.instance.partyData;
+        List<PlayerCharacterData> battleParty = GameManager.instance.partyManager.partyData;
         if (!battleParty.Contains(pcd1) && !battleParty.Contains(pcd2)) return;
 
         var indexOf2 = battleParty.IndexOf(pcd2);
@@ -95,7 +95,7 @@ public class OptionsList : MonoBehaviour
     public void ReturnToOverworld(InputAction.CallbackContext ctx)
     {
         controls.menu.Return.started -= ReturnToOverworld;
-        SceneManager.instance.StartCoroutine(SceneManager.instance.CloseMenu());
+        GameManager.instance.sceneManager.StartCoroutine(GameManager.instance.sceneManager.CloseMenu());
     }
 
     public void ReturnToOptionsList(InputAction.CallbackContext ctx)

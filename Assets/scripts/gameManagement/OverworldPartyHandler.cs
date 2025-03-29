@@ -22,7 +22,7 @@ public class OverworldPartyHandler : MonoBehaviour
     void Start()
     {
         created = true;
-        controls = ControlsHandler.instance.playerControls;
+        controls = GameManager.instance.controlsManager.playerControls;
         controls.overworld.SwapLead.performed += ctx => QuickSwapLead();
         GameObject temp;
         currParty.Clear();
@@ -30,7 +30,7 @@ public class OverworldPartyHandler : MonoBehaviour
         temp = Instantiate(playerCharacterPrefab, transform);
         playerCharacter = temp.GetComponent<PlayerCharacterHandler>();
 
-        foreach (PlayerCharacterData pcd in BattlePartyHandler.instance.partyData)
+        foreach (PlayerCharacterData pcd in GameManager.instance.partyManager.partyData)
         {
             if (pcd is HeroData && pcd.isInParty)
             {
@@ -54,7 +54,7 @@ public class OverworldPartyHandler : MonoBehaviour
         if (currParty.Any())
             currParty.Clear();
 
-        foreach (PlayerCharacterData data in BattlePartyHandler.instance.partyData)
+        foreach (PlayerCharacterData data in GameManager.instance.partyManager.partyData)
         {
             if (data is HeroData)
             {
@@ -77,7 +77,7 @@ public class OverworldPartyHandler : MonoBehaviour
 
     void Update()
     {
-        if (playerCharacter != SceneManager.instance.cam.cam.LookAt)
+        if (playerCharacter != GameManager.instance.sceneManager.cam.cam.LookAt)
         {
             SetLeadCharacterCam();
         }
@@ -85,8 +85,8 @@ public class OverworldPartyHandler : MonoBehaviour
     public void SetLeadCharacterCam()
     {
         playerCharacter.animator.runtimeAnimatorController = currCharacter;
-        SceneManager.instance.cam.cam.Follow = playerCharacter.transform;
-        SceneManager.instance.cam.cam.LookAt = playerCharacter.transform;
+        GameManager.instance.sceneManager.cam.cam.Follow = playerCharacter.transform;
+        GameManager.instance.sceneManager.cam.cam.LookAt = playerCharacter.transform;
     }
     public void SwapLeader()
     {
@@ -95,7 +95,7 @@ public class OverworldPartyHandler : MonoBehaviour
 
     public void QuickSwapLead()
     {
-        BattlePartyHandler.instance.QuickSwapLead();
+        GameManager.instance.partyManager.QuickSwapLead();
 
         var temp = currParty[0];
         currParty[0] = currParty[1];

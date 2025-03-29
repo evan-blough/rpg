@@ -276,7 +276,7 @@ public class InventoryDisplayHandler : MonoBehaviour
     {
         if (inventory is null)
         {
-            inventory = BattlePartyHandler.instance.inventory;
+            inventory = GameManager.instance.partyManager.inventory;
         }
     }
 

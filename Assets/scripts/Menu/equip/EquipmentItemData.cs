@@ -14,7 +14,7 @@ public class EquipmentItemData : MonoBehaviour
     public void PopulateData(PlayerCharacterData pcd, EquipMenuData emd)
     {
         data = pcd;
-        inventory = BattlePartyHandler.instance.inventory.items;
+        inventory = GameManager.instance.partyManager.inventory.items;
         equipMenuData = emd;
     }
 

@@ -51,7 +51,7 @@ public class UIHandler : MonoBehaviour
         lossBox.gameObject.SetActive(true);
         yield return new WaitForSeconds(2f);
         canvas.gameObject.SetActive(false);
-        SceneManager.instance.StartCoroutine(SceneManager.instance.ReturnToMainMenu());
+        GameManager.instance.sceneManager.StartCoroutine(GameManager.instance.sceneManager.ReturnToMainMenu());
     }
 
     public void OnWin(List<Enemy> enemy, List<PlayerCharacter> playerCharacterList)

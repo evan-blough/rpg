@@ -12,7 +12,7 @@ public class EnemyHandler : NonPlayerCharacterHandler
     public PlayerCharacterHandler chasingCharacter;
     private void Start()
     {
-        cam = SceneManager.instance.cam.transform;
+        cam = GameManager.instance.sceneManager.cam.transform;
         mainCamera = Camera.main;
         state = EnemyState.INITALIZING;
         StartCoroutine(WaitToStart(1.5f));
@@ -105,7 +105,7 @@ public class EnemyHandler : NonPlayerCharacterHandler
             else
             {
                 isActive = false;
-                SceneManager.instance.StartCoroutine(SceneManager.instance.StartBattle(this));
+                GameManager.instance.sceneManager.StartCoroutine(GameManager.instance.sceneManager.StartBattle(this));
             }
         }
     }

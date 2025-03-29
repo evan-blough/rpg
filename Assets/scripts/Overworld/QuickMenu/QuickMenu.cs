@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class QuickMenu : MonoBehaviour
 {
-    BattlePartyHandler partyHandler;
+    PartyManager partyHandler;
     public QuickCharHUD hudPrefab;
 
     private void Start()
     {
-        partyHandler = BattlePartyHandler.instance;
+        partyHandler = GameManager.instance.partyManager;
 
         gameObject.SetActive(false);
     }
