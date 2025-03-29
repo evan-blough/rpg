@@ -21,7 +21,7 @@ public class OverworldPartyHandler : MonoBehaviour
 
     void Start()
     {
-        created = false;
+        created = true;
         controls = ControlsHandler.instance.playerControls;
         controls.overworld.SwapLead.performed += ctx => QuickSwapLead();
         GameObject temp;
