@@ -75,7 +75,7 @@ public class SkillDisplayHandler : MonoBehaviour
 
     public void OnSkillUseClick(Skill skill)
     {
-        skillUseModal.PopulateData(skill);
+        skillUseModal.PopulateData(skill, data);
         skillUseModal.gameObject.SetActive(true);
     }
 

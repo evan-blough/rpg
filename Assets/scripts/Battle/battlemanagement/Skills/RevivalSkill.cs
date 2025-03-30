@@ -32,4 +32,23 @@ public class RevivalSkill : Skill
 
         return result;
     }
+
+    public override void UseFieldSkill(PlayerCharacterData character, List<PlayerCharacterData> targets)
+    {
+        foreach (var target in targets)
+        {
+            if (!target.isActive)
+            {
+                target.isActive = true;
+
+                int heals = (int)((character.magAtk * powerModifier * Random.Range(.85f, 1.25f)) / targets.Count);
+
+                if (heals > 9999) heals = 9999;
+
+                target.currHP += heals;
+
+                if (target.currHP > target.maxHP) target.currHP = target.maxHP;
+            }
+        }
+    }
 }

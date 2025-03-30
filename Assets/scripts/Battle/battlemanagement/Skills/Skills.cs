@@ -84,7 +84,7 @@ public class Skill : ScriptableObject
         return new List<string>();
     }
 
-    public virtual void UseFieldSkill(Character character, List<Character> targets)
+    public virtual void UseFieldSkill(PlayerCharacterData character, List<PlayerCharacterData> targets)
     {
         return;
     }

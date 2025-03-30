@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -77,12 +78,20 @@ public class StatusRemovalSkill : Skill
         return results;
     }
 
-    public override void UseFieldSkill(Character character, List<Character> targets)
+    public override void UseFieldSkill(PlayerCharacterData character, List<PlayerCharacterData> targets)
     {
         if (removeSelfStatuses.Count > 0)
         {
             foreach (var status in removeSelfStatuses)
-                SelfStatusCure(character, status, 1);
+            {
+                var curingStatus = character.currStatuses.FirstOrDefault(s => s.status == status);
+                if (curingStatus != null && curingStatus.canBeCured)
+                {
+                    character.currStatuses.RemoveAll(s => s.status == status);
+
+                }
+            }
+
         }
 
         foreach (var target in targets)
@@ -95,7 +104,14 @@ public class StatusRemovalSkill : Skill
             if (removeTargetStatuses.Count > 0)
             {
                 foreach (var status in removeTargetStatuses)
-                    TargetStatusRemoval(character, status, target, 1);
+                {
+                    var curingStatus = target.currStatuses.FirstOrDefault(s => s.status == status);
+                    if (curingStatus != null && curingStatus.canBeCured)
+                    {
+                        target.currStatuses.RemoveAll(s => s.status == status);
+                    }
+                }
+
             }
         }
     }
@@ -131,31 +147,6 @@ public class StatusApplicationSkill : Skill
             }
         }
         return results;
-    }
-    public override void UseFieldSkill(Character character, List<Character> targets)
-    {
-        string temp;
-        if (applySelfStatuses.Count > 0)
-        {
-            foreach (var status in applySelfStatuses)
-                SelfStatusApplication(character, status, 1);
-        }
-
-        foreach (var target in targets)
-        {
-            if (!target.isActive)
-            {
-                continue;
-            }
-
-            if (applyTargetStatuses.Count > 0)
-            {
-                foreach (var status in applyTargetStatuses)
-                {
-                    temp = TargetStatusApplication(character, status, target, 1);
-                }
-            }
-        }
     }
 }
 
