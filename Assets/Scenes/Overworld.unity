@@ -2983,10 +2983,10 @@ MonoBehaviour:
     weightClass: 2
     skills:
     - {fileID: 11400000, guid: c65e5f15092b5ea4cbdecdcdaaba0a57, type: 2}
-    - {fileID: 11400000, guid: 5b068e4274a72f34fbc4e3f25a2056cf, type: 2}
+    - {fileID: 11400000, guid: 3da07421480495e4f89f24f08f7c5680, type: 2}
     equippedSkills:
     - {fileID: 11400000, guid: c65e5f15092b5ea4cbdecdcdaaba0a57, type: 2}
-    - {fileID: 11400000, guid: 5b068e4274a72f34fbc4e3f25a2056cf, type: 2}
+    - {fileID: 11400000, guid: 3da07421480495e4f89f24f08f7c5680, type: 2}
     classes:
     - classSlot: {fileID: 11400000, guid: d81032e881be0244592b98b609dadcc7, type: 2}
       currLevel: {fileID: 11400000, guid: 82cb1741af8c1bf4d8bde15cd8aa2993, type: 2}

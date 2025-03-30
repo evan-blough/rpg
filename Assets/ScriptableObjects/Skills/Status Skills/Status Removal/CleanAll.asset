@@ -9,15 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65b78a7377dec3049af9ad47e3564b9c, type: 3}
-  m_Name: Clear Status
-  m_EditorClassIdentifier: 
-  skillName: Clear Status
-  skillDescription: Clears all negative statuses from all party members
+  m_Script: {fileID: 0}
+  m_Name: CleanAll
+  m_EditorClassIdentifier: Assembly-CSharp::StatusRemovalSkill
+  skillName: Clean-All
+  skillDescription: Clears all negative statuses for the full party
   skillPointCost: 40
   criticalModifier: 0
   powerModifier: 0
-  accuracyModifier: 1
   isMagic: 1
   isRanged: 1
   isMultiTargeted: 1
@@ -25,4 +24,4 @@ MonoBehaviour:
   applySelfStatuses: []
   applyTargetStatuses: []
   removeSelfStatuses: 000000000100000002000000030000000400000005000000
-  removeTargetStatuses: 
+  removeTargetStatuses: 000000000100000002000000030000000400000005000000

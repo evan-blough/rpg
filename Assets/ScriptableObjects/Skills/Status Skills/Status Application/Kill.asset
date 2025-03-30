@@ -9,27 +9,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65b78a7377dec3049af9ad47e3564b9c, type: 3}
-  m_Name: Death
-  m_EditorClassIdentifier: 
+  m_Script: {fileID: 0}
+  m_Name: Kill
+  m_EditorClassIdentifier: Assembly-CSharp::StatusApplicationSkill
   skillName: Death
-  skillDescription: Instantly kills the target... if it hits.
-  skillPointCost: 15
-  active: 0
-  isEquipped: 0
-  levelReq: 0
+  skillDescription: Kills the target instantly... if it hits
+  skillPointCost: 20
   criticalModifier: 0
   powerModifier: 0
-  accuracyModifier: 0
   isMagic: 1
   isRanged: 1
   isMultiTargeted: 0
-  elemAttribute: 0
+  elemAttribute: 7
   applySelfStatuses: []
   applyTargetStatuses:
   - status: 7
-    expirationTurn: 1
-    canBeCured: 0
-    accuracy: 0.1
-  removeSelfStatuses: []
-  removeTargetStatuses: []
+    expirationTurn: -1
+    canBeCured: 1
+    accuracy: 0.15
+  removeSelfStatuses: 
+  removeTargetStatuses: 

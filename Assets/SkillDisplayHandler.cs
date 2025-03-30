@@ -38,7 +38,7 @@ public class SkillDisplayHandler : MonoBehaviour
             newButton.PopulateButton(skill);
 
             var button = newButton.GetComponent<Button>();
-            if (newButton.skill is HealingSkill || newButton.skill is RevivalSkill || newButton.skill is StatusSkill)
+            if (newButton.skill is HealingSkill || newButton.skill is RevivalSkill || newButton.skill is StatusRemovalSkill)
             {
                 button.onClick.AddListener(() => OnSkillUseClick(skill));
             }
@@ -75,7 +75,8 @@ public class SkillDisplayHandler : MonoBehaviour
 
     public void OnSkillUseClick(Skill skill)
     {
-        Debug.Log("Program Me!");
+        skillUseModal.PopulateData(skill);
+        skillUseModal.gameObject.SetActive(true);
     }
 
     public void OnSkillAddClick(Skill skill)
@@ -86,5 +87,11 @@ public class SkillDisplayHandler : MonoBehaviour
         data.equippedSkills.Add(skill);
         isUse = true;
         characterHolder.PopulateBattleSkillsDisplay();
+    }
+
+    private void OnDisable()
+    {
+        isUse = false;
+        skillUseModal.gameObject.SetActive(false);
     }
 }

@@ -19,4 +19,4 @@ MonoBehaviour:
   magAtkBuff: 3
   magDefBuff: 3
   agilityBuff: 0
-  acquiredSkill: {fileID: 11400000, guid: f25be9161aabeba488f582cdcb54277a, type: 2}
+  acquiredSkill: {fileID: 11400000, guid: 47a15b723970d754b88f9a58a945b536, type: 2}

@@ -62,4 +62,5 @@ public class SkillsCharacterHolder : MonoBehaviour
         pcd.equippedSkills.Remove(skill);
         PopulateBattleSkillsDisplay();
     }
+
 }
