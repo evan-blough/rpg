@@ -2796,7 +2796,7 @@ MonoBehaviour:
     currStatuses: []
     isActive: 1
     isBackRow: 0
-    portrait: {fileID: 21300000, guid: 302686a9bc5d023468e6c753925549d9, type: 3}
+    portrait: {fileID: -608852291, guid: fae09291a07f8ec4cae064be59d978c3, type: 3}
     expHandler:
       experienceCurve:
         serializedVersion: 2

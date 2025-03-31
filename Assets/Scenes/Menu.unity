@@ -5664,7 +5664,7 @@ MonoBehaviour:
       accuracy: 0
     isActive: 1
     isBackRow: 0
-    portrait: {fileID: 21300000, guid: 302686a9bc5d023468e6c753925549d9, type: 3}
+    portrait: {fileID: -608852291, guid: fae09291a07f8ec4cae064be59d978c3, type: 3}
     expHandler:
       experienceCurve:
         serializedVersion: 2
@@ -5771,6 +5771,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7df9437d966edf740b2c4500287d95e7, type: 2}
     - {fileID: 11400000, guid: 3eadb9cbb8fac314fa3639d4935f12b0, type: 2}
     - {fileID: 11400000, guid: ce4e4ae3a0fbc3a49b3cd17be07cb4e9, type: 2}
+    - {fileID: 11400000, guid: 3615a18a16dc63941926b46bfb386b66, type: 2}
+    - {fileID: 11400000, guid: 99197cccc3bf9bc44add1599faa6e5aa, type: 2}
     equippedSkills:
     - {fileID: 11400000, guid: 7df9437d966edf740b2c4500287d95e7, type: 2}
     - {fileID: 11400000, guid: 3eadb9cbb8fac314fa3639d4935f12b0, type: 2}
@@ -17502,6 +17504,7 @@ MonoBehaviour:
   charDataPrefab: {fileID: 6642609554212998287, guid: 4e5e18fd7d68f484fa2e055c9c4f934a, type: 3}
   characterList: {fileID: 1425061826}
   allCharsButton: {fileID: 1425061831}
+  skillDisplayHandler: {fileID: 1400020196}
   references:
     version: 2
     RefIds: []

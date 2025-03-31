@@ -19,6 +19,7 @@ public class MenuHandler : MonoBehaviour
 
     public void OpenItemMenu()
     {
+        itemDisplay.GetComponentInChildren<CharacterItemDisplay>().RefreshCharView();
         itemDisplay.GetComponentInChildren<InventoryDisplayHandler>().PopulateFieldMenu();
         itemDisplay.SetActive(true);
         CloseAllUnusedTabs(itemDisplay.transform);
@@ -115,6 +116,7 @@ public class MenuHandler : MonoBehaviour
     {
         if (mainDisplay.activeInHierarchy) return;
 
+        mainDisplay.GetComponentInChildren<MenuData>().FillSlotData();
         mainDisplay.SetActive(true);
         CloseAllUnusedTabs(mainDisplay.transform);
     }

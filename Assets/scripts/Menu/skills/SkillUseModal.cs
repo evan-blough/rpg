@@ -9,6 +9,7 @@ public class SkillUseModal : MonoBehaviour
     public GameObject charDataPrefab;
     public GameObject characterList;
     public Button allCharsButton;
+    public SkillDisplayHandler skillDisplayHandler;
 
     public void PopulateData(Skill skillToUse, PlayerCharacterData charUsing)
     {
@@ -20,6 +21,8 @@ public class SkillUseModal : MonoBehaviour
         }
 
         GameObject temp;
+        allCharsButton.onClick.RemoveAllListeners();
+        allCharsButton.interactable = false;
         foreach (PlayerCharacterData pcd in currParty)
         {
             temp = Instantiate(charDataPrefab, characterList.transform);
@@ -42,17 +45,16 @@ public class SkillUseModal : MonoBehaviour
             else
                 button.interactable = false;
         }
-
         if (skillToUse.isMultiTargeted)
         {
-            // add all button
+            if ((skillToUse is HealingSkill && currParty.Any(pcd => pcd.currHP != pcd.maxHP))
+                || (skillToUse is StatusRemovalSkill && currParty.Any(pcd => pcd.currStatuses.Any()))
+                || (skillToUse is RevivalSkill && !currParty.Any(pcd => pcd.isActive)))
+            {
+                allCharsButton.onClick.AddListener(() => UseSkill(skillToUse, charUsing, currParty));
+                allCharsButton.interactable = true;
+            }
         }
-        else
-        {
-            allCharsButton.onClick.RemoveAllListeners();
-            allCharsButton.interactable = false;
-        }
-
     }
 
     public void UseSkill(Skill skill, PlayerCharacterData currCharacter, List<PlayerCharacterData> targets)
@@ -63,7 +65,10 @@ public class SkillUseModal : MonoBehaviour
         skill.UseFieldSkill(currCharacter, targets);
 
         if (currCharacter.currSP < skill.skillPointCost)
+        {
+            skillDisplayHandler.PopulateUseMenu();
             gameObject.SetActive(false);
+        }
 
         RepopulateData(skill, currCharacter, targets);
 
@@ -71,6 +76,7 @@ public class SkillUseModal : MonoBehaviour
             || (skill is StatusRemovalSkill && !currParty.Any(t => t.currStatuses.Any()))
             || (skill is RevivalSkill && !currParty.Any(t => !t.isActive)))
         {
+            skillDisplayHandler.PopulateUseMenu();
             gameObject.SetActive(false);
         }
     }

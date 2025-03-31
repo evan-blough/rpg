@@ -15,17 +15,13 @@ MonoBehaviour:
   skillName: Heal-All
   skillDescription: Heals a bit of HP to all allies.
   skillPointCost: 9
-  active: 0
-  isEquipped: 0
-  levelReq: 0
   criticalModifier: 1
   powerModifier: 3
-  accuracyModifier: 1
   isMagic: 1
   isRanged: 1
-  isMultiTargeted: 0
+  isMultiTargeted: 1
   elemAttribute: 0
   applySelfStatuses: []
   applyTargetStatuses: []
-  removeSelfStatuses: []
-  removeTargetStatuses: []
+  removeSelfStatuses: 
+  removeTargetStatuses: 

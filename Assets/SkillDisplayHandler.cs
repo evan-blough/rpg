@@ -1,30 +1,29 @@
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class SkillDisplayHandler : MonoBehaviour
 {
     public PlayerCharacterData data;
+    public List<PlayerCharacterData> currParty;
     public GameObject skillButtonPrefab;
     public GameObject sortOptions;
     public SkillUseModal skillUseModal;
     public Button sort;
     public SkillsCharacterHolder characterHolder;
-    bool isUse = false;
 
     public void PopulateUseMenu(PlayerCharacterData pcd)
     {
         data = pcd;
+        currParty = GameManager.instance.partyManager.partyData;
         PopulateUseMenu();
     }
 
     public void PopulateUseMenu()
     {
-        if (isUse) return;
-
         sortOptions.gameObject.SetActive(false);
         sort.interactable = true;
-        isUse = true;
+        characterHolder.PopulateCharacterDisplay();
 
         foreach (Transform child in transform)
         {
@@ -38,7 +37,10 @@ public class SkillDisplayHandler : MonoBehaviour
             newButton.PopulateButton(skill);
 
             var button = newButton.GetComponent<Button>();
-            if (newButton.skill is HealingSkill || newButton.skill is RevivalSkill || newButton.skill is StatusRemovalSkill)
+            if (((newButton.skill is HealingSkill && currParty.Any(p => p.currHP < p.maxHP)
+                || (newButton.skill is RevivalSkill && currParty.Any(p => !p.isActive)))
+                || (newButton.skill is StatusRemovalSkill && currParty.Any(p => p.currStatuses.Any())))
+                && skill.skillPointCost <= data.currSP)
             {
                 button.onClick.AddListener(() => OnSkillUseClick(skill));
             }
@@ -51,11 +53,8 @@ public class SkillDisplayHandler : MonoBehaviour
 
     public void PopulateAddMenu()
     {
-        if (!isUse) return;
-
         sortOptions.gameObject.SetActive(false);
         sort.interactable = true;
-        isUse = false;
 
         foreach (Transform child in transform)
         {
@@ -85,13 +84,11 @@ public class SkillDisplayHandler : MonoBehaviour
             return;
 
         data.equippedSkills.Add(skill);
-        isUse = true;
         characterHolder.PopulateBattleSkillsDisplay();
     }
 
     private void OnDisable()
     {
-        isUse = false;
         skillUseModal.gameObject.SetActive(false);
     }
 }
