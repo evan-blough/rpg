@@ -5548,9 +5548,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InventoryDisplayHandler, Assembly-CSharp
-        m_MethodName: OnSortPress
+      - m_Target: {fileID: 1400020196}
+        m_TargetAssemblyTypeName: SkillDisplayHandler, Assembly-CSharp
+        m_MethodName: OnSortClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8705,8 +8705,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 230.95, y: 128.65}
-  m_SizeDelta: {x: 125.9296, y: 126.2918}
+  m_AnchoredPosition: {x: 230.95, y: 144.91823}
+  m_SizeDelta: {x: 125.9296, y: 93.7553}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &742653504
 MonoBehaviour:
@@ -10175,9 +10175,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InventoryDisplayHandler, Assembly-CSharp
-        m_MethodName: SortByHealFirst
+      - m_Target: {fileID: 1400020196}
+        m_TargetAssemblyTypeName: SkillDisplayHandler, Assembly-CSharp
+        m_MethodName: HealSkillSort
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14581,6 +14581,7 @@ MonoBehaviour:
   skillUseModal: {fileID: 1849863731}
   sort: {fileID: 492812966}
   characterHolder: {fileID: 9136875336432426611}
+  state: 0
   references:
     version: 2
     RefIds:
@@ -18117,9 +18118,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InventoryDisplayHandler, Assembly-CSharp
-        m_MethodName: SortByFieldItemFirst
+      - m_Target: {fileID: 1400020196}
+        m_TargetAssemblyTypeName: SkillDisplayHandler, Assembly-CSharp
+        m_MethodName: StatusSkillSort
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19113,9 +19114,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InventoryDisplayHandler, Assembly-CSharp
-        m_MethodName: SortByAttackFirst
+      - m_Target: {fileID: 1400020196}
+        m_TargetAssemblyTypeName: SkillDisplayHandler, Assembly-CSharp
+        m_MethodName: BattleSkillSort
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

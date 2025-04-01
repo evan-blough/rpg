@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+
+public enum SkillDisplayState { USE, EQUIP }
 public class SkillDisplayHandler : MonoBehaviour
 {
     public PlayerCharacterData data;
@@ -11,6 +13,7 @@ public class SkillDisplayHandler : MonoBehaviour
     public SkillUseModal skillUseModal;
     public Button sort;
     public SkillsCharacterHolder characterHolder;
+    public SkillDisplayState state;
 
     public void PopulateUseMenu(PlayerCharacterData pcd)
     {
@@ -24,6 +27,7 @@ public class SkillDisplayHandler : MonoBehaviour
         sortOptions.gameObject.SetActive(false);
         sort.interactable = true;
         characterHolder.PopulateCharacterDisplay();
+        state = SkillDisplayState.USE;
 
         foreach (Transform child in transform)
         {
@@ -55,6 +59,7 @@ public class SkillDisplayHandler : MonoBehaviour
     {
         sortOptions.gameObject.SetActive(false);
         sort.interactable = true;
+        state = SkillDisplayState.EQUIP;
 
         foreach (Transform child in transform)
         {
@@ -85,6 +90,61 @@ public class SkillDisplayHandler : MonoBehaviour
 
         data.equippedSkills.Add(skill);
         characterHolder.PopulateBattleSkillsDisplay();
+    }
+
+    public void OnSortClick()
+    {
+        sortOptions.gameObject.SetActive(true);
+    }
+
+    public void HealSkillSort()
+    {
+        List<Skill> list = new List<Skill>();
+        list.AddRange(data.skills.Where(s => s is HealingSkill).ToList());
+        list.AddRange(data.skills.Where(s => s is RevivalSkill).ToList());
+        list.AddRange(data.skills.Where(s => s is StatusRemovalSkill).ToList());
+        list.AddRange(data.skills.Where(s => s is MixedStatusSkill).ToList());
+        list.AddRange(data.skills.Where(s => s is StatusApplicationSkill).ToList());
+        list.AddRange(data.skills.Where(s => s is AttackSkill).ToList());
+        list.AddRange(data.skills.Where(s => !list.Contains(s)).ToList());
+        data.skills = list;
+        RepopulateData();
+    }
+
+    public void BattleSkillSort()
+    {
+        List<Skill> list = new List<Skill>();
+        list.AddRange(data.skills.Where(s => s is AttackSkill).ToList());
+        list.AddRange(data.skills.Where(s => s is StatusApplicationSkill).ToList());
+        list.AddRange(data.skills.Where(s => s is MixedStatusSkill).ToList());
+        list.AddRange(data.skills.Where(s => s is StatusRemovalSkill).ToList());
+        list.AddRange(data.skills.Where(s => s is HealingSkill).ToList());
+        list.AddRange(data.skills.Where(s => s is RevivalSkill).ToList());
+        list.AddRange(data.skills.Where(s => !list.Contains(s)).ToList());
+        data.skills = list;
+        RepopulateData();
+    }
+
+    public void StatusSkillSort()
+    {
+        List<Skill> list = new List<Skill>();
+        list.AddRange(data.skills.Where(s => s is StatusApplicationSkill).ToList());
+        list.AddRange(data.skills.Where(s => s is StatusRemovalSkill).ToList());
+        list.AddRange(data.skills.Where(s => s is MixedStatusSkill).ToList());
+        list.AddRange(data.skills.Where(s => s is AttackSkill).ToList());
+        list.AddRange(data.skills.Where(s => s is HealingSkill).ToList());
+        list.AddRange(data.skills.Where(s => s is RevivalSkill).ToList());
+        list.AddRange(data.skills.Where(s => !list.Contains(s)).ToList());
+        data.skills = list;
+        RepopulateData();
+    }
+
+    public void RepopulateData()
+    {
+        if (state == SkillDisplayState.USE)
+            PopulateUseMenu();
+        else
+            PopulateAddMenu();
     }
 
     private void OnDisable()
