@@ -11,6 +11,14 @@ public class SkillUseModal : MonoBehaviour
     public Button allCharsButton;
     public SkillDisplayHandler skillDisplayHandler;
     public OptionsList options;
+    public Text title;
+    public Text description;
+    public Text skillPointCost;
+    public Text caster;
+    public Text isMagic;
+    public Text isRanged;
+    public Text isMultiTargeted;
+    public Text whatElement;
 
     public void PopulateData(Skill skillToUse, PlayerCharacterData charUsing)
     {
@@ -56,6 +64,7 @@ public class SkillUseModal : MonoBehaviour
                 allCharsButton.interactable = true;
             }
         }
+        PopulateSkillData(skillToUse, charUsing);
     }
 
     public void UseSkill(Skill skill, PlayerCharacterData currCharacter, List<PlayerCharacterData> targets)
@@ -101,5 +110,17 @@ public class SkillUseModal : MonoBehaviour
                 button.interactable = false;
             }
         }
+    }
+
+    public void PopulateSkillData(Skill skill, PlayerCharacterData currChar)
+    {
+        title.text = skill.name;
+        description.text = skill.skillDescription;
+        skillPointCost.text = $"SP Cost: {skill.skillPointCost.ToString()}";
+        caster.text = $"Caster: {currChar.unitName}";
+        isMagic.text = skill.isMagic ? "Magical" : "Physical";
+        isRanged.text = skill.isRanged ? "Ranged" : "Close Up";
+        isMultiTargeted.text = skill.isMultiTargeted ? "Multiple targets" : "Single target";
+        whatElement.text = $"Element: {skill.elemAttribute.ToString()}";
     }
 }

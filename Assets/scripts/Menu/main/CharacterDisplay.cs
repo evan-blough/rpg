@@ -20,6 +20,6 @@ public class CharacterDisplay : MonoBehaviour
         status.text = statusText;
         nameText.text = pcd.unitName;
         health.text = $"{pcd.currHP} / {pcd.maxHP}";
-        skillPoints.text = $"{pcd.currSP} / {pcd.maxHP}";
+        skillPoints.text = $"{pcd.currSP} / {pcd.maxSP}";
     }
 }
