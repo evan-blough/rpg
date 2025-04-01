@@ -9,6 +9,7 @@ public class OptionsList : MonoBehaviour
     public MenuHandler menuHandler;
     public Button formationButton;
     public ExitModal exitModal;
+    public SkillUseModal skillModal;
 
     private void Awake()
     {
@@ -92,6 +93,13 @@ public class OptionsList : MonoBehaviour
         exitModal.gameObject.SetActive(true);
     }
 
+    public void ReturnToSkillSubmenu(InputAction.CallbackContext ctx)
+    {
+        skillModal.gameObject.SetActive(false);
+        controls.menu.Return.started -= ReturnToSkillSubmenu;
+        controls.menu.Return.started += ReturnToMainStatusMenu;
+    }
+
     public void ReturnToOverworld(InputAction.CallbackContext ctx)
     {
         controls.menu.Return.started -= ReturnToOverworld;
@@ -109,6 +117,7 @@ public class OptionsList : MonoBehaviour
     {
         menuHandler.OpenMainDisplay();
         controls.menu.Return.started -= ReturnToMainStatusMenu;
+        controls.menu.Return.started -= ReturnToSkillSubmenu;
         controls.menu.Return.started += ReturnToOverworld;
     }
 
@@ -122,5 +131,12 @@ public class OptionsList : MonoBehaviour
     {
         controls.menu.Return.started -= ReturnToOverworld;
         controls.menu.Return.started += ReturnToOptionsList;
+    }
+
+    public void NestedSkillSubmenuOpen()
+    {
+        Debug.Log("Hit");
+        controls.menu.Return.started -= ReturnToMainStatusMenu;
+        controls.menu.Return.started += ReturnToSkillSubmenu;
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16163,6 +16163,7 @@ MonoBehaviour:
   menuHandler: {fileID: 1964608291}
   formationButton: {fileID: 1279198175}
   exitModal: {fileID: 1529252043}
+  skillModal: {fileID: 1849863731}
 --- !u!114 &1653181172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17506,6 +17507,7 @@ MonoBehaviour:
   characterList: {fileID: 1425061826}
   allCharsButton: {fileID: 1425061831}
   skillDisplayHandler: {fileID: 1400020196}
+  options: {fileID: 1653181171}
   references:
     version: 2
     RefIds: []

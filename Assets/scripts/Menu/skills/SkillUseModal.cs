@@ -10,12 +10,12 @@ public class SkillUseModal : MonoBehaviour
     public GameObject characterList;
     public Button allCharsButton;
     public SkillDisplayHandler skillDisplayHandler;
-    public MenuHandler menuHandler;
+    public OptionsList options;
 
     public void PopulateData(Skill skillToUse, PlayerCharacterData charUsing)
     {
         currParty = GameManager.instance.partyManager.partyData;
-        menuHandler.EnableModalControls(this);
+        options.NestedSkillSubmenuOpen();
         foreach (Transform child in characterList.transform)
         {
             Destroy(child.gameObject);
