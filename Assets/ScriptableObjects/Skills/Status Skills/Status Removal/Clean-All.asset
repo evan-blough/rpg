@@ -9,18 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: CleanAll
-  m_EditorClassIdentifier: Assembly-CSharp::StatusRemovalSkill
+  m_Script: {fileID: 11500000, guid: ca7b41d4b202e4e4da7992074e864159, type: 3}
+  m_Name: Clean-All
+  m_EditorClassIdentifier: 
   skillName: Clean-All
-  skillDescription: Clears all negative statuses for the full party
+  skillDescription: Calls holy power to cleanse all negative statuses from the party.
   skillPointCost: 40
   criticalModifier: 0
   powerModifier: 0
   isMagic: 1
   isRanged: 1
   isMultiTargeted: 1
-  elemAttribute: 0
+  elemAttribute: 6
   applySelfStatuses: []
   applyTargetStatuses: []
   removeSelfStatuses: 000000000100000002000000030000000400000005000000

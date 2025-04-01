@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2983,10 +2983,10 @@ MonoBehaviour:
     weightClass: 2
     skills:
     - {fileID: 11400000, guid: c65e5f15092b5ea4cbdecdcdaaba0a57, type: 2}
-    - {fileID: 11400000, guid: 3da07421480495e4f89f24f08f7c5680, type: 2}
+    - {fileID: 11400000, guid: 98bb131c2eba7024cafbb58da19a6c78, type: 2}
     equippedSkills:
     - {fileID: 11400000, guid: c65e5f15092b5ea4cbdecdcdaaba0a57, type: 2}
-    - {fileID: 11400000, guid: 3da07421480495e4f89f24f08f7c5680, type: 2}
+    - {fileID: 11400000, guid: 98bb131c2eba7024cafbb58da19a6c78, type: 2}
     classes:
     - classSlot: {fileID: 11400000, guid: d81032e881be0244592b98b609dadcc7, type: 2}
       currLevel: {fileID: 11400000, guid: 82cb1741af8c1bf4d8bde15cd8aa2993, type: 2}

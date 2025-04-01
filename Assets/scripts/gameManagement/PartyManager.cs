@@ -49,6 +49,10 @@ public class PartyManager : MonoBehaviour
         partyData[0] = partyData[1];
         partyData[1] = partyData[2];
         partyData[2] = temp;
+
+        partyData[0].isBackRow = false;
+        partyData[1].isBackRow = false;
+        partyData[2].isBackRow = true;
     }
 
     public void SetCharacterPartyStatus(PlayerCharacterData data)

@@ -121,6 +121,11 @@ public class MenuHandler : MonoBehaviour
         CloseAllUnusedTabs(mainDisplay.transform);
     }
 
+    public void CloseSkillModal()
+    {
+        skillsMenu.GetComponentInChildren<SkillUseModal>().gameObject.SetActive(false);
+    }
+
     public void CloseAllUnusedTabs(Transform openTab)
     {
         foreach (Transform child in this.transform)
