@@ -96,47 +96,52 @@ public class OptionsList : MonoBehaviour
     public void ReturnToSkillSubmenu(InputAction.CallbackContext ctx)
     {
         skillModal.gameObject.SetActive(false);
-        controls.menu.Return.started -= ReturnToSkillSubmenu;
+        ClearReturnListeners();
         controls.menu.Return.started += ReturnToMainStatusMenu;
     }
 
     public void ReturnToOverworld(InputAction.CallbackContext ctx)
     {
-        controls.menu.Return.started -= ReturnToOverworld;
+        ClearReturnListeners();
         GameManager.instance.sceneManager.StartCoroutine(GameManager.instance.sceneManager.CloseMenu());
     }
 
     public void ReturnToOptionsList(InputAction.CallbackContext ctx)
     {
         menuHandler.CancelTargets();
-        controls.menu.Return.started -= ReturnToOptionsList;
+        ClearReturnListeners();
         controls.menu.Return.started += ReturnToOverworld;
     }
 
     public void ReturnToMainStatusMenu(InputAction.CallbackContext ctx)
     {
         menuHandler.OpenMainDisplay();
-        controls.menu.Return.started -= ReturnToMainStatusMenu;
-        controls.menu.Return.started -= ReturnToSkillSubmenu;
+        ClearReturnListeners();
         controls.menu.Return.started += ReturnToOverworld;
     }
 
     public void ActivateSubmenuControls()
     {
-        controls.menu.Return.started -= ReturnToOverworld;
+        ClearReturnListeners();
         controls.menu.Return.started += ReturnToMainStatusMenu;
     }
 
     public void ActivateCharacterSelectionControls()
     {
-        controls.menu.Return.started -= ReturnToOverworld;
+        ClearReturnListeners();
         controls.menu.Return.started += ReturnToOptionsList;
     }
 
     public void NestedSkillSubmenuOpen()
     {
-        Debug.Log("Hit");
-        controls.menu.Return.started -= ReturnToMainStatusMenu;
+        ClearReturnListeners();
         controls.menu.Return.started += ReturnToSkillSubmenu;
+    }
+    private void ClearReturnListeners()
+    {
+        controls.menu.Return.started -= ReturnToSkillSubmenu;
+        controls.menu.Return.started -= ReturnToOverworld;
+        controls.menu.Return.started -= ReturnToOptionsList;
+        controls.menu.Return.started -= ReturnToMainStatusMenu;
     }
 }
