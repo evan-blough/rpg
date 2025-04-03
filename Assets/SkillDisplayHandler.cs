@@ -41,7 +41,7 @@ public class SkillDisplayHandler : MonoBehaviour
             newButton.PopulateButton(skill);
 
             var button = newButton.GetComponent<Button>();
-            if (((newButton.skill is HealingSkill && currParty.Any(p => p.currHP < p.maxHP)
+            if (data.isActive && ((newButton.skill is HealingSkill && currParty.Any(p => p.currHP < p.maxHP)
                 || (newButton.skill is RevivalSkill && currParty.Any(p => !p.isActive)))
                 || (newButton.skill is StatusRemovalSkill && currParty.Any(p => p.currStatuses.Any())))
                 && skill.skillPointCost <= data.currSP)
