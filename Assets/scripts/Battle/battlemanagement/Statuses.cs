@@ -4,8 +4,8 @@ public class Statuses
 {
     public Status status;
     public int expirationTurn;
-    public bool canBeCured;
-    public float accuracy;
+    public bool canBeCured = true;
+    public float accuracy = 1;
 
     //deep copy creator
     public Statuses(Statuses oldStatus)

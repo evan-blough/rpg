@@ -101,59 +101,59 @@ public class PlayerCharacter : Character
             return elemList;
         }
     }
+
     public override int Attack(Character enemy, int turnCounter)
     {
+        Attack currAttack = null;
         double hitChance = hitPercent - enemy.dodgePercent;
-
-        if (weapon is not null && weapon.element != Elements.None && enemy.elemImmunities.Where(e => e == weapon.element).Any()) { return -1; }
 
         if (hitChance >= UnityEngine.Random.Range(0, 100))
         {
             bool criticalValue = UnityEngine.Random.Range(1, 20) == 20 ? true : false;
-            int damage = FindDamage(enemy, criticalValue);
-
-            damage = (int)(damage * enemy.FindPhysicalDamageStatusModifier());
-
+            int damage = FindDamage(enemy);
             if (weapon is not null)
             {
-                if (weapon.element != Elements.None)
-                    damage = (int)(damage * enemy.FindElementalDamageModifier(weapon.element));
-
-                weapon.ApplyWeaponStatuses(enemy, turnCounter);
+                List<Elements> element = new List<Elements>();
+                element.Add(weapon.element);
+                currAttack = new Attack(damage, criticalValue, weapon.isMagic, weapon.statuses, element, turnCounter);
             }
-
-            if (damage <= 0)
+            if (currAttack is null)
             {
-                damage = 1;
+                currAttack = new Attack(damage, criticalValue, false);
             }
-            if (damage > 9999) damage = 9999;
 
-            enemy.currHP -= damage;
-            if (enemy.currHP < 0) enemy.currHP = 0;
+            damage = enemy.TakeDamage(currAttack);
 
             return damage;
         }
         return 0;
     }
 
-    public int FindDamage(Character enemy, bool isCritical)
+    public int FindDamage(Character enemy)
     {
         int attackVal;
-        int defenseVal;
         if (weapon.isMagic)
-        {
             attackVal = magAtk;
-            defenseVal = enemy.magDef;
-        }
         else
-        {
             attackVal = attack;
-            defenseVal = enemy.defense;
-        }
 
-        return (int)((attackVal *
-                FindPhysicalAttackStatusModifier() * UnityEngine.Random.Range(1f, 1.25f) * (isCritical ? 2 : 1) - defenseVal));
+        return (int)((attackVal * FindPhysicalAttackStatusModifier() * UnityEngine.Random.Range(1f, 1.25f)));
     }
+
+    public virtual void CleanBattleStatuses()
+    {
+        List<Statuses> newStatuses = new List<Statuses>();
+        foreach (Statuses status in currStatuses)
+        {
+            if (status.status == Status.Paralyzed || status.status == Status.Poisoned || status.status == Status.Bleeding)
+            {
+                Statuses newStatus = new Statuses(status.status, 4, true, .5f);
+                newStatuses.Add(newStatus);
+            }
+        }
+        currStatuses = newStatuses;
+    }
+
     public virtual void OnLevelUp()
     {
         maxHP += 20;

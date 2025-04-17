@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
@@ -19,35 +18,22 @@ public class AttackSkill : Skill
                 continue;
             }
 
-            if (target.elemImmunities.Where(e => e == elemAttribute).Any()) { returnDamages.Add("Immune"); }
-            else
+            hitCheck = character.hitPercent - target.dodgePercent;
+            if (hitCheck >= Random.Range(0, 100))
             {
-                hitCheck = character.hitPercent - target.dodgePercent;
-                if (hitCheck >= Random.Range(0, 100))
-                {
-                    foreach (var status in applyTargetStatuses) TargetStatusApplication(character, status, target, turnCounter);
-                    foreach (var status in removeTargetStatuses) TargetStatusRemoval(character, status, target, turnCounter);
+                bool isCritical = Random.Range(1, 20) * criticalModifier >= Random.Range(1, 20) ? true : false;
+                int damage = (int)((isMagic ? character.magAtk : character.attack * character.FindPhysicalAttackStatusModifier())
+                    * Random.Range(1f, 1.25f) * powerModifier / targets.Count);
 
-                    int damage = (int)((isMagic ? character.magAtk : character.attack * character.FindPhysicalAttackStatusModifier())
-                        * Random.Range(1f, 1.25f) * powerModifier * ((Random.Range(1, 20) * criticalModifier) >= Random.Range(1, 20) ? 2 : 1)) / targets.Count;
+                List<Elements> element = new List<Elements>();
+                element.Add(elemAttribute);
 
-                    damage = (int)(damage - (isMagic ? target.magDef : target.defense));
+                Attack attack = new Attack(damage, isCritical, isMagic, applyTargetStatuses, element, removeTargetStatuses, turnCounter);
+                damage = target.TakeDamage(attack);
 
-                    damage = (int)(damage * target.FindElementalDamageModifier(elemAttribute));
-
-                    if (damage <= 0) damage = 1;
-                    if (damage > 9999) damage = 9999;
-
-                    target.currHP -= damage;
-
-                    if (target.currHP < 0) target.currHP = 0;
-
-                    if (target.currHP <= 0) target.isActive = false;
-
-                    returnDamages.Add(damage.ToString());
-                }
-                else returnDamages.Add("Miss");
+                returnDamages.Add(damage.ToString());
             }
+            else returnDamages.Add("Miss");
         }
 
         return returnDamages;

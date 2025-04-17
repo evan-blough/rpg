@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Attack Item", menuName = "Items/BattleItem/Attack Item")]
@@ -18,20 +17,13 @@ public class AttackItem : BattleItem
                 continue;
             }
 
-            if (target.elemImmunities.Any(e => e == element)) result.Add("Immune");
             else
             {
-                newEffectVal = (int)(effectValue * target.FindElementalDamageModifier(element));
+                List<Elements> element = new List<Elements>();
 
-                if (newEffectVal <= 0) newEffectVal = 1;
+                Attack attack = new Attack(effectValue, false, false, statuses, element, turnCounter);
 
-                target.currHP -= newEffectVal;
-
-                if (target.currHP <= 0)
-                {
-                    target.currHP = 0;
-                    target.isActive = false;
-                }
+                newEffectVal = target.TakeDamage(attack);
 
                 result.Add(newEffectVal.ToString());
             }

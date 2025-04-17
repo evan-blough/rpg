@@ -24,11 +24,11 @@ public class Wolf : Enemy
         else
         {
             targets.Add(targetUnit);
-            damages.Add(RegularAttack(targetUnit, turnCounter).ToString());
+            damages.Add(Attack(targetUnit, turnCounter).ToString());
             yield return null;
         }
 
-        for(int i = 0; i < damages.Count && i < targets.Count; i++) bsm.SetText(damages[i], targets[i]);
+        for (int i = 0; i < damages.Count && i < targets.Count; i++) bsm.SetText(damages[i], targets[i]);
 
         yield return new WaitForSeconds(0.5f);
 
@@ -48,44 +48,21 @@ public class Wolf : Enemy
 
     public int Maul(Character enemy, int turnCounter)
     {
-        double charAgility, enemyAgility, criticalValue, hitChance;
-        int damage, enemyDefense;
-
-        charAgility = agility;
-
-        PlayerCharacter target = (PlayerCharacter)enemy;
-        enemyAgility = target.agility + (target.weapon is null ? 0 : target.weapon.agilityBuff);
-        enemyDefense = target.defense + (target.weapon is null ? 0 : target.weapon.defenseBuff);
-        
-        hitChance = ((charAgility * 2 / enemyAgility) + .01) * 100;
+        int damage;
+        double hitChance = hitPercent - enemy.dodgePercent;
 
         if (hitChance >= UnityEngine.Random.Range(0, 100))
         {
-            if (Random.Range(1, 100) >= 50)
-            {
-                if (target.currStatuses.Where(s => s.status == Status.Bleeding).Any())
-                {
-                    Statuses status = new Statuses(target.currStatuses.Where(s => s.status == Status.Bleeding).First());
-                    target.currStatuses.RemoveAll(s => s.status == Status.Bleeding);
-                    status.expirationTurn += 3;
-                    target.currStatuses.Add(status);
-                }
-                else
-                {
-                    Statuses status = new Statuses(Status.Bleeding, 3, true, .5f);
-                }
-            }
+            bool isCritical = UnityEngine.Random.Range(1, 20) >= 18 ? true : false;
+            damage = (int)(((attack * 1.5) * FindPhysicalAttackStatusModifier() * UnityEngine.Random.Range(1f, 1.25f)));
 
-            criticalValue = UnityEngine.Random.Range(1, 20) >= 18 ? 2 : 1;
-            damage = (int)(((attack * 1.5) * FindPhysicalAttackStatusModifier() * UnityEngine.Random.Range(1f, 1.25f) * criticalValue) - (enemyDefense));
-            damage = (int)(damage / enemy.FindPhysicalDamageStatusModifier());
-            if (damage <= 0)
-            {
-                damage = 1;
-            }
+            List<Statuses> statuses = new List<Statuses>();
+            statuses.Add(new Statuses(Status.Bleeding, 3, true, .5f));
+            List<Elements> element = new List<Elements>();
 
-            enemy.currHP -= damage;
-            if (enemy.currHP < 0) enemy.currHP = 0;
+            Attack currAttack = new Attack(damage, isCritical, false, statuses, element, turnCounter);
+
+            damage = enemy.TakeDamage(currAttack);
 
             return damage;
         }

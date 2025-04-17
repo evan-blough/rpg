@@ -26,7 +26,7 @@ public class Ogre : Enemy
         else
         {
             targets.Add(targetUnit);
-            damages.Add(RegularAttack(targetUnit, turnCounter).ToString());
+            damages.Add(Attack(targetUnit, turnCounter).ToString());
             yield return null;
         }
 
@@ -50,30 +50,17 @@ public class Ogre : Enemy
 
     public int ClubThrow(Character enemy)
     {
-
-        double charAgility, enemyAgility, criticalValue, hitChance;
-        int damage, enemyDefense;
-
-        charAgility = agility;
-
-        PlayerCharacter target = (PlayerCharacter)enemy;
-        enemyAgility = target.agility + (target.weapon is null ? 0 : target.weapon.agilityBuff);
-        enemyDefense = target.defense + (target.weapon is null ? 0 : target.weapon.defenseBuff);
-
-        hitChance = ((charAgility * 3 / enemyAgility) + .01) * 100;
+        int damage;
+        double hitChance;
+        hitChance = hitPercent - enemy.dodgePercent;
 
         if (hitChance >= UnityEngine.Random.Range(0, 100))
         {
-            criticalValue = UnityEngine.Random.Range(1, 20) == 20 ? 2 : 1;
-            damage = (int)(((attack * 2) * FindPhysicalAttackStatusModifier() * UnityEngine.Random.Range(1f, 1.25f) * criticalValue) - (enemyDefense));
-            damage = (int)(damage / enemy.FindPhysicalDamageStatusModifier());
-            if (damage <= 0)
-            {
-                damage = 1;
-            }
+            bool isCritical = UnityEngine.Random.Range(1, 20) == 20 ? true : false;
+            damage = (int)(((attack * 2) * FindPhysicalAttackStatusModifier() * UnityEngine.Random.Range(1f, 1.25f)));
 
-            enemy.currHP -= damage;
-            if (enemy.currHP < 0) enemy.currHP = 0;
+            Attack currAttack = new Attack(damage, isCritical, false);
+            damage = enemy.TakeDamage(currAttack);
 
             return damage;
         }

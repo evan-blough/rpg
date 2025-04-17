@@ -36,61 +36,11 @@ public class Enemy : Character
 
         throw new Exception("Error generating enemy rarity");
     }
-    public override int Attack(Character enemy, int turnCounter)
-    {
-        double charAgility, enemyAgility, criticalValue, hitChance;
-        int damage, enemyDefense;
-
-        charAgility = agility;
-        if (enemy is PlayerCharacter)
-        {
-            PlayerCharacter target = (PlayerCharacter)enemy;
-            enemyAgility = target.agility + (target.weapon is null ? 0 : target.weapon.agilityBuff);
-            enemyDefense = target.defense + (target.weapon is null ? 0 : target.weapon.defenseBuff);
-        }
-        else
-        {
-            enemyAgility = enemy.agility;
-            enemyDefense = enemy.defense;
-        }
-        hitChance = ((charAgility * 2 / enemyAgility) + .01) * 100;
-
-        if (enemy.elemImmunities.Where(e => e == atkElement).Any()) { return -1; }
-
-        if (hitChance >= UnityEngine.Random.Range(0, 100))
-        {
-            criticalValue = UnityEngine.Random.Range(1, 20) == 20 ? 2 : 1;
-            damage = (int)((attack * FindPhysicalAttackStatusModifier() * UnityEngine.Random.Range(1f, 1.25f) * criticalValue) - (enemyDefense));
-            damage = (int)(damage / enemy.FindPhysicalDamageStatusModifier());
-            if (damage <= 0)
-            {
-                damage = 1;
-            }
-            if (damage > 9999) damage = 9999;
-
-            enemy.currHP -= damage;
-            if (enemy.currHP < 0) enemy.currHP = 0;
-            if (enemy.currHP <= 0) enemy.isActive = false;
-
-            return damage;
-        }
-        return 0;
-    }
-
-    public virtual int RegularAttack(Character targetUnit, int turnCounter)
-    {
-        int damage = this.Attack(targetUnit, turnCounter);
-
-        if (targetUnit.currHP < 0) { targetUnit.currHP = 0; }
-
-        return damage;
-    }
-
     public virtual IEnumerator EnemyTurn(List<PlayerCharacter> playerCharacters, List<Enemy> enemies, int turnCounter, BattleStationManager bsm, EnemySkillUI esu)
     {
         Character targetUnit = this.FindTarget(playerCharacters.Where(c => c.isActive && c.isActive).ToList());
 
-        int damage = RegularAttack(targetUnit, turnCounter);
+        int damage = Attack(targetUnit, turnCounter);
 
         bsm.SetText(damage.ToString(), targetUnit);
 

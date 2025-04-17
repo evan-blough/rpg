@@ -191,9 +191,9 @@ public class BattleStateMachine : MonoBehaviour
 
         uiHandler.ResetUI();
 
-        int attackPower = currentCharacter.Attack(target, turnCounter);
+        int damage = currentCharacter.Attack(target, turnCounter);
 
-        battleStationManager.SetText(attackPower.ToString(), target);
+        battleStationManager.SetText(damage.ToString(), target);
 
         yield return new WaitForSeconds(.55f);
 
@@ -210,6 +210,11 @@ public class BattleStateMachine : MonoBehaviour
     {
         uiHandler.ResetUI();
         dataHudHandler.DeactivateEnemyHud();
+
+        foreach (PlayerCharacter character in playerCharacterList)
+        {
+            character.CleanBattleStatuses();
+        }
 
         if (state == BattleStates.LOSS)
         {

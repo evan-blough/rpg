@@ -60,21 +60,97 @@ public abstract class Character : MonoBehaviour
         return modifier;
     }
 
-    public virtual float FindElementalDamageModifier(Elements atkElement)
+    public virtual float FindElementalDamageModifier(List<Elements> atkElements)
     {
         float modifier = 1;
 
+        foreach (var element in elemImmunities)
+        {
+            if (atkElements.Any(x => x == element)) return 0;
+        }
+
         foreach (var element in elemResistances)
         {
-            if (element == atkElement) modifier /= 2;
+            if (atkElements.Any(x => x == element)) modifier /= 2;
         }
 
         foreach (var element in elemWeaknesses)
         {
-            if (element == atkElement) modifier *= 2;
+            if (atkElements.Any(x => x == element)) modifier *= 2;
         }
 
         return modifier;
+    }
+
+    public virtual void ApplyStatuses(List<Statuses> statuses, int turnCounter)
+    {
+        foreach (var status in statuses)
+        {
+            Statuses newStatus = new Statuses(status);
+            if (immunities.Any(s => s == newStatus.status))
+            {
+                continue;
+            }
+            else if (!resistances.Any(s => s == newStatus.status) || Random.Range(0, 1) == 1)
+            {
+                if (newStatus.accuracy * 100 >= Random.Range(1, 100))
+                {
+                    if (currStatuses.FirstOrDefault(s => s.status == newStatus.status) != null)
+                    {
+                        currStatuses.RemoveAll(s => s.status == newStatus.status);
+                    }
+
+                    newStatus.expirationTurn += turnCounter;
+                    currStatuses.Add(newStatus);
+
+                    if (newStatus.status == Status.Death)
+                    {
+                        currHP = 0;
+                        isActive = false;
+                    }
+                }
+            }
+        }
+    }
+
+    public virtual void RemoveStatuses(List<Status> statusesToRemove)
+    {
+        foreach (var status in statusesToRemove)
+        {
+            var curingStatus = currStatuses.FirstOrDefault(s => s.status == status);
+            if (curingStatus != null && curingStatus.canBeCured)
+            {
+                currStatuses.RemoveAll(s => s.status == status);
+            }
+        }
+    }
+
+    public virtual int TakeDamage(Attack attack)
+    {
+        int damage = attack.damage - (attack.isMagic ? magDef : defense);
+        damage = (int)(damage * FindElementalDamageModifier(attack.attackElements));
+
+        if (attack.isCritical)
+            damage *= 2;
+
+        if (!attack.isMagic)
+            damage = (int)(damage * FindPhysicalDamageStatusModifier());
+
+        ApplyStatuses(attack.attackStatuses, attack.turnCounter);
+        RemoveStatuses(attack.statusToRemove);
+
+        if (damage < 0) damage = 0;
+        if (damage > 9999) damage = 9999;
+
+        currHP -= damage;
+
+        if (currHP <= 0)
+        {
+            isActive = false;
+            currHP = 0;
+        }
+
+        return damage;
     }
 
     public virtual int Attack(Character enemy, int turnCounter)
@@ -83,16 +159,11 @@ public abstract class Character : MonoBehaviour
 
         if (hitChance >= UnityEngine.Random.Range(0, 100))
         {
-            int criticalValue = UnityEngine.Random.Range(1, 20) == 20 ? 2 : 1;
-            int damage = (int)((attack * FindPhysicalAttackStatusModifier() * UnityEngine.Random.Range(1f, 1.25f) * criticalValue) - (enemy.defense));
-            damage = (int)(damage / enemy.FindPhysicalDamageStatusModifier());
-            if (damage <= 0)
-            {
-                damage = 1;
-            }
+            bool criticalValue = UnityEngine.Random.Range(1, 20) == 20 ? true : false;
+            int damage = (int)((attack * FindPhysicalAttackStatusModifier() * UnityEngine.Random.Range(1f, 1.25f)));
 
-            enemy.currHP -= damage;
-            if (enemy.currHP < 0) enemy.currHP = 0;
+            Attack currAttack = new Attack(damage, criticalValue, false);
+            damage = enemy.TakeDamage(currAttack);
 
             return damage;
         }
